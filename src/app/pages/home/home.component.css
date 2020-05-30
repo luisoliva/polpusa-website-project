@@ -1,0 +1,37 @@
+.title {
+  color: #4A4A4A;
+  font-family: 'Lato-Regular';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29px;
+  text-align: center;
+}
+
+.paralax-wrapper {
+  height: 259px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.paralax-picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+.paralax-text {
+  color: #FFFFFF;
+  font-family: 'Lato-Bold';
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: center;
+}

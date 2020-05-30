@@ -1,0 +1,22 @@
+.presence-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.precense-item {
+  margin: 20px 0;
+}
+.presence-title {
+  font-family: 'Montserrat-Bold';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+}
+.presence-img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}

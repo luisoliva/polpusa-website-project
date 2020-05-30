@@ -1,0 +1,27 @@
+<!-- Baner -->
+<section class="blog-wrapper">
+  <img class="blog-banner" src="https://cdn.pixabay.com/photo/2020/05/20/07/01/glencoe-5195121_960_720.jpg" alt="banner">
+</section>
+
+<!-- Posts -->
+<section class="mt-5">
+  <h2 class="title">Últimas Publicaciones</h2>
+  <div class="container">
+    <div class="row mt-5 mb-5" *ngFor="let post of posts">
+      <div class="col-md-6">
+        <img class="img-fluid" [src]="post.image" [alt]="post.title">
+      </div>
+      <div class="col-md-6 post-item ">
+        <h3 class="post-title">{{post.title}}</h3>
+        <span class="post-date">{{post.date | date:'MMMM d, yyyy'}}</span>
+        <p class="post-content">{{post.content}}</p>
+        <a class="btn-read-more">Leer más</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Load More -->
+<section class="container text-center">
+  <button class="btn btn-load-more">Cargar más</button>
+</section>

@@ -1,0 +1,10 @@
+<section class="mt-5">
+  <h4 class="c-sky presence-title text-center">Nuestra Presencia</h4>
+  <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
+  <div class="container presence-wrapper mt-5">
+    <div class="precense-item" *ngFor="let country of countries">
+      <img class="presence-img" [src]="country.url" [alt]="country.name">
+      <span class="text-center d-block mt-4">{{country.name}}</span>
+    </div>
+  </div>
+</section>

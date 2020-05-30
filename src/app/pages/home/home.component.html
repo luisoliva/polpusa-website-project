@@ -1,0 +1,36 @@
+<!-- Slider -->
+<app-banner></app-banner>
+
+<!-- Products Cards -->
+<!-- <app-product-card></app-product-card> -->
+
+<!-- Alliances -->
+<section class="mt-5">
+  <div class="container-fluid">
+    <h3 class="title mb-5">En <strong class="c-sky">Polpusa</strong> estamos orgullosos de trabajar con marcas prestigiosas como:</h3>
+    <div class="row mt-5">
+      <div *ngFor="let alliance of alliances" class="col-lg-3 col-md-6">
+        <img class="img-fluid ml-auto mr-auto mb-5 d-block" [ngStyle]="{height: alliance.size}" [src]="alliance.url" [alt]="alliance.name">
+      </div>
+    </div>
+  </div>
+  <img class="img-fluid mt-5" src="/assets/images/home/alliances/triangle.png" alt="triangle">
+</section>
+
+<!-- Our Presence -->
+<app-our-presence></app-our-presence>
+
+<!-- Contact -->
+<app-home-contact></app-home-contact>
+
+<!-- Strategies -->
+<app-strategy></app-strategy>
+
+<!-- Paralax -->
+<section class="mt-5 mb-5 paralax-wrapper">
+  <img class="paralax-picture" src="/assets/images/home/POLPUSA_INTERIOR.jpg" alt="">
+  <p class="paralax-text">Más de 30 años de experiencia ofreciendo soluciones en empaques flexibles</p>
+</section>
+
+<!-- Certifications -->
+<app-certifications></app-certifications>

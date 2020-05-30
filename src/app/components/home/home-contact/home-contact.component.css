@@ -1,0 +1,33 @@
+.contact-wrapper {
+  background-color:  #0FAED2;
+  height: 91px;
+}
+.contact-wrapper .row {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.contact-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-question {
+  color: #FFFFFF;
+  font-family: 'Montserrat-Regular';
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 50px;
+}
+.contact-title {
+  color: #FFFFFF;
+  font-family: 'Montserrat-Bold';
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 50px;
+}
+@media only screen and (max-width: 768px) {
+  .contact-wrapper {
+    height: auto;
+  }
+}
