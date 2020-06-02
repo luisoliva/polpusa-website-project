@@ -1,15 +1,14 @@
-<div class="banner-home">
-  <img src="/assets/images/home/banner-home.png" alt="banner-home">
-  <h2>Nuestros Productos</h2>
-  <div class="m-auto row">
-    <div class="col-md-4">
-      <div class="card-item"></div>
-    </div>
-    <div class="col-md-4">
-      <div class="card-item"></div>
-    </div>
-    <div class="col-md-4">
-      <div class="card-item"></div>
+<section class="product-wrapper">
+  <h4 class="product-card-title">Nuestros Productos</h4>
+  <app-title-bar [background]="'#ffffff'" [width]="'115px'" [height]="'7px'"></app-title-bar>
+  <div class="container mt-5 ml-auto mr-auto row">
+    <div class="col-md-4" *ngFor="let card of cards">
+      <div class="card-item">
+        <img class="card-item-picture img-fluid" [src]="card.image" [alt]="card.title">
+        <span class="card-item-title mt-3">{{card.title}}</span>
+        <p class="card-item-content mt-3">{{ card.content.length > 100 ? card.content.substring(0, 100) + '...' : card.content }}</p>
+        <a class="card-item-button" [routerLink]="">Ver más <span class="c-sky ml-2"><i class="fas fa-chevron-right"></i></span></a>
+      </div>
     </div>
   </div>
-</div>
+</section>

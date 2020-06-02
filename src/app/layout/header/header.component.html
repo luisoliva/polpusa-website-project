@@ -2,12 +2,12 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav-menu">
     <img class="logotype img-responsive" src="/assets/images/menu/logo.svg" alt="logo">
     <!-- <a class="navbar-brand" href="#">Menu</a> -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPolpusa" aria-controls="navbarPolpusa" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+    <div class="collapse navbar-collapse" id="navbarPolpusa">
+      <ul class="navbar-nav ml-auto mr-5">
         <li class="nav-item custom-nav-item">
           <a class="nav-link custom-nav-link" [routerLink]="['/inicio']" routerLinkActive="custom-active">Inicio</a>
         </li>
@@ -26,19 +26,30 @@
         <li class="nav-item custom-nav-item">
           <a class="nav-link custom-nav-link" [routerLink]="['/blog']" routerLinkActive="custom-active">Blog</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cotizar</a>
+        <li class="nav-item custom-nav-item d-flex justify-content-center align-items-center">
+          <a class="nav-link cotizar" [routerLink]="">Cotizar</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="/assets/images/menu/globe.svg" alt="globe">
+        <li class="nav-item dropdown custom-nav-item d-flex justify-content-center align-items-center">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="/assets/images/menu/globe.svg" alt="globe"> <span class="ml-2 language">ES</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Es</a>
-            <a class="dropdown-item" href="#">En</a>
+            <a class="dropdown-item language">ES</a>
+            <a class="dropdown-item language">EN</a>
           </div>
         </li>
       </ul>
+
+      <!-- <div style="background-color: green;">
+        <a class="mr-5" href="#">Cotizar</a>
+        <a id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="/assets/images/menu/globe.svg" alt="globe">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Es</a>
+          <a class="dropdown-item" href="#">En</a>
+        </div>
+      </div> -->
     </div>
   </nav>
 </header>

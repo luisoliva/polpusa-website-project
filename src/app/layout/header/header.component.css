@@ -12,12 +12,18 @@ header {
   height: 60px;
   position: relative;
 }
+#navbarPolpusa ul {
+  width: 100%;
+  justify-content: space-around;
+}
 .custom-nav-item {
   /* border: 1px solid red; */
 }
 .custom-nav-link {
   color: #0A1450 !important;
   font-family: "Lato-Bold";
+  font-weight: 400;
+  line-height: 22px;
   height: 70px;
   display: flex;
   align-items: center;
@@ -28,11 +34,38 @@ header {
   border-radius: 5px;
   color: #ffffff !important;
 }
+.cotizar {
+  background-color: #29AAE3;
+  border-radius: 18px;
+  color: #ffffff !important;
+  width: 109px;
+  font-family: 'Lato-Bold';
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+.language {
+  color: #002D73;
+  font-family: 'Lato-Regular';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+}
 .logotype {
   position: relative;
   left: -60px;
   height: 100px;
   margin-top: 20px;
+}
+@media only screen and (max-width:768px) {
+  #navbarPolpusa ul {
+    width: auto;
+    margin: 0 !important;
+  }
+  #navbarPolpusa ul li.d-flex,
+  #navbarPolpusa ul li.d-flex {
+    display: block !important;
+  }
 }
 @media only screen and (max-width:990px) {
   header {

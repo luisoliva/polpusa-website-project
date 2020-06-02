@@ -53,7 +53,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/assets/css/lato-font.css",
-              "src/assets/css/montserrat-font.css"
+              "src/assets/css/montserrat-font.css",
+              "src/assets/css/poppins-font.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

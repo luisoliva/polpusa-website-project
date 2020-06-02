@@ -28,23 +28,18 @@ video {
   text-align: center;
   margin:  auto;
 }
-.banner-home {
-  border: 1px solid red;
-  /* padding: 250px 0 100px 0; */
-  position: relative;
-  height: 907px;
-}
-.banner-home img {
-  position: absolute;
+.product-banner {
+  /* border: 2px solid green; */
+  display: block;
+  max-width: 100%;
   width: 100%;
+  position: absolute;
+  bottom: -10px;
 }
 @media only screen and (max-width: 768px) {
   video {
     height: 400px;
     object-fit: fill;
-  }
-  .banner-home {
-    padding: 0;
   }
   .slider-title {
     font-size: 5vw;
