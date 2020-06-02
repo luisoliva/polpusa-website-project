@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurPresenceComponent implements OnInit {
   countries: any[] = [
-    {name: 'EUA', url: '/assets/images/placeholder_images.png'},
-    {name: 'México', url: '/assets/images/placeholder_images.png'},
-    {name: 'Belice', url: '/assets/images/placeholder_images.png'},
-    {name: 'Cuba', url: '/assets/images/placeholder_images.png'},
-    {name: 'Jamaica', url: '/assets/images/placeholder_images.png'},
-    {name: 'Colombia', url: '/assets/images/placeholder_images.png'},
-    {name: 'Alemania', url: '/assets/images/placeholder_images.png'},
+    {name: 'EUA', url: '/assets/images/home/our-presence/usa-today.png'},
+    {name: 'México', url: '/assets/images/home/our-presence/mexico.png'},
+    {name: 'Belice', url: '/assets/images/home/our-presence/belize.png'},
+    {name: 'Cuba', url: '/assets/images/home/our-presence/cuba.png'},
+    {name: 'Jamaica', url: '/assets/images/home/our-presence/jamaica.png'},
+    {name: 'Colombia', url: '/assets/images/home/our-presence/colombia.png'},
+    {name: 'Alemania', url: '/assets/images/home/our-presence/alemania.png'},
   ];
 
   constructor() { }
