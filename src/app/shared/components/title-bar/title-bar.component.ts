@@ -9,6 +9,7 @@ export class TitleBarComponent implements OnInit {
   @Input() background: string = '';
   @Input() width: string = '';
   @Input() height: string = '';
+  @Input() float: string = 'none';
 
   constructor() { }
 

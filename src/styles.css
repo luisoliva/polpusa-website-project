@@ -4,3 +4,6 @@
 .ps-r {
   position: relative;
 }
+.quotes {
+  quotes: "“" "”";
+}

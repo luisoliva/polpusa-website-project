@@ -1,0 +1,22 @@
+.about-us-wrapper {
+  background-color: #00A3DA;
+}
+.about-us-title {
+  color: #ffffff;
+  font-family: 'Montserrat-Bold';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: center;
+}
+.about-us-content {
+  color: #ffffff;
+  font-family: 'Lato-Regular';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+}
+.about-us-banner-bottom {
+  position: relative;
+  top: -1px;
+}

@@ -7,6 +7,7 @@ import { LayoutModule } from './layout/layout.module';
 import { HomeModule } from './pages/home/home.module';
 import { ProductsModule } from './pages/products/products.module';
 import { BlogModule } from './pages/blog/blog.module';
+import { AboutModule } from './pages/about/about.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BlogModule } from './pages/blog/blog.module';
     LayoutModule,
     HomeModule,
     ProductsModule,
-    BlogModule
+    AboutModule,
+    BlogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
