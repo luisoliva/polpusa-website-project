@@ -2,7 +2,7 @@
 <app-about-banner></app-about-banner>
 
 <!-- About Us -->
-<!-- <app-about-us></app-about-us> -->
+<app-about-us></app-about-us>
 
 <!-- Our Purpose -->
 <section class="mt-5">
@@ -18,3 +18,55 @@
 
 <!-- Our Values -->
 <app-our-values></app-our-values>
+
+<!-- Mision -->
+<section class="mt-5 mb-5">
+  <img class="img-fluid arrows" src="/assets/images/about/mision/left-arrow.png" alt="left-arrow">
+  <div class="mission">
+    <h4 class="mission-title">Misión</h4>
+    <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'" [float]="'right'"></app-title-bar>
+    <p class="mission-content mt-5 mb-5">Generar <span class="mission-content-bold">bienestar a nuestra comunidad</span>, brindando <span class="mission-content-bold">soluciones sustentables</span> de empaque flexible.</p>
+  </div>
+  <img class="img-fluid arrows ml-auto" src="/assets/images/about/mision/right-arrow.png" alt="right-arrow">
+</section>
+
+<!-- Vision -->
+<section class="container-fluid mt-5">
+  <!-- Title -->
+  <div class="row mb-5">
+    <div class="col-lg-4">
+      <h4 class="vision-title">Visión</h4>
+      <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'" [float]="'right'"></app-title-bar>
+    </div>
+  </div>
+  <!-- Items -->
+  <div class="row mt-5" *ngFor="let vision of visions">
+    <div class="col-lg-4 vision-wrapper">
+      <div class="vision-overlay"></div>
+      <div class="container vision-item">
+        <!-- d-flex align-items-center justify-content-end -->
+        <!-- <img class="img-fluid" [src]="vision.image" [alt]="vision.name">
+        <span class="vision-item-title">{{vision.name}}</span> -->
+        <div class="row">
+          <div class="col-6 d-flex align-items-center justify-content-end">
+            <img class="img-fluid" [src]="vision.image" [alt]="vision.name">
+          </div>
+          <div class="col-6">
+            <span class="vision-item-title">{{vision.name}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 d-flex align-items-center">
+      <p class="vision-item-content">{{vision.content}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="mt-5 ps-r">
+  <img class="img-fluid triangle" src="/assets/images/about/gallery/triangle.png" alt="triangle">
+  <img class="img-fluid gallery-image" src="/assets/images/about/gallery/cumpleaños.jpg" alt="cumpleaños">
+  <img class="img-fluid gallery-image" src="/assets/images/about/gallery/playa.jpg" alt="playa">
+  <img class="img-fluid gallery-image" src="/assets/images/about/gallery/certificados.jpg" alt="certificados">
+</section>

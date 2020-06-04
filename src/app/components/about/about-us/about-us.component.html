@@ -2,12 +2,12 @@
   <h4 class="about-us-title">Nosotros</h4>
   <app-title-bar [background]="'#ffffff'" [width]="'115px'" [height]="'7px'"></app-title-bar>
 
-  <div class="mt-5">
+  <div class="mt-5 container-fluid">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-5 about-us-item-picture">
         <img class="img-fluid" src="/assets/images/about/about-us/polpusa.jpg" alt="polpusa">
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-7 about-us-item">
         <p class="about-us-content">Polietileno Publicitario S.A. nació en 1986 de la necesidad de crear una nueva empresa que pudiera satisfacer de
           manera integral la demanda de bolsas y películas de polietileno para el mercado del sureste mexicano.
         </p>
@@ -18,7 +18,10 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-lg-6 about-us-item-picture">
+        <img class="img-fluid" src="/assets/images/about/about-us/tecnologia.jpg" alt="tecnologia">
+      </div>
+      <div class="col-lg-6 about-us-item">
         <p class="about-us-content">Hoy en día fabricamos bolsas con sello pouche, películas monocapa y coextruídas de polietileno en alta y baja
           densidad y polipropileno. Igualmente hacemos laminaciones para aplicaciones de empaques que requieren barrera al medio
           ambiente y, además, contamos con la más alta tecnología en impresión flexográfica, lo que nos permite imprimir
@@ -32,20 +35,17 @@
         </p>
         <app-title-bar [background]="'#ffffff'" [width]="'100px'" [height]="'4px'" [float]="'left'"></app-title-bar>
       </div>
-      <div class="col-md-6">
-        <img class="img-fluid" src="/assets/images/about/about-us/tecnologia.jpg" alt="tecnologia">
-      </div>
     </div>
-    <div class="row">
-      <div class="col-md-6">
+    <div class="row" style="position: relative; z-index: 1;">
+      <div class="col-lg-5 about-us-item-picture">
         <img class="img-fluid" src="/assets/images/about/about-us/portada.jpg" alt="portada">
       </div>
-      <div class="col-md-6">
+      <div class="col-lg-7 about-us-item">
         <p class="about-us-content">En Polietileno Publicitario siempre estamos evolucionando e innovando nuevos conceptos, destacando en nuestro
           catálogo toda una completa gama de productos que podemos ofrecer a nuestros clientes. </p>
           <app-title-bar [background]="'#ffffff'" [width]="'100px'" [height]="'4px'" [float]="'left'"></app-title-bar>
       </div>
     </div>
   </div>
+  <img class="img-fluid about-us-banner-bottom" src="/assets/images/about/banner/banner-bottom.png" alt="banner-bottom">
 </section>
-<img class="img-fluid about-us-banner-bottom" src="/assets/images/about/banner/banner-bottom.png" alt="banner-bottom">

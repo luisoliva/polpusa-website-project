@@ -25,3 +25,123 @@
     width: 100%;
   }
 }
+/* mission */
+.mission {
+  margin-right: 10%;
+}
+.mission-title {
+  color: #00A3DA;
+  font-family: 'Montserrat-Bold';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: right;
+}
+.mission-content {
+  color: #0A1450;
+  font-family: 'Montserrat-Regular';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  width: 527px;
+  text-align: right;
+  margin: 0 0 0 auto;
+}
+.mission-content-bold {
+  font-family: 'Montserrat-Bold';
+}
+.arrows {
+  display: block;
+  width: 50%;
+}
+@media only screen and (max-width: 768px) {
+  .mission-content {
+    width: auto;
+  }
+}
+/* Vision */
+.vision-title {
+  color: #00A3DA;
+  font-family: 'Montserrat-Bold';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: right;
+}
+.vision-wrapper {
+  position: relative;
+  height: 71px;
+  padding-left: 0;
+}
+.vision-overlay {
+  background-image: linear-gradient(90deg, #29AAE3 0%, #6DCFF6 23.09%, #BAE4FA 51.11%, rgba(186, 228, 250, 0) 100%);
+  opacity: 0.4617280505952381;
+  height: 100%;
+  width: 100%;
+}
+.vision-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.vision-item-title {
+  color: #0A1450;
+  font-family: 'Montserrat-Bold';
+  font-size: 22px;
+  font-weight: 400;
+}
+.vision-item-content {
+  color: #888888;
+  font-family: 'Montserrat-Regular';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .vision-item-content {
+    margin-top: 3.5rem;
+  }
+}
+/* Gallery */
+.gallery-image {
+  position: absolute;
+  border: 15px solid rgba(130, 217, 249, 0.5);
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+}
+section .gallery-image:nth-child(2) {
+  /* height: 420px; */
+  height: 30vw;
+  width: 30vw;
+  top: 0;
+  left: 30%;
+}
+section .gallery-image:nth-child(3) {
+  /* height: 492px; */
+  height: 35vw;
+  width: 35vw;
+  top: 15%;
+  right: 1%;
+}
+section .gallery-image:nth-child(4) {
+  /* height: 599px; */
+  height: 40vw;
+  width: 40vw;
+  bottom: 0;
+  left: 10%;
+}
+@media only screen and (max-width: 767px) {
+  .triangle {
+    display: none;
+  }
+  .gallery-image {
+    position: static;
+    margin: 10px auto;
+    display: block;
+    width: 80vw !important;
+    height: 80vw !important;
+  }
+}
