@@ -1,8 +1,8 @@
-<section class="mt-5">
+<section class="our-values-wrapper">
   <h4 class="our-values-title">Nuestros Valores</h4>
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
 
-  <div class="container">
+  <div class="container our-values-content">
     <div class="row mt-5">
       <div class="col-md-4" *ngFor="let value of values_row1">
         <img class="img-fluid value-image" [src]="value.image" [alt]="value.title">
@@ -16,7 +16,7 @@
         <img class="img-fluid value-image" [src]="value.image" [alt]="value.title">
         <span class="value-title mt-4">{{value.title}}</span>
         <span class="value-subtitle">{{value.subtitle}}</span>
-        <p class="value-content">{{value.content}}</p>
+        <p class="value-content value-content-last">{{value.content}}</p>
       </div>
     </div>
   </div>

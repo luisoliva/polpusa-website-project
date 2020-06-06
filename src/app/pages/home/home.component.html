@@ -9,8 +9,9 @@
   <div class="container-fluid">
     <h3 class="title mb-5">En <strong class="c-sky">Polpusa</strong> estamos orgullosos de trabajar con marcas prestigiosas como:</h3>
     <div class="row mt-5">
-      <div *ngFor="let alliance of alliances" class="col-lg-3 col-md-6">
-        <img class="img-fluid ml-auto mr-auto mb-5 d-block" [ngStyle]="{height: alliance.size}" [src]="alliance.url" [alt]="alliance.name">
+      <div *ngFor="let alliance of alliances" class="col-lg-3 col-md-6 mt-5 d-flex align-items-center">
+        <!-- <img class="img-fluid ml-auto mr-auto mb-5 d-block" [ngStyle]="{height: alliance.size}" [src]="alliance.url" [alt]="alliance.name"> -->
+        <img class="img-fluid ml-auto mr-auto d-block" [ngStyle]="{height: alliance.size}" [src]="alliance.url" [alt]="alliance.name">
       </div>
     </div>
   </div>
@@ -24,10 +25,10 @@
 <app-home-contact></app-home-contact>
 
 <!-- Social Responsability -->
-<section class="mt-5">
+<section class="social-responsability-wrapper">
   <h4 class="social-responsability-title">Responsabilidad Social</h4>
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
-  <img class="img-fluid d-block ml-auto mr-auto mt-5" style="border-radius: 50%; width: 600px;" src="/assets/images/home/responsabilidad.png" alt="social-responsability">
+  <img class="img-fluid d-block ml-auto mr-auto" style="width: 45%; margin-top: 5rem;" src="/assets/images/home/responsabilidad.png" alt="social-responsability">
 </section>
 
 <!-- Strategies -->

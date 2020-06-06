@@ -30,7 +30,7 @@ export class OurValuesComponent implements OnInit {
   values_row2: IValues[] = [
     {
       image: '/assets/images/about/our-values/pasion.png',
-      title: 'Pasion',
+      title: 'Pasión',
       subtitle: 'Amamos lo que hacemos.',
       content: '-Compromiso, perseverancia, entusiasmo, dusciplina, entrega.'
     },

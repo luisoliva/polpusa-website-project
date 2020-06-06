@@ -5,6 +5,7 @@
 .banner-image {
   /* height: 90vh; */
   width: 100vw;
+  opacity: 0.85;
 }
 .banner-title {
   position: absolute;

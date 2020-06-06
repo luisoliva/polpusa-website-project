@@ -1,3 +1,6 @@
+.our-values-wrapper {
+  margin-top: 7rem;
+}
 .our-values-title {
   color: #00A3DA;
   font-family: 'Montserrat-Bold';
@@ -5,6 +8,9 @@
   font-weight: 400;
   line-height: 42px;
   text-align: center;
+}
+.our-values-content {
+  margin-top: 6rem;
 }
 .value-image {
   display: block;
@@ -28,6 +34,10 @@
   line-height: 32px;
   text-align: center;
 }
+.value-content-last {
+  width: 380px;
+  margin: 1rem auto;
+}
 .value-subtitle {
   display: block;
   font-family: 'Montserrat-Bold';
@@ -35,4 +45,9 @@
 }
 .value-content {
   font-family: 'Montserrat-Regular';
+}
+@media only screen and (max-width: 768px) {
+  .value-content-last {
+    width: auto;
+  }
 }
