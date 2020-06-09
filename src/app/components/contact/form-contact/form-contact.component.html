@@ -1,17 +1,17 @@
-<section class="container-fluid">
+<section class="container-fluid mt-3">
   <h2 class="form-title">Queremos saber más de ti</h2>
   <!-- Form Options -->
   <div class="row">
     <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
-      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.PROVIDER" src="/assets/images/contact/form/provider.png" alt="provider" (click)="chooseFormOption(formOptions.PROVIDER)">
+      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.PROVIDER" [src]="selectedFormOption ===  formOptions.PROVIDER ? '/assets/images/contact/form/provider-active.png' : '/assets/images/contact/form/provider.png'" alt="provider" (click)="chooseFormOption(formOptions.PROVIDER)">
       <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.PROVIDER">Soy Proveedor</span>
     </div>
     <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
-      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.CLIENT" src="/assets/images/contact/form/client.png" alt="client" (click)="chooseFormOption(formOptions.CLIENT)">
+      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.CLIENT" [src]="selectedFormOption ===  formOptions.CLIENT ? '/assets/images/contact/form/client-active.png' : '/assets/images/contact/form/client.png'" alt="client" (click)="chooseFormOption(formOptions.CLIENT)">
       <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption === formOptions.CLIENT">Soy Cliente</span>
     </div>
     <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
-      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.WORK" src="/assets/images/contact/form/work.png" alt="work" (click)="chooseFormOption(formOptions.WORK)">
+      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.WORK" [src]="selectedFormOption ===  formOptions.WORK ? '/assets/images/contact/form/work-active.png' : '/assets/images/contact/form/work.png'" alt="work" (click)="chooseFormOption(formOptions.WORK)">
       <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.WORK">Busco Trabajo</span>
     </div>
   </div>

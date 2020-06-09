@@ -1,0 +1,9 @@
+.contact-triangle {
+  display: block;
+  width: 22%;
+}
+@media only screen and (max-width: 768px) {
+  .contact-triangle {
+    width: 100%;
+  }
+}

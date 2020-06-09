@@ -8,8 +8,8 @@
   margin-bottom: 7rem;
 }
 .form-option-icon {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
 }
 .form-option-icon:hover,
 .option-icon-active {
@@ -54,5 +54,8 @@
   }
   .form-options-content {
     max-width: 100%;
+  }
+  .form-options-content {
+    margin: 0;
   }
 }
