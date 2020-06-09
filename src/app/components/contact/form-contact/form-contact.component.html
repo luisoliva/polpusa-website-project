@@ -1,0 +1,99 @@
+<section class="container-fluid">
+  <h2 class="form-title">Queremos saber más de ti</h2>
+  <!-- Form Options -->
+  <div class="row">
+    <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.PROVIDER" src="/assets/images/contact/form/provider.png" alt="provider" (click)="chooseFormOption(formOptions.PROVIDER)">
+      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.PROVIDER">Soy Proveedor</span>
+    </div>
+    <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.CLIENT" src="/assets/images/contact/form/client.png" alt="client" (click)="chooseFormOption(formOptions.CLIENT)">
+      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption === formOptions.CLIENT">Soy Cliente</span>
+    </div>
+    <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
+      <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.WORK" src="/assets/images/contact/form/work.png" alt="work" (click)="chooseFormOption(formOptions.WORK)">
+      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.WORK">Busco Trabajo</span>
+    </div>
+  </div>
+
+  <!-- Form Options Content -->
+  <div class="form-options-content">
+    <!-- PROVIDER FORM -->
+    <form *ngIf="selectedFormOption ===  formOptions.PROVIDER">
+      <!-- Contact Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+      </div>
+      <!-- Company Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+      </div>
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Product -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Producto de interés">
+      </div>
+      <!-- Action -->
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn send-form-button">Enviar</button>
+      </div>
+    </form>
+    <!-- CLIENT FORM -->
+    <form *ngIf="selectedFormOption ===  formOptions.CLIENT">
+      <!-- Contact Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+      </div>
+      <!-- Company Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+      </div>
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Product -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Producto de interés">
+      </div>
+      <!-- Action -->
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn send-form-button">Enviar</button>
+      </div>
+    </form>
+    <!-- WORK FORM -->
+    <form *ngIf="selectedFormOption ===  formOptions.WORK">
+      <!-- Contact Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+      </div>
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Upload CV -->
+      <div class="form-group">
+        <input type="file" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Action -->
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn send-form-button">Enviar</button>
+      </div>
+    </form>
+  </div>
+</section>

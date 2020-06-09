@@ -1,0 +1,14 @@
+<section class="container contact-container">
+  <div class="row">
+    <div class="col-lg-6 d-flex justify-content-center flex-column">
+      <h4 class="contact-title mb-4">Datos de contacto</h4>
+      <div class="contact-item" *ngFor="let info of contactInfo">
+        <img class="img-fluid contact-icon" [src]="info.image" alt="info.content">
+        <p class="contact-content">{{info.content}}</p>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <img class="img-fluid contact-map" src="/assets/images/contact/info/map.png" alt="map">
+    </div>
+  </div>
+</section>

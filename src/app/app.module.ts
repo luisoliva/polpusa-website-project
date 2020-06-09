@@ -8,6 +8,7 @@ import { HomeModule } from './pages/home/home.module';
 import { ProductsModule } from './pages/products/products.module';
 import { BlogModule } from './pages/blog/blog.module';
 import { AboutModule } from './pages/about/about.module';
+import { ContactModule } from './pages/contact/contact.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AboutModule } from './pages/about/about.module';
     HomeModule,
     ProductsModule,
     AboutModule,
+    ContactModule,
     BlogModule,
   ],
   providers: [],

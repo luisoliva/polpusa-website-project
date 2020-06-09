@@ -21,7 +21,6 @@ export class TitleBarComponent implements OnInit {
   @HostListener('window:resize')
   @HostListener('window:load')
   resize() {
-    console.log('resize');
     if(window.innerWidth <= 768) {
       this.float = 'none';
     } else {
