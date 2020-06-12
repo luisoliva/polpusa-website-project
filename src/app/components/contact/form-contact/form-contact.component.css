@@ -48,6 +48,15 @@
   font-weight: 400;
   line-height: 24px;
 }
+.form-cv-text {
+  display: block;
+  color: #536890 !important;
+  font-family: 'Lato-Bold' !important;
+  background: none;
+  border: 1px solid rgba(32, 119, 189, 0.4137834821428572);
+  width: 100%;
+  text-align: left;
+}
 @media only screen and (max-width: 768px) {
   .form-title {
     margin-bottom: 3rem;
