@@ -1,0 +1,155 @@
+.spetial-product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.spetial-product-left {
+  width: calc(100% - 40%);
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.spetial-product-left-title {
+  color: #002d73;
+  font-family: "Montserrat-Bold";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.title-green {
+  color: #00984f;
+}
+.spetial-product-left-content {
+  color: #888888;
+  font-family: 'Lato-Regular';
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 30px;
+  max-width: 580px;
+}
+.trust-in-us {
+  display: block;
+  color: #002D73;
+  font-family: 'Lato-Bold';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 5rem;
+}
+.gallery {
+  /* border: 1px solid red; */
+  margin-top: 7rem;
+  position: relative;
+}
+.polpusa {
+  display: block;
+  /* width: 304px; */
+  height: 262px;
+}
+.pouch {
+  display: block;
+  /* width: 248px; */
+  height: 222px;
+}
+.trompos {
+  display: block;
+  /* width: 321.05px; */
+  height: 500px;
+}
+.spetial-product-right {
+  background: url('/assets/images/sustainability/products/green-banner.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  width: 40%;
+}
+.spetial-product-right-title {
+  color: #FFFFFF;
+  font-family: 'Montserrat-Regular';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 38px;
+  width: 431px;
+  text-align: center;
+  margin: 4.5rem auto 1rem auto;
+}
+.products {
+  color: #FFFFFF;
+  font-family: 'Montserrat-Bold';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: center;
+  margin-top: 4rem;
+}
+.products-line {
+  display: block;
+  color: #FFFFFF;
+  font-family: 'Montserrat-Regular';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.img-camiseta {
+  display: block;
+  margin-bottom: 6rem;
+}
+.btn-consult {
+  background-color: #FFFFFF;
+  border-radius: 28px;
+  width: 238px;
+  height: 56px;
+  color: #058504;
+  font-family: 'Montserrat-Bold';
+  font-size: 29px;
+  font-weight: 400;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.sells {
+  color: #FFFFFF;
+  font-family: 'Montserrat-Regular';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 38px;
+  max-width: 448px;
+  text-align: center;
+  margin: 2.5rem auto 15rem auto;
+}
+.sells-bold {
+  text-transform: uppercase;
+  font-family: 'Montserrat-Bold';
+}
+@media only screen and (max-width: 768px) {
+  .polpusa, .pouch, .trompos {
+    height: auto;
+  }
+}
+@media only screen and (max-width: 990px) {
+  .spetial-product-left {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .spetial-product-left-title {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .trust-in-us {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+  .spetial-product-right {
+    width: 100%;
+  }
+  .spetial-product-right-title {
+    width: auto;
+  }
+  .sells {
+    margin: 2.5rem auto 4.5rem auto;
+  }
+}

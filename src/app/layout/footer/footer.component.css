@@ -1,7 +1,12 @@
-footer {
+.blue-footer {
   /* border: 1px solid red; */
   /* height: 400px; */
-  background: url(/assets/images/footer/banner.png);
+  background: url('/assets/images/footer/banner.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.green-footer {
+  background: url('/assets/images/footer/green-banner.png');
   background-repeat: no-repeat;
   background-size: cover;
 }

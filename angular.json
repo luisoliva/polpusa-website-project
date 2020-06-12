@@ -55,7 +55,8 @@
               "node_modules/@fortawesome/fontawesome-free/css/all.css",
               "src/assets/css/lato-font.css",
               "src/assets/css/montserrat-font.css",
-              "src/assets/css/poppins-font.css"
+              "src/assets/css/poppins-font.css",
+              "src/assets/css/roboto-font.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

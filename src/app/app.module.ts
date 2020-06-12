@@ -9,6 +9,7 @@ import { ProductsModule } from './pages/products/products.module';
 import { BlogModule } from './pages/blog/blog.module';
 import { AboutModule } from './pages/about/about.module';
 import { ContactModule } from './pages/contact/contact.module';
+import { SustainabilityModule } from './pages/sustainability/sustainability.module';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ContactModule } from './pages/contact/contact.module';
     ProductsModule,
     AboutModule,
     ContactModule,
+    SustainabilityModule,
     BlogModule,
   ],
   providers: [],

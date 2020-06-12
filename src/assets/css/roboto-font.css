@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "Roboto-Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Roboto-Bold"),
+    url("~/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+}

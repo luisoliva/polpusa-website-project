@@ -1,6 +1,8 @@
 <header>
   <nav class="navbar navbar-expand-lg navbar-light bg-light custom-nav-menu">
-    <img class="logotype img-responsive" src="/assets/images/menu/logo.svg" alt="logo">
+    <a [routerLink]="['/inicio']">
+      <img class="logotype img-responsive" src="/assets/images/menu/logo.svg" alt="logo">
+    </a>
     <!-- <a class="navbar-brand" href="#">Menu</a> -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarPolpusa" aria-controls="navbarPolpusa" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -21,7 +23,7 @@
           <a class="nav-link custom-nav-link" [routerLink]="['/contacto']" routerLinkActive="custom-active">Contacto</a>
         </li>
         <li class="nav-item custom-nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="">Sustentabilidad</a>
+          <a class="nav-link custom-nav-link" [routerLink]="['/sustentabilidad']" routerLinkActive="custom-active">Sustentabilidad</a>
         </li>
         <li class="nav-item custom-nav-item">
           <a class="nav-link custom-nav-link" [routerLink]="['/blog']" routerLinkActive="custom-active">Blog</a>

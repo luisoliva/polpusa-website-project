@@ -1,0 +1,135 @@
+.our-actions-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.our-actions-left {
+  width: calc(100% - 40%);
+  padding-top: 85px;
+  display: flex;
+  justify-content: center;
+}
+.our-actions-left-title {
+  color: #0A1450;
+  font-family: 'Montserrat-Bold';
+  font-size: 35px;
+  line-height: 42px;
+}
+.gallery {
+  margin-top: 6rem;
+}
+.gallery-image {
+  display: block;
+  border-radius: 35px;
+  height: 420px;
+  max-width: 582px;
+  margin: 1.5rem 0;
+}
+.our-actions-left-content {
+  color: #044C0E;
+  font-family: 'Lato-Regular';
+  font-size: 20px;
+  line-height: 39px;
+  max-width: 558px;
+  margin-top: 3rem;
+}
+.our-actions-right {
+  background-color: #AACB14;
+  width: 40%;
+}
+.green-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #044C0E;
+  border-radius: 28px 0 0 28px;
+  height: 174px;
+  width: 80%;
+  margin: 140px 0 0 20%;
+}
+.green-box-item {
+  padding: 0 5%;
+}
+.know-that {
+  color: #F4FFF6;
+  font-family: 'Roboto-Bold';
+  font-size: 38px;
+  line-height: 46px;
+  text-align: left;
+}
+.know-that-response {
+  color: #F4FFF6;
+  font-family: 'Lato-Regular';
+  font-size: 24px;
+  line-height: 29px;
+}
+.circular-economy {
+  color: #044C0E;
+  font-family: 'Lato-Black';
+  font-size: 44px;
+  line-height: 53px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 3rem;
+}
+.is_alternative {
+  color: #044C0E;
+  font-family: 'Lato-Bold';
+  font-size: 24px;
+  line-height: 29px;
+  max-width: 393px;
+  margin: 2rem auto 0 auto;
+}
+.resource-image {
+  display: block;
+  height: 445px;
+  max-width: 445px;
+  margin: 4rem auto 0 auto;
+}
+.resource-title {
+  display: block;
+  margin: 4rem auto 15rem auto;
+  padding: 0 50px;
+}
+@media only screen and (max-width: 990px) {
+  .our-actions-left {
+    width: 100%;
+    padding: 0 2rem;
+  }
+  .our-actions-left-title {
+    text-align: center;
+  }
+  .gallery {
+    margin-top: 3rem;
+  }
+  .gallery-image {
+    height: 220px;
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+  .our-actions-right {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .green-box {
+    width: 100%;
+    margin: 25px 0;
+    border-radius: 28px;
+  }
+  .know-that {
+    font-size: 26px;
+  }
+  .know-that-response {
+    font-size: 17px;
+  }
+  .resource-image {
+    max-height: 445px;
+    height: auto;
+    max-width: 100%;
+  }
+  .resource-title {
+    max-width: 100%;
+    margin: 4rem auto 4.5rem auto;
+    padding: 0;
+  }
+}
