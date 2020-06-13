@@ -10,6 +10,7 @@ import { BlogModule } from './pages/blog/blog.module';
 import { AboutModule } from './pages/about/about.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { SustainabilityModule } from './pages/sustainability/sustainability.module';
+import { QuoteModule } from './pages/quote/quote.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SustainabilityModule } from './pages/sustainability/sustainability.modu
     ContactModule,
     SustainabilityModule,
     BlogModule,
+    QuoteModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

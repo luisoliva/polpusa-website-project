@@ -1,0 +1,49 @@
+.quote-form-title {
+  color: #1A255D;
+  font-family: 'Montserrat-Bold';
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
+}
+.quote-form-options-wrapper {
+  margin-top: 5rem;
+}
+.quote-form-options-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quote-form-options-image {
+  display: block;
+  height: 160px;
+  margin: 0 auto;
+  width: 160px;
+  object-fit: scale-down;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s all;
+}
+.quote-form-options-image:hover,
+.options-image-active {
+  border-radius: 50%;
+  background-color: #009EE2;
+  padding: 30px;
+  cursor: pointer;
+}
+.quote-form-options-title {
+  color: #009EE2;
+  font-family: 'Lato-Light';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 50px;
+}
+.quote-form-options-title-active {
+  color: #009EE2;
+  font-family: 'Lato-Regular';
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 50px;
+}

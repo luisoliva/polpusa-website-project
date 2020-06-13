@@ -1,0 +1,26 @@
+<section>
+  <h1 class="quote-form-title">¿Qué deseas cotizar?</h1>
+  <!-- Form Options -->
+  <div class="container quote-form-options-wrapper">
+    <div class="row">
+      <div class="col-md-4 quote-form-options-item">
+        <div class="quote-form-options-image" [class.options-image-active]="selectedFormOption ===  formOptions.MOVIE" (click)="chooseFormOption(formOptions.MOVIE)">
+          <img class="img-fluid" src="/assets/images/quote/options/round-bags.png" alt="round-bags">
+        </div>
+        <h3 class="quote-form-options-title" [class.quote-form-options-title-active]="selectedFormOption ===  formOptions.MOVIE">Películas <br> de Línea</h3>
+      </div>
+      <div class="col-md-4 quote-form-options-item">
+        <div class="quote-form-options-image" [class.options-image-active]="selectedFormOption ===  formOptions.SPETIAL" (click)="chooseFormOption(formOptions.SPETIAL)">
+          <img class="img-fluid" src="/assets/images/quote/options/espetial.png" alt="espetial">
+        </div>
+        <h3 class="quote-form-options-title" [class.quote-form-options-title-active]="selectedFormOption ===  formOptions.SPETIAL">Productos <br> de Especialidad</h3>
+      </div>
+      <div class="col-md-4 quote-form-options-item">
+        <div class="quote-form-options-image" [class.options-image-active]="selectedFormOption ===  formOptions.LINE" (click)="chooseFormOption(formOptions.LINE)">
+          <img class="img-fluid" src="/assets/images/quote/options/bag.png" alt="bag">
+        </div>
+        <h3   class="quote-form-options-title" [class.quote-form-options-title-active]="selectedFormOption ===  formOptions.LINE">Productos <br> de Línea</h3>
+      </div>
+    </div>
+  </div>
+</section>

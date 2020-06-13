@@ -1,0 +1,10 @@
+.quote-banner {
+  display: block;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .quote-banner {
+    height: 400px;
+    object-fit: cover;
+  }
+}

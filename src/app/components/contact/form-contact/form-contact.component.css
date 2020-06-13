@@ -1,6 +1,6 @@
 .form-title {
-  color: #1A255D;
-  font-family: 'Montserrat-Bold';
+  color: #1a255d;
+  font-family: "Montserrat-Bold";
   font-size: 35px;
   font-weight: 400;
   line-height: 50px;
@@ -18,32 +18,32 @@
   transition: all 1s;
 }
 .form-option-title {
-    color: #2077BD;
-    font-family: 'Lato-Light';
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 50px;
-    text-align: center;
+  color: #2077bd;
+  font-family: "Lato-Light";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
 }
 .option-title-active {
-    color: #0A1450;
-    font-family: 'Lato-Regular';
-    font-size: 26px;
-    font-weight: 400;
-    line-height: 50px;
-    text-align: center;
+  color: #0a1450;
+  font-family: "Lato-Regular";
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
 }
 .form-options-content {
   max-width: 40%;
   margin: 5rem auto 2rem auto;
 }
 .send-form-button {
-  background-color: #002D73;
+  background-color: #002d73;
   border-radius: 21.5px;
   width: 136px;
   height: 43px;
   color: #ffffff;
-  font-family: 'Lato-Bold';
+  font-family: "Lato-Bold";
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
@@ -51,7 +51,7 @@
 .form-cv-text {
   display: block;
   color: #536890 !important;
-  font-family: 'Lato-Bold' !important;
+  font-family: "Lato-Bold" !important;
   background: none;
   border: 1px solid rgba(32, 119, 189, 0.4137834821428572);
   width: 100%;
