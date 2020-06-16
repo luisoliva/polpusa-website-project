@@ -99,6 +99,9 @@
   margin-bottom: 6rem;
 }
 .btn-consult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #FFFFFF;
   border-radius: 28px;
   width: 238px;

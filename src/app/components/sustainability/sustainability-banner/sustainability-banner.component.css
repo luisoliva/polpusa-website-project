@@ -3,6 +3,9 @@
   width: 100%;
 }
 .btn-quote {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #29AAE3;
   border-radius: 120px;
   width: 308px;

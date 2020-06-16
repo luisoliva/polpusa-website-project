@@ -1,4 +1,4 @@
-<section class="container-fluid mt-3">
+<section class="container-fluid form-contact-wrapper">
   <h2 class="form-title">Queremos saber más de ti</h2>
   <!-- Form Options -->
   <div class="row">
@@ -86,12 +86,12 @@
       <div class="form-group">
         <input type="text" class="form-control custom-form-input" placeholder="Correo">
       </div>
+      <!-- Position -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Puesto">
+      </div>
       <!-- Upload CV -->
       <div class="form-group">
-        <!-- <div class="row">
-          <div class="col-md-9"><input type="file" class="form-control custom-form-input" placeholder="Correo"></div>
-          <div class="col-md-3"><label class="label-control form-cv-text">Subir su CV</label></div>
-        </div> -->
         <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i> Adjuntar su CV</button>
         <input #cvFile type="file" class="d-none">
       </div>

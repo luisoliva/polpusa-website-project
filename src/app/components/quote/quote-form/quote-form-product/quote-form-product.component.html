@@ -1,0 +1,12 @@
+<section class="container quote-form-product-wrapper">
+  <h1 class="quote-form-product-title">Selecciona los productos de tu interes</h1>
+
+  <div class="row d-flex justify-content-center">
+    <div class="col-xl-3 col-lg-4 col-md-6 d-flex flex-column justify-content-center align-items-center" *ngFor="let product of quoteProducts">
+      <div class="quote-form-product-figure" [class.quote-form-product-figure-active]="product.id === 1">
+        <img class="img-fluid" [src]="product.image" [alt]="product.name">
+      </div>
+      <span class="quote-form-prodcut-item" [class.quote-form-prodcut-item-active]="product.id === 1">{{product.name}}</span>
+    </div>
+  </div>
+</section>

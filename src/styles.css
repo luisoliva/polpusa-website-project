@@ -11,9 +11,16 @@
   border: 1px solid rgba(32, 119, 189, 0.4137834821428572) !important;
   border-radius: 0 !important;
 }
+.custom-form-select,
 .custom-form-input::placeholder {
   color: #536890 !important;
   font-family: 'Lato-Bold' !important;
+}
+.custom-label {
+  color: #1A255D;
+  font-family: 'Lato-Regular';
+  font-size: 16px;
+  line-height: 19px;
 }
 @media only screen and (max-width: 768px) {
   .main-content {

@@ -1,4 +1,4 @@
-<section>
+<section class="container-fluid">
   <h1 class="quote-form-title">¿Qué deseas cotizar?</h1>
   <!-- Form Options -->
   <div class="container quote-form-options-wrapper">
@@ -19,8 +19,144 @@
         <div class="quote-form-options-image" [class.options-image-active]="selectedFormOption ===  formOptions.LINE" (click)="chooseFormOption(formOptions.LINE)">
           <img class="img-fluid" src="/assets/images/quote/options/bag.png" alt="bag">
         </div>
-        <h3   class="quote-form-options-title" [class.quote-form-options-title-active]="selectedFormOption ===  formOptions.LINE">Productos <br> de Línea</h3>
+        <h3 class="quote-form-options-title" [class.quote-form-options-title-active]="selectedFormOption ===  formOptions.LINE">Productos <br> de Línea</h3>
       </div>
     </div>
+  </div>
+
+  <!-- Quote Form Product -->
+  <app-quote-form-product *ngIf="selectedFormOption ===  formOptions.LINE"></app-quote-form-product>
+
+  <!-- Form Options Content -->
+  <div class="form-options-content">
+    <!-- MOVIE FORM -->
+    <form *ngIf="selectedFormOption ===  formOptions.MOVIE">
+      <!-- Application -->
+      <div class="form-group">
+        <select class="form-control custom-form-select" placeholder="Aplicación de interés">
+          <option value="null">Aplicación de interés</option>
+        </select>
+      </div>
+      <!-- Quantity (kg) -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Cantidad (kilos)">
+      </div>
+      <!-- Width -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Ancho">
+      </div>
+      <!-- Size -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Calibre">
+      </div>
+      <!-- Company Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+      </div>
+      <!-- Contact Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+      </div>
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Friendly Enviroment -->
+      <div class="form-group">
+        <label class="custom-label">¿Te interesa que tu producto sea más amigable con el medio ambiente?</label>
+      </div>
+      <!-- Yes -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Si">
+      </div>
+      <!-- No -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="No">
+      </div>
+      <!-- Action -->
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn send-form-button">Enviar</button>
+      </div>
+    </form>
+    <!-- SPETIAL FORM -->
+    <form *ngIf="selectedFormOption ===  formOptions.SPETIAL">
+      <!-- Application -->
+      <div class="form-group">
+        <select class="form-control custom-form-select" placeholder="Aplicación de interés">
+          <option value="null">Aplicación de interés</option>
+        </select>
+      </div>
+      <!-- Company Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+      </div>
+      <!-- Contact Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+      </div>
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Friendly Enviroment -->
+      <div class="form-group">
+        <label class="custom-label">¿Te interesa que tu producto sea más amigable con el medio ambiente?</label>
+      </div>
+      <!-- Yes -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Si">
+      </div>
+      <!-- No -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="No">
+      </div>
+      <!-- Action -->
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn send-form-button">Enviar</button>
+      </div>
+    </form>
+    <!-- LINE FORM -->
+    <form *ngIf="selectedFormOption ===  formOptions.LINE">
+      <!-- Company Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+      </div>
+      <!-- Contact Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+      </div>
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Friendly Enviroment -->
+      <div class="form-group">
+        <label class="custom-label">¿Te interesa que tu producto sea más amigable con el medio ambiente?</label>
+      </div>
+      <!-- Yes -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Si">
+      </div>
+      <!-- No -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="No">
+      </div>
+      <!-- Action -->
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn send-form-button">Enviar</button>
+      </div>
+    </form>
   </div>
 </section>
