@@ -5,3 +5,10 @@
   src: local("Roboto-Bold"),
     url("~/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
 }
+@font-face {
+  font-family: "Roboto-Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Roboto-Regular"),
+    url("~/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}

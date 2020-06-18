@@ -1,0 +1,29 @@
+<section class="ps-r mt-5">
+  <div class="category-wrapper" id="accordion">
+    <div *ngFor="let category of productCategories; let i = index">
+      <div [id]="'cat-'+category.id">
+        <h5 class="d-flex align-items-center">
+          <button class="btn btn-link btn-category"
+                  data-toggle="collapse"
+                  [attr.data-target]="'#collapse-'+category.id"
+                  aria-expanded="true"
+                  [attr.aria-controls]="'collapse-'+category.id"
+                  [innerHTML]="category.name"
+                  (click)="selectedCategory(category)">
+            <!-- {{category.name}} -->
+          </button>
+          <span class="btn-category-icon">
+            <i [ngClass]="categorySelectedItem === category ? 'fas fa-angle-down' : 'fas fa-angle-right'" ></i>
+          </span>
+        </h5>
+      </div>
+      <div [id]="'collapse-'+category.id" class="collapse" [class.show]="i === 0" [attr.aria-labelledby]="'cat-'+category.id" data-parent="#accordion">
+        <ul class="category-menu">
+          <li *ngFor="let subCategory of category.subcategory; let j = index">
+            <a class="subcategory-link" [class.subcategory-link-active]="j === 4">{{subCategory.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

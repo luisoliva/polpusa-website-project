@@ -1,0 +1,10 @@
+.products-banner {
+  height: 716px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .products-banner {
+    height: 400px;
+    object-fit: cover;
+  }
+}

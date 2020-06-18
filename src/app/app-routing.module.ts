@@ -6,9 +6,11 @@ import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { SustainabilityComponent } from './pages/sustainability/sustainability.component';
 import { QuoteComponent } from './pages/quote/quote.component';
+import { ProductsComponent } from './pages/products/products.component';
 
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
+  {path: 'productos', component: ProductsComponent},
   {path: 'nosotros', component: AboutComponent},
   {path: 'contacto', component: ContactComponent},
   {path: 'sustentabilidad', component: SustainabilityComponent},
