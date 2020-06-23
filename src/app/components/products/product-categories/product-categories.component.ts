@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ProductCategory } from 'src/app/core/interfaces/products';
+import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 
 @Component({
   selector: 'app-product-categories',
@@ -7,6 +8,8 @@ import { ProductCategory } from 'src/app/core/interfaces/products';
   styleUrls: ['./product-categories.component.css']
 })
 export class ProductCategoriesComponent implements OnInit {
+  @Output() setCategorySelectedItem:EventEmitter<ProductCategory> = new EventEmitter<ProductCategory>()
+
   active: string = 'fas fa-angle-down';
   normal: string = 'fas fa-angle-right';
   categorySelectedItem: ProductCategory = {} as ProductCategory;
@@ -14,6 +17,7 @@ export class ProductCategoriesComponent implements OnInit {
     {
       id: 1,
       name: 'Películas de Línea',
+      type: ECategoryType.FILTER,
       subcategory: [
         {
           id: 1,
@@ -44,6 +48,7 @@ export class ProductCategoriesComponent implements OnInit {
     {
       id: 2,
       name: 'Productos de Línea',
+      type: ECategoryType.SEARCH,
       subcategory: [
         {
           id: 1,
@@ -70,6 +75,7 @@ export class ProductCategoriesComponent implements OnInit {
     {
       id: 3,
       name: 'Productos de Especialidad',
+      type: ECategoryType.SEARCH,
       subcategory: [
         {
           id: 1,
@@ -101,7 +107,10 @@ export class ProductCategoriesComponent implements OnInit {
 
       return x;
     });
-    this.categorySelectedItem = this.productCategories[0];
+    this.categorySelectedItem = this.productCategories[0]; // Set default element
+    setTimeout(() => {
+      this.setCategorySelectedItem.emit(this.productCategories[0]); // Set default element filter o search component
+    }, 100);
   }
 
   splitWord(word: string) {
@@ -113,8 +122,10 @@ export class ProductCategoriesComponent implements OnInit {
   selectedCategory(category: ProductCategory) {
     if (this.categorySelectedItem !== category) {
       this.categorySelectedItem = category;
+      this.setCategorySelectedItem.emit(category);
     } else {
       this.categorySelectedItem = {} as ProductCategory;
+      // this.setCategorySelectedItem.emit(null);
     }
   }
 

@@ -1,0 +1,47 @@
+.filter-wrapper {
+  margin-top: 4rem;
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.filter-albel {
+  color: #888888;
+  font-family: 'Roboto-Regular';
+  font-size: 14px;
+  line-height: 17px;
+}
+.filter-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('/assets/images/arrow-down.png');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  border: 1px solid #82CFF4;
+  border-radius: 35px;
+  width: 295px;
+  color: #888888;
+  font-family: 'Roboto-Regular';
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 2rem;
+  padding: 0 1.5rem;
+}
+.filter-input:focus {
+  box-shadow: none;
+}
+@media only screen and (max-width: 990px) {
+  form {
+    justify-content: center;
+  }
+  .filter-albel {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .filter-input {
+    margin-left: 0;
+  }
+}

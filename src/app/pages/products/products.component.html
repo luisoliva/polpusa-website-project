@@ -7,10 +7,13 @@
 <!-- Products -->
 <div class="container-fluid">
   <!-- Serach Bar -->
-  <app-product-search-bar></app-product-search-bar>
+  <app-product-search-bar *ngIf="selectedCategoryItem?.type === eCategory.SEARCH"></app-product-search-bar>
+
+  <!-- Filter Bar -->
+  <app-product-filter *ngIf="selectedCategoryItem?.type === eCategory.FILTER"></app-product-filter>
 
   <!-- Product Categories -->
-  <app-product-categories></app-product-categories>
+  <app-product-categories (setCategorySelectedItem)="setCategorySelectedItem($event)"></app-product-categories>
 
   <!-- Product Items -->
   <app-product-items></app-product-items>

@@ -1,6 +1,9 @@
+import { ECategoryType } from '../enums/ECategoryType';
+
 export interface ProductCategory {
   id?: number;
   name?: string;
+  type?: ECategoryType;
   subcategory?: ProductCategory[];
 }
 
