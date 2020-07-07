@@ -6,15 +6,16 @@
 
 <!-- Products -->
 <div class="container-fluid">
-  <!-- Serach Bar -->
-  <app-product-search-bar *ngIf="selectedCategoryItem?.type === eCategory.SEARCH"></app-product-search-bar>
+  <!-- Search Bar -->
+  <!-- <app-product-search-bar *ngIf="selectedCategoryItem?.type === eCategory.SEARCH"></app-product-search-bar> -->
 
   <!-- Filter Bar -->
-  <app-product-filter *ngIf="selectedCategoryItem?.type === eCategory.FILTER"></app-product-filter>
+  <!-- <app-product-filter *ngIf="selectedCategoryItem?.type === eCategory.FILTER"></app-product-filter> -->
 
   <!-- Product Categories -->
   <app-product-categories (setCategorySelectedItem)="setCategorySelectedItem($event)"></app-product-categories>
 
   <!-- Product Items -->
-  <app-product-items></app-product-items>
+  <app-product-items [selectedCategoryItem]="selectedCategoryItem"></app-product-items>
+  <!-- <router-outlet></router-outlet> -->
 </div>

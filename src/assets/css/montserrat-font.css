@@ -13,6 +13,13 @@
     url("~/assets/fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
 }
 @font-face {
+  font-family: "Montserrat-Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Montserrat-Medium"),
+    url("~/assets/fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+}
+@font-face {
   font-family: "Montserrat-Regular";
   font-style: normal;
   font-weight: normal;

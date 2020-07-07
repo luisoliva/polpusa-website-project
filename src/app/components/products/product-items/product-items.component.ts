@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductItem } from 'src/app/core/interfaces/products';
+import { Component, OnInit, Input } from '@angular/core';
+import { ProductItem, ProductCategory } from 'src/app/core/interfaces/products';
+import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 
 @Component({
   selector: 'app-product-items',
@@ -7,6 +8,9 @@ import { ProductItem } from 'src/app/core/interfaces/products';
   styleUrls: ['./product-items.component.css']
 })
 export class ProductItemsComponent implements OnInit {
+  @Input() selectedCategoryItem: ProductCategory = {} as ProductCategory;
+  eCategory = ECategoryType;
+  showProductDetail: boolean = false;
   products: ProductItem[] = [
     {
       id: 1,
@@ -43,6 +47,15 @@ export class ProductItemsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  goToProductDetail(product: ProductItem) {
+    this.showProductDetail = true;
+    console.log('detail: ', product);
+  }
+
+  hideProductDetail() {
+    this.showProductDetail = false;
   }
 
 }

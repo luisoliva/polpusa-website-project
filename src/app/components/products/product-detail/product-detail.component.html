@@ -1,0 +1,122 @@
+<section class="product-detail-wrapper mt-5">
+  <div class="row product-detail-header">
+    <div class="col-md-4">
+      <span class="product-detail-header-content">Bobina Azul</span>
+    </div>
+    <div class="col-md-8">
+      <span class="product-detail-header-content">Descripción</span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 right-line">
+      <img class="img-fluid product-detail-image" src="/assets/images/productos/detail/movie-line.png" alt="movie-line">
+      <span class="product-detail-image-text">Pelicula eslástica baja desidad natural</span>
+    </div>
+    <div class="col-md-8">
+      <h3 class="product-detail-title">Bobina Stetch</h3>
+      <div>
+        <p class="product-detail-description">
+          Una película ipsum dolor sit amet consectetur, adipisicing elit. Officiis voluptatum odio accusantium provident fugiat
+          minima eveniet tempore suscipit repellat rem. Fugit alias repellendus aliquid, iure eum laboriosam aut atque. Fugit.
+        </p>
+        <p class="product-detail-description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis voluptatum odio accusantium provident fugiat
+          minima eveniet tempore suscipit repellat rem. Fugit alias repellendus aliquid, iure eum laboriosam aut atque. Fugit.
+        </p>
+        <p class="product-detail-description">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis voluptatum odio accusantium provident fugiat
+          minima eveniet tempore suscipit repellat rem. Fugit alias repellendus aliquid, iure eum laboriosam aut atque. Fugit.
+        </p>
+      </div>
+
+      <!-- Specifications Table -->
+      <app-specification-table></app-specification-table>
+
+      <app-features-table [tableTitle]="'Propiedades físicas'"></app-features-table>
+
+      <app-features-table [tableTitle]="'Ventajas'"></app-features-table>
+    </div>
+  </div>
+  <!-- Line Down -->
+  <div class="down-line mt-5"></div>
+  <!-- Images Carousel -->
+  <app-product-carousel></app-product-carousel>
+  <!-- Line Down -->
+  <div class="down-line mt-5"></div>
+  <h3 class="download-title">Descargar</h3>
+  <div class="down-wrapper">
+    <a class="btn-download">
+      <img src="/assets/images/icons/download.png" alt="">
+      <span>Ficha Técnica</span>
+    </a>
+    <a class="btn-download">
+      <img src="/assets/images/icons/download.png" alt="">
+      <span>Catálogo Productos</span>
+    </a>
+    <a class="btn-download">
+      <!-- <img src="/assets/images/icons/download.png" alt=""> -->
+      <span>Cotizar producto</span>
+    </a>
+  </div>
+
+  <div class="form-wrapper">
+    <h3 class="form-title">¿Te interesa este producto?</h3>
+    <span class="form-subtitle">Te contactatmos en breve</span>
+    <!-- MOVIE FORM -->
+    <form>
+      <!-- Application -->
+      <div class="form-group">
+        <select class="form-control custom-form-select" placeholder="Aplicación de interés">
+          <option value="null">Aplicación de interés</option>
+        </select>
+      </div>
+      <!-- Quantity (kg) -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Cantidad (kilos)">
+      </div>
+      <!-- Width -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Ancho">
+      </div>
+      <!-- Size -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Calibre">
+      </div>
+      <!-- Company Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+      </div>
+      <!-- Contact Name -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+      </div>
+      <!-- Phone -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+      </div>
+      <!-- Email -->
+      <div class="form-group">
+        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+      </div>
+      <!-- Friendly Enviroment -->
+      <div class="form-group">
+        <label class="custom-label">¿Te interesa que tu producto sea más amigable con el medio ambiente?</label>
+        <!-- Yes -->
+        <div>
+          <input class="btn-enviroment" id="yes" type="radio" value="Si" name="gender">
+          <label for="yes">Si</label>
+        </div>
+        <!-- No -->
+        <div class="mt-3">
+          <input class="btn-enviroment" id="no" type="radio" value="No" name="gender">
+          <label for="no">No</label>
+        </div>
+      </div>
+      <!-- Action -->
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn send-form-button">Enviar</button>
+      </div>
+    </form>
+  </div>
+</section>

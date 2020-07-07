@@ -1,0 +1,43 @@
+.carousel-title {
+  color: #1a255d;
+  font-family: "Montserrat-Bold";
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 50px;
+  margin: 1rem 0;
+}
+#container {
+  width: 100%;
+  margin: 1em auto;
+  padding: 0;
+  opacity: 0.6;
+}
+.ng2-carouselamos-wrapper {
+  width: 80% !important;
+}
+.items {
+  max-width: 166px;
+  margin-right: 10px;
+}
+.items img {
+  display: block;
+  width: 166px;
+  height: 180px;
+  border: 2px solid #009EE2;
+  border-radius: 15px;
+}
+.items img:hover {
+  cursor: pointer;
+}
+#left, #right {
+  margin: 30px;
+  color: #009EE2;
+}
+.controls button:focus {
+  outline: none !important;
+}
+@media only screen and (max-width: 990px) {
+  .ng2-carouselamos-wrapper {
+    width: 100% !important;
+  }
+}

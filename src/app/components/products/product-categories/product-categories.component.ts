@@ -17,7 +17,7 @@ export class ProductCategoriesComponent implements OnInit {
     {
       id: 1,
       name: 'Películas de Línea',
-      type: ECategoryType.FILTER,
+      type: ECategoryType.SEARCH,
       subcategory: [
         {
           id: 1,
@@ -48,7 +48,7 @@ export class ProductCategoriesComponent implements OnInit {
     {
       id: 2,
       name: 'Productos de Línea',
-      type: ECategoryType.SEARCH,
+      type: ECategoryType.FILTER,
       subcategory: [
         {
           id: 1,

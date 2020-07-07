@@ -12,3 +12,10 @@ export interface ProductItem {
   image?: string;
   name?: string;
 }
+
+export interface ProductDetail {
+  id?: number;
+  image?: string;
+  name?: string;
+  descriptions?: string[];
+}

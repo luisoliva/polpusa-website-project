@@ -1,0 +1,23 @@
+<div class="table-responsive">
+  <table class="table feature-table">
+    <thead class="feature-table-header">
+      <tr class="text-center">
+        <td colspan="2">{{tableTitle}}</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="feature-table-body">
+        <td>
+          <ul class="feature-list">
+            <li class="feature-item" *ngFor="let item of leftItems">{{item}}</li>
+          </ul>
+        </td>
+        <td>
+          <ul class="feature-list">
+            <li class="feature-item" *ngFor="let item of rightItems">{{item}}</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

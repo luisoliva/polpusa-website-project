@@ -7,10 +7,15 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SustainabilityComponent } from './pages/sustainability/sustainability.component';
 import { QuoteComponent } from './pages/quote/quote.component';
 import { ProductsComponent } from './pages/products/products.component';
+import { ProductItemsComponent } from './components/products/product-items/product-items.component';
+import { ProductDetailComponent } from './components/products/product-detail/product-detail.component';
 
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
-  {path: 'productos', component: ProductsComponent},
+  {path: 'productos', component: ProductsComponent/*,  children: [
+    { path: '', component: ProductItemsComponent },
+    { path: 'detalle/:id', component: ProductDetailComponent }
+  ] */},
   {path: 'nosotros', component: AboutComponent},
   {path: 'contacto', component: ContactComponent},
   {path: 'sustentabilidad', component: SustainabilityComponent},

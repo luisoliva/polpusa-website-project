@@ -6,11 +6,13 @@ import { ProductCategoriesModule } from 'src/app/components/products/product-cat
 import { ProductItemsModule } from 'src/app/components/products/product-items/product-items.module';
 import { ProductSearchBarModule } from 'src/app/components/products/product-search-bar/product-search-bar.module';
 import { ProductFilterModule } from 'src/app/components/products/product-filter/product-filter.module';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 @NgModule({
   declarations: [ProductsComponent],
   imports: [
     CommonModule,
+    AppRoutingModule,
     ProductBannerModule,
     ProductCategoriesModule,
     ProductItemsModule,

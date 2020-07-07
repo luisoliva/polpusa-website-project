@@ -1,0 +1,46 @@
+.specification-table {
+  margin-bottom: 3rem;
+}
+table td {
+  border: none;
+}
+.specification-table-header {
+  background-color: #2B45A3;
+  color: #FFFFFF;
+  font-family: 'Montserrat-Medium';
+  font-size: 23px;
+  line-height: 28px;
+  text-align: center;
+}
+.specification-table-title {
+  background-color: #1571C0;
+  color: #FFFFFF;
+  font-family: 'Montserrat-Medium';
+  font-size: 18px;
+  height: 67px;
+  line-height: 21.94px;
+  text-align: center;
+}
+.specification-table-body {
+  background-color: #D1ECFB;
+  color: #0A1450;
+  font-family: "Montserrat-Light";
+  font-size: 14px;
+  height: 53px;
+  line-height: 17.07px;
+  text-align: center;
+}
+.specification-table-title td,
+.specification-table-body td {
+  vertical-align: middle;
+}
+.specification-table-title td:nth-child(-n+3),
+.specification-table-body td:nth-child(-n+3) {
+  border-right: 2px solid #FFFFFF;
+}
+.specification-table-body td:first-child {
+  border-radius: 0 0 0 18px;
+}
+.specification-table-body td:last-child {
+  border-radius: 0 0 18px 0;
+}
