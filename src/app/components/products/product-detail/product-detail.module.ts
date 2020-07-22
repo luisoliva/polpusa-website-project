@@ -6,6 +6,7 @@ import { FeaturesTableComponent } from './features-table/features-table.componen
 import { ProductCarouselComponent } from './product-carousel/product-carousel.component';
 
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -14,10 +15,11 @@ import { Ng2CarouselamosModule } from 'ng2-carouselamos';
     FeaturesTableComponent,
     ProductCarouselComponent
   ],
-  imports: [
-    CommonModule,
-    Ng2CarouselamosModule
-  ],
+    imports: [
+        CommonModule,
+        Ng2CarouselamosModule,
+        FormsModule
+    ],
   exports: [
     ProductDetailComponent,
     Ng2CarouselamosModule

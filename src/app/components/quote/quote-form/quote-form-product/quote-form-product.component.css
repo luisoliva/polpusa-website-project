@@ -1,6 +1,9 @@
 .quote-form-product-wrapper {
   margin-top: 10rem;
 }
+.main-container-product{
+  cursor: pointer;
+}
 .quote-form-product-title {
   color: #1A255D;
   font-family: 'Montserrat-Bold';
@@ -8,7 +11,7 @@
   font-weight: 400;
   line-height: 50px;
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 3rem;
 }
 .quote-form-product-figure {
   background-color: #ECF3FF;
@@ -16,17 +19,33 @@
   height: 250px;
   width: 250px;
   padding: 30px;
+  transition: 0.2s all;
+  object-fit: scale-down;
 }
 .quote-form-product-figure img {
   display: block;
   height: 100%;
   margin: 0 auto;
-  object-fit: scale-down;
 }
-.quote-form-product-figure-active,
-.quote-form-product-figure:hover {
+.quote-form-product-figure-active{
   background-color: #009EE2;
+  transition: 0.2s all;
   cursor: pointer;
+}
+.select-all-button{
+  border-color: #29aae3;
+  border-radius: 21.5px;
+  height: 35px;
+  color: #29aae3;
+  font-family: "Lato-Bold";
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+}
+.select-all-button-container{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 .quote-form-prodcut-item {
   color: #009EE2;
@@ -37,8 +56,11 @@
   margin-top: 1.5rem;
   margin-bottom: 5rem;
 }
+.main-container-product:hover .quote-form-prodcut-item{
+  color: #1A255D;
+}
 .quote-form-prodcut-item-active,
-.quote-form-product-figure:hover + .quote-form-prodcut-item {
+.quote-form-product-figure:hover + .quote-form-prodcut-item{
   color: #1A255D;
 }
 @media only screen and (max-width: 990px) {

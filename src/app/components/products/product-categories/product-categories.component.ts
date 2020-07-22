@@ -9,7 +9,6 @@ import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 })
 export class ProductCategoriesComponent implements OnInit {
   @Output() setCategorySelectedItem:EventEmitter<ProductCategory> = new EventEmitter<ProductCategory>()
-
   active: string = 'fas fa-angle-down';
   normal: string = 'fas fa-angle-right';
   categorySelectedItem: ProductCategory = {} as ProductCategory;

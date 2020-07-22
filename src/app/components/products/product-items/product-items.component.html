@@ -14,11 +14,11 @@
     <!-- Product Item -->
     <div class="product-item">
       <!-- Header -->
-      <div class="product-header" [class.product-header-active]="i === 0">
+      <div class="product-header" [class.product-header-active]="i === null">
         <img class="img-fluid product-item-image" [src]="product.image" [alt]="product.name">
       </div>
       <!-- Footer -->
-      <div class="product-item-footer" [class.product-item-footer-active]="i === 0">
+      <div class="product-item-footer" [class.product-item-footer-active]="i === null">
         <span class="product-item-title">{{product.name}}</span>
         <!-- <a class="product-item-action" [routerLink]="['/productos/detalle', product.id]">
           Ver Más
@@ -28,7 +28,7 @@
         </a> -->
         <a class="product-item-action" (click)="goToProductDetail(product)">
           Ver Más
-          <span class="product-item-action-icon" [class.product-item-action-icon-active]="i === 0">
+          <span class="product-item-action-icon" [class.product-item-action-icon-active]="i === null">
             <i class="fas fa-chevron-right"></i>
           </span>
         </a>

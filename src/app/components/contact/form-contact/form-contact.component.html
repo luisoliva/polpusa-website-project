@@ -22,18 +22,22 @@
     <form *ngIf="selectedFormOption ===  formOptions.PROVIDER">
       <!-- Contact Name -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
       </div>
       <!-- Company Name -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
       </div>
       <!-- Phone -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
       </div>
       <!-- Email -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Correo">
       </div>
       <!-- Product -->
@@ -49,18 +53,22 @@
     <form *ngIf="selectedFormOption ===  formOptions.CLIENT">
       <!-- Contact Name -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
       </div>
       <!-- Company Name -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
       </div>
       <!-- Phone -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
       </div>
       <!-- Email -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Correo">
       </div>
       <!-- Product -->
@@ -76,14 +84,17 @@
     <form *ngIf="selectedFormOption ===  formOptions.WORK">
       <!-- Contact Name -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
       </div>
       <!-- Phone -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
       </div>
       <!-- Email -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <input type="text" class="form-control custom-form-input" placeholder="Correo">
       </div>
       <!-- Position -->
@@ -92,6 +103,7 @@
       </div>
       <!-- Upload CV -->
       <div class="form-group">
+        <div class="required-dot">*</div>
         <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i> Adjuntar su CV</button>
         <input #cvFile type="file" class="d-none">
       </div>

@@ -1,6 +1,14 @@
 .c-sky {
   color: #009EE2;
 }
+.justify-text{
+  text-align: justify!important;
+}
+.required-dot{
+  color: #ce1313;
+  line-height: 0px;
+  padding-bottom: 4px;
+}
 .ps-r {
   position: relative;
 }

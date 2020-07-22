@@ -19,9 +19,28 @@ export class QuoteFormProductComponent implements OnInit {
     {id: 10, name: 'Injerto', image: '/assets/images/quote/products/bag.png'}
   ];
 
+  selectedProducts:Array<any> = new Array<any>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  selectProduct(product: any) {
+    if (this.isProductSelected(product)){
+      let index = this.selectedProducts.indexOf(product);
+      this.selectedProducts.splice(index, 1);
+    }else{
+      this.selectedProducts.push(product);
+    }
+  }
+
+  isProductSelected(product: any) {
+    return this.selectedProducts.indexOf(product) !== -1;
+  }
+
+  selectAllProducts() {
+    this.selectedProducts = [];
+    this.selectedProducts = this.selectedProducts.concat(this.quoteProducts)
+  }
 }

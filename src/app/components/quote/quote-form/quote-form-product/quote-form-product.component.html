@@ -1,12 +1,15 @@
 <section class="container quote-form-product-wrapper">
-  <h1 class="quote-form-product-title">Selecciona los productos de tu interes</h1>
+  <h1 class="quote-form-product-title">Selecciona los productos de tu interés</h1>
+  <div class="select-all-button-container">
+    <button (click)="selectAllProducts()" class="btn select-all-button">Seleccionar todos</button>
+  </div>
 
   <div class="row d-flex justify-content-center">
-    <div class="col-xl-3 col-lg-4 col-md-6 d-flex flex-column justify-content-center align-items-center" *ngFor="let product of quoteProducts">
-      <div class="quote-form-product-figure" [class.quote-form-product-figure-active]="product.id === 1">
+    <div class="col-xl-3 col-lg-4 col-md-6 d-flex flex-column justify-content-center align-items-center main-container-product" style="cursor: pointer;" *ngFor="let product of quoteProducts" (click)="selectProduct(product)">
+      <div class="quote-form-product-figure" [class.quote-form-product-figure-active]="isProductSelected(product)">
         <img class="img-fluid" [src]="product.image" [alt]="product.name">
       </div>
-      <span class="quote-form-prodcut-item" [class.quote-form-prodcut-item-active]="product.id === 1">{{product.name}}</span>
+      <span class="quote-form-prodcut-item" [class.quote-form-prodcut-item-active]="isProductSelected(product)">{{product.name}}</span>
     </div>
   </div>
 </section>

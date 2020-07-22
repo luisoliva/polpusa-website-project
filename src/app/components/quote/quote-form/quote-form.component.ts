@@ -11,7 +11,8 @@ export class QuoteFormComponent implements OnInit {
   providerForm: FormGroup;
   clientForm: FormGroup;
   workForm: FormGroup;
-  selectedFormOption = EQuoteForm.SPETIAL;
+  //selectedFormOption = EQuoteForm.SPETIAL;
+  selectedFormOption = null;
   formOptions = EQuoteForm;
 
   constructor(
