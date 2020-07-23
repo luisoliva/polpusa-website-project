@@ -6,13 +6,10 @@
         <app-title-bar [background]="'#00AAFB'" [height]="'8px'" [width]="titleResize" [float]="'left'"></app-title-bar>
 
         <div class="gallery">
-          <img class="img-fluid gallery-image" src="/assets/images/sustainability/our-actions/playa.jpeg" alt="playa">
-          <img class="img-fluid gallery-image" src="/assets/images/sustainability/our-actions/paneles.png" alt="paneles">
+          <img *ngIf="imageA" class="img-fluid gallery-image" src="{{imageA.file_Upload}}" alt="{{imageA.title}}">
+          <img *ngIf="imageB" class="img-fluid gallery-image" src="{{imageB.file_Upload}}" alt="{{imageB.title}}">
         </div>
-
-        <p class="our-actions-left-content justify-text">
-          La capacidad instalada es de 1 MWh (megawatt). Un hogar promedio en Yucatán consume 400kW al bimestre;
-          lo cual, la producción de energía eléctrica equivale a mantener 600 hogares con pura energía limpia</p>
+        <app-paragraph-with-breaks class="our-actions-left-content" marginTop="15px" *ngIf="sustainabilityData" [text]="sustainabilityData.our_actions.description" textColor="#044C0E"></app-paragraph-with-breaks>
       </div>
     </div>
     <div class="our-actions-right">

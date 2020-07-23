@@ -11,10 +11,20 @@
 <section class="mt-5">
   <div class="container-fluid">
     <h3 class="title mb-5">En <strong class="c-sky">Polpusa</strong> estamos orgullosos de trabajar con marcas prestigiosas como:</h3>
-    <div class="row mt-5">
-      <div *ngFor="let alliance of alliances" class="col-lg-3 col-md-6 mt-5 d-flex align-items-center">
-        <!-- <img class="img-fluid ml-auto mr-auto mb-5 d-block" [ngStyle]="{height: alliance.size}" [src]="alliance.url" [alt]="alliance.name"> -->
-        <img class="img-fluid ml-auto mr-auto d-block" [ngStyle]="{height: alliance.size}" [src]="alliance.url" [alt]="alliance.name">
+    <div class="row mt-5 justify-content-center">
+      <div class="col-11">
+        <div ng2-carouselamos [items]="alliances" [$item]="itemTemplate" [$next]="next" [$prev]="prev" [width]="width"></div>
+        <ng-template #itemTemplate let-item let-i="index">
+          <div style="display: flex">
+            <img class="carousel-item-polpusa" [ngStyle]="{width:itemCarouselWidth}" [src]="item.file_Upload" [alt]="item.title">
+          </div>
+        </ng-template>
+        <ng-template #prev>
+          <i class="fas fa-chevron-left" id="left"></i>
+        </ng-template>
+        <ng-template #next>
+          <i class="fas fa-chevron-right" id="right"></i>
+        </ng-template>
       </div>
     </div>
   </div>
@@ -36,6 +46,30 @@
 
 <!-- Strategies -->
 <app-strategy></app-strategy>
+
+<!--Our brands-->
+<section class="mt-5">
+  <h4 class="c-sky brand-title text-center">Nuestras marcas</h4>
+  <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
+  <div class="container-fluid">
+    <div class="row mt-5 justify-content-center">
+      <div class="col-11">
+        <div ng2-carouselamos [items]="polpusaBrands" [$item]="itemTemplate2" [$next]="next" [$prev]="prev" [width]="width"></div>
+        <ng-template #itemTemplate2 let-item2 let-i="index">
+          <div style="display: flex">
+            <img class="carousel-item-polpusa" [ngStyle]="{width:itemCarouselWidth}" [src]="item2.url" [alt]="item2.name">
+          </div>
+        </ng-template>
+        <ng-template #prev>
+          <i class="fas fa-chevron-left"></i>
+        </ng-template>
+        <ng-template #next>
+          <i class="fas fa-chevron-right"></i>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Paralax -->
 <section class="mt-5 mb-5 paralax-wrapper">

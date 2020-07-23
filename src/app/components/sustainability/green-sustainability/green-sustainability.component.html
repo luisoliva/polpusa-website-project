@@ -5,26 +5,21 @@
     <img class="img-fluid green-box-title" src="/assets/images/sustainability/green/title.png" alt="title">
     <app-title-bar [background]="'#ffffff'" [height]="'6px'" [width]="titleResize" [float]="'left'"></app-title-bar>
     <br>
+    <app-paragraph-with-breaks class="polpusa_in" textColor="white" *ngIf="sustainabilityData" [text]="sustainabilityData.polpusa_verde_brief.description"></app-paragraph-with-breaks>
 
-    <p class="polpusa_in justify-text">En Polpusa contamos con opciones ecológicas para la fabricación de sus empaques como:</p>
-
-    <ul class="green-box-menu">
-      <li class="green-box-menu-item">Materiales biodegradables</li>
-      <li class="green-box-menu-item">Material Reciclado</li>
-      <li class="green-box-menu-item">Compuestos Minerales</li>
+    <ul *ngIf="sustainabilityData" class="green-box-menu">
+      <li *ngFor="let item of getOptions()" class="green-box-menu-item">{{item}}</li>
     </ul>
 
-    <p class="purpose">La finalidad es lograr reducir el uso de materia prima virgen y disminuir su tiempo de permanencia en la tierra,
-      logrando un impacto positivo en el medio ambiente.</p>
-    <p class="purpose">Comprometidos con el planeta queremos que nuestros consumidores conozcan
-      la importancia del manejo de los residuos, es por eso que buscamos informar y concientizar a través de la información
-      de nuestros empaques los beneficios de separa la basura.</p>
+    <div style="max-width: 771px" class="mt-5">
+      <app-paragraph-with-breaks class="purpose" textColor="white" *ngIf="sustainabilityData" [text]="sustainabilityData.polpusa_verde_long.description"></app-paragraph-with-breaks>
+    </div>
 
     <img class="img-fluid phrase" src="/assets/images/sustainability/green/phrase.png" alt="phrase">
   </div>
 
   <div class="green-div"></div>
   <img  class="img-fluid green-bold-triangle" src="/assets/images/sustainability/green/green-bold-triangle.png" alt="green-bold-triangle">
-  <img class="img-fluid bag" src="/assets/images/sustainability/green/ecologic-bag.png" alt="ecologic-bag">
-  <img class="img-fluid tree" src="/assets/images/sustainability/green/ecologic.png" alt="ecologic">
+  <img *ngIf="imageA" class="img-fluid bag" src="{{imageA.file_Upload}}" alt="{{imageA.title}}">
+  <img *ngIf="imageB" class="img-fluid tree" src="{{imageB.file_Upload}}" alt="{{imageB.title}}">
 </section>

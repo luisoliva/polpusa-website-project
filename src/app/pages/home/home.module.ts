@@ -9,19 +9,21 @@ import { OurPresenceModule } from 'src/app/components/home/our-presence/our-pres
 import { HomeContactModule } from 'src/app/components/home/home-contact/home-contact.module';
 import { CertificationsModule } from 'src/app/components/home/certifications/certifications.module';
 import { StrategyModule } from 'src/app/components/home/strategy/strategy.module';
+import {Ng2CarouselamosModule} from "ng2-carouselamos";
 
 @NgModule({
   declarations: [HomeComponent],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-    BannerModule,
-    ProductCardModule,
-    OurPresenceModule,
-    HomeContactModule,
-    StrategyModule,
-    CertificationsModule,
-    TitleBarModule
-  ]
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        BannerModule,
+        ProductCardModule,
+        OurPresenceModule,
+        HomeContactModule,
+        StrategyModule,
+        CertificationsModule,
+        TitleBarModule,
+        Ng2CarouselamosModule,
+    ]
 })
 export class HomeModule { }

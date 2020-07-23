@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Slide} from "../../../core/models/slide.model";
+import {HomepageApiService} from "../../../pages/home/services/homepage-api.service";
 
 @Component({
   selector: 'app-certifications',
@@ -6,16 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./certifications.component.css']
 })
 export class CertificationsComponent implements OnInit {
-  certifications: any[] = [
-    {name: 'logo-premio-calidad', url: '/assets/images/home/certifications/logo-premio-calidad.png'},
-    {name: 'nsf', url: '/assets/images/home/certifications/nsf.png'},
-    {name: 'empresa_dies', url: '/assets/images/home/certifications/empresa_diez.png'},
-    {name: 'fda', url: '/assets/images/home/certifications/fda.png'},
-  ]
+  certifications: Slide[] = []
 
-  constructor() { }
+  constructor(private homepageApiService:HomepageApiService) { }
 
   ngOnInit(): void {
+    this.homepageApiService.getCertifications().toPromise()
+        .then(res=>this.certifications = res.data)
   }
 
 }

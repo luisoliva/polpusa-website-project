@@ -1,4 +1,4 @@
-<section class="ps-r">
-  <img class="img-fluid sustainability-banner" src="/assets/images/sustainability/banner/banner.jpg" alt="banner">
+<section *ngIf="banner" class="ps-r">
+  <img class="img-fluid sustainability-banner" src="{{banner.file_Upload}}" alt="banner">
   <a class="btn btn-quote" [routerLink]="['/cotizar']">Cotiza nuestros productos</a>
 </section>

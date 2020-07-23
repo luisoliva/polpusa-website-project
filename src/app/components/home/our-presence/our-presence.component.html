@@ -3,8 +3,8 @@
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
   <div class="container-fluid presence-wrapper mt-5">
     <div class="precense-item" *ngFor="let country of countries">
-      <img class="presence-img" [src]="country.url" [alt]="country.name">
-      <span class="text-center d-block mt-4 precense-item-title">{{country.name}}</span>
+      <img class="presence-img" [src]="country.file_Upload" [alt]="country.title">
+      <span class="text-center d-block mt-4 precense-item-title">{{country.title}}</span>
     </div>
   </div>
 </section>

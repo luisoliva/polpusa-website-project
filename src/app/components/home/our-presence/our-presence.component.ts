@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {HomepageApiService} from "../../../pages/home/services/homepage-api.service";
+import {Slide} from "../../../core/models/slide.model";
 
 @Component({
   selector: 'app-our-presence',
@@ -6,19 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./our-presence.component.css']
 })
 export class OurPresenceComponent implements OnInit {
-  countries: any[] = [
-    {name: 'EUA', url: '/assets/images/home/our-presence/usa-today.png'},
-    {name: 'México', url: '/assets/images/home/our-presence/mexico.png'},
-    {name: 'Belice', url: '/assets/images/home/our-presence/belize.png'},
-    {name: 'Cuba', url: '/assets/images/home/our-presence/cuba.png'},
-    {name: 'Jamaica', url: '/assets/images/home/our-presence/jamaica.png'},
-    {name: 'Colombia', url: '/assets/images/home/our-presence/colombia.png'},
-    {name: 'Alemania', url: '/assets/images/home/our-presence/alemania.png'},
-  ];
+  countries: Slide[] = [];
 
-  constructor() { }
+  constructor(private homepageApiService:HomepageApiService) { }
 
   ngOnInit(): void {
+    this.homepageApiService.getCountries().toPromise()
+        .then(res=>this.countries = res.data)
   }
 
 }
