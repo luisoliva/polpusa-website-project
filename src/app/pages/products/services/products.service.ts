@@ -7,6 +7,7 @@ import {Upload} from "../../../core/models/upload.model";
 import {ProductEn} from "../../../core/models/product-en.model";
 import {Utils} from "../../../core/utils";
 import {Spec} from "../../../core/models/spec.model";
+import {ProductCategory} from "../../../core/interfaces/products";
 
 @Injectable({
   providedIn: 'root'
@@ -329,4 +330,13 @@ export class ProductsService {
   deleteUpload(id:number):Observable<any>{
     return this.api.delete('v1/api/upload-file/'+id+'/');
   }
+
+  getAllProducts(products:ProductCategory[]):Observable<any>{
+    let req = []
+    products.forEach((item) => {
+      req.push(this.getProductsByCategory(item.id))
+    })
+    return forkJoin(req)
+  }
+
 }

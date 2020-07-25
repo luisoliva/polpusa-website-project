@@ -18,7 +18,7 @@ import {FormsModule} from "@angular/forms";
     imports: [
         CommonModule,
         Ng2CarouselamosModule,
-        FormsModule
+        FormsModule,
     ],
   exports: [
     ProductDetailComponent,

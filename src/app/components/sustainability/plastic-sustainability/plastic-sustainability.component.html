@@ -7,7 +7,8 @@
       <h2 class="plastic-title">Sustentabilidad en plástico</h2>
     </div>
     <div class="col-lg-7 d-flex flex-column justify-content-center align-items-center">
-      <app-paragraph-with-breaks style="width: 90%;font-size: 19px" *ngIf="sustainabilityData" textColor="white" [text]="sustainabilityData.plastic_sustainability.description"></app-paragraph-with-breaks>
+      <br><br>
+      <p *ngIf="sustainabilityData" class="plastic-content justify-text text-with-br">{{sustainabilityData.plastic_sustainability.description}}</p>
     </div>
     <div class="col-lg-5 d-flex justify-content-start align-items-center mt-5 mb-5">
       <img *ngIf="image" class="img-fluid hand-image" src="{{image.file_Upload}}" alt="{{image.title}}">

@@ -20,7 +20,7 @@
       <div [id]="'collapse-'+category.id" class="collapse" [class.show]="i === 0" [attr.aria-labelledby]="'cat-'+category.id" data-parent="#accordion">
         <ul class="category-menu">
           <li *ngFor="let subCategory of category.subcategory; let j = index">
-            <a class="subcategory-link" [class.subcategory-link-active]="j === 4">{{subCategory.name}}</a>
+            <a (click)="productSelected.emit(subCategory)" class="subcategory-link" [class.subcategory-link-active]="j === 4">{{subCategory.name}}</a>
           </li>
         </ul>
       </div>

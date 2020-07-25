@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {Component, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import { IAlbum } from 'src/app/core/interfaces/album';
+import {Upload} from "../../../../core/models/upload.model";
 
 @Component({
   selector: 'app-product-carousel',
@@ -8,14 +9,8 @@ import { IAlbum } from 'src/app/core/interfaces/album';
   encapsulation: ViewEncapsulation.None
 })
 export class ProductCarouselComponent implements OnInit {
-  album: IAlbum[] = [
-    { src: '/assets/images/productos/detail/item.png', thumb: '/assets/images/productos/detail/item.png' },
-    { src: '/assets/images/productos/detail/item.png', thumb: '/assets/images/productos/detail/item.png' },
-    { src: '/assets/images/productos/detail/item.png', thumb: '/assets/images/productos/detail/item.png' },
-    { src: '/assets/images/productos/detail/item.png', thumb: '/assets/images/productos/detail/item.png' },
-    { src: '/assets/images/productos/detail/item.png', thumb: '/assets/images/productos/detail/item.png' },
-    { src: '/assets/images/productos/detail/item.png', thumb: '/assets/images/productos/detail/item.png' },
-  ];
+  @Input() title:string;
+  @Input() album:Upload[];
 
   constructor() { }
 

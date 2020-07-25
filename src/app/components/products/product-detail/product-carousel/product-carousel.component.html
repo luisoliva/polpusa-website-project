@@ -1,5 +1,5 @@
 <section>
-  <h3 class="carousel-title">Usos sugerido</h3>
+  <h3 class="carousel-title">{{title}}</h3>
 
   <div id="container" *ngIf="album.length > 0">
     <div ng2-carouselamos class="slides-wrapper"
@@ -20,7 +20,7 @@
 
     <ng-template #item let-item let-i="index">
       <div class="items">
-        <img [src]="item.src">
+        <img [src]="item.u_file">
       </div>
     </ng-template>
   </div>

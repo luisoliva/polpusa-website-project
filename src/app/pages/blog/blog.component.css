@@ -56,6 +56,12 @@
   font-weight: 400;
   line-height: 19px;
   text-align: left;
+  transition: transform .2s;
+}
+.btn-read-more:hover{
+  cursor: pointer;
+  color: white!important;
+  transform: scale(1.1);
 }
 .btn-load-more {
   background-color: #FFFFFF;

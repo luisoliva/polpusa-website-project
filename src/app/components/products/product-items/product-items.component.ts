@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input, ViewChild} from '@angular/core';
 import { ProductItem, ProductCategory } from 'src/app/core/interfaces/products';
 import { ECategoryType } from 'src/app/core/enums/ECategoryType';
+import {Product} from "../../../core/models/product.model";
+import {ProductDetailComponent} from "../product-detail/product-detail.component";
 
 @Component({
   selector: 'app-product-items',
@@ -8,54 +10,33 @@ import { ECategoryType } from 'src/app/core/enums/ECategoryType';
   styleUrls: ['./product-items.component.css']
 })
 export class ProductItemsComponent implements OnInit {
-  @Input() selectedCategoryItem: ProductCategory = {} as ProductCategory;
+  @Input() selectedCategoryItem: ProductCategory;
   eCategory = ECategoryType;
   showProductDetail: boolean = false;
-  products: ProductItem[] = [
-    {
-      id: 1,
-      name: 'Bobina Stretch',
-      image: '/assets/images/productos/products/bobina_azul.png',
-    },
-    {
-      id: 2,
-      name: 'Bobina Polipro',
-      image: '/assets/images/productos/products/bobina_blanca.png',
-    },
-    {
-      id: 3,
-      name: 'Bobina Stretch',
-      image: '/assets/images/productos/products/bobina_negra.png',
-    },
-    {
-      id: 4,
-      name: 'Bobina Polipro',
-      image: '/assets/images/productos/products/bobina_polipro.png',
-    },
-    {
-      id: 5,
-      name: 'Bobina Stretch',
-      image: '/assets/images/productos/products/bobina_stretch.png',
-    },
-    {
-      id: 6,
-      name: 'Bobina Stretch',
-      image: '/assets/images/productos/products/bobina_termoencogible.png',
-    },
-  ];
+  productSelected:Product;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  goToProductDetail(product: ProductItem) {
+  goToProductDetail(product: Product) {
     this.showProductDetail = true;
-    console.log('detail: ', product);
+    this.productSelected  = product;
+    // if(this.productSelected){
+    //   let des = product.description;
+    //   this.productSelected = product;
+    //   this.productSelected.description = null;
+    //   setTimeout(()=>{
+    //     this.productSelected.description = des;
+    //     console.log('detail: ', product);
+    //   })
+    // }else{
+    //   this.productSelected = product;
+    // }
   }
 
   hideProductDetail() {
     this.showProductDetail = false;
   }
-
 }

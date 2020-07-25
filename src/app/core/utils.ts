@@ -6,4 +6,8 @@ export class Utils {
     public static cloneObject(obj:any){
         return JSON.parse(JSON.stringify(obj));
     }
+
+    public static openUrlInOtherTab(url:string){
+        window.open(url, "_blank");
+    }
 }

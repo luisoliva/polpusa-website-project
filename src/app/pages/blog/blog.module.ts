@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {CommonModule, DatePipe} from '@angular/common';
 import { BlogComponent } from './blog.component';
+import {TruncateTextPipe} from "../../core/truncate-text.pipe";
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
-  declarations: [BlogComponent],
-  imports: [
-    CommonModule
-  ]
+    declarations: [BlogComponent, TruncateTextPipe, BlogDetailComponent],
+    imports: [
+        CommonModule,
+        RouterModule,
+    ],
+    providers:[DatePipe]
 })
 export class BlogModule { }

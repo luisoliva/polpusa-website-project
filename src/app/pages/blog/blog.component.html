@@ -13,9 +13,9 @@
       </div>
       <div class="col-md-6 post-item ">
         <h3 class="post-title">{{post.title}}</h3>
-        <span class="post-date">{{post.date | date:'MMMM d, yyyy'}}</span>
-        <p class="post-content justify-text">{{post.content}}</p>
-        <a class="btn-read-more">Leer más</a>
+        <span class="post-date">{{post.date | date:'shortDate'}}</span>
+        <p class="post-content justify-text">{{post.body | truncateText: 325}}</p>
+        <a [routerLink]="['detail/',post.id]" class="btn-read-more">Leer más</a>
       </div>
     </div>
   </div>
@@ -23,5 +23,5 @@
 
 <!-- Load More -->
 <section class="container text-center">
-  <button class="btn btn-load-more">Cargar más</button>
+  <button *ngIf="!isLoading && pagination ? pagination.links.next : false" class="btn btn-load-more" (click)="loadMoreBlogs()">Cargar más</button>
 </section>

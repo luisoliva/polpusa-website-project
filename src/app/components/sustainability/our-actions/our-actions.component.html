@@ -9,7 +9,7 @@
           <img *ngIf="imageA" class="img-fluid gallery-image" src="{{imageA.file_Upload}}" alt="{{imageA.title}}">
           <img *ngIf="imageB" class="img-fluid gallery-image" src="{{imageB.file_Upload}}" alt="{{imageB.title}}">
         </div>
-        <app-paragraph-with-breaks class="our-actions-left-content" marginTop="15px" *ngIf="sustainabilityData" [text]="sustainabilityData.our_actions.description" textColor="#044C0E"></app-paragraph-with-breaks>
+        <p *ngIf="sustainabilityData" class="our-actions-left-content text-with-br justify-text">{{sustainabilityData.our_actions.description}}</p>
       </div>
     </div>
     <div class="our-actions-right">

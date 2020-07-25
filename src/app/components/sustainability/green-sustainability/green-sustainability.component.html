@@ -5,15 +5,13 @@
     <img class="img-fluid green-box-title" src="/assets/images/sustainability/green/title.png" alt="title">
     <app-title-bar [background]="'#ffffff'" [height]="'6px'" [width]="titleResize" [float]="'left'"></app-title-bar>
     <br>
-    <app-paragraph-with-breaks class="polpusa_in" textColor="white" *ngIf="sustainabilityData" [text]="sustainabilityData.polpusa_verde_brief.description"></app-paragraph-with-breaks>
+    <p *ngIf="sustainabilityData" class="polpusa_in justify-text text-with-br">{{sustainabilityData.polpusa_verde_brief.description}}</p>
 
     <ul *ngIf="sustainabilityData" class="green-box-menu">
       <li *ngFor="let item of getOptions()" class="green-box-menu-item">{{item}}</li>
     </ul>
 
-    <div style="max-width: 771px" class="mt-5">
-      <app-paragraph-with-breaks class="purpose" textColor="white" *ngIf="sustainabilityData" [text]="sustainabilityData.polpusa_verde_long.description"></app-paragraph-with-breaks>
-    </div>
+    <p *ngIf="sustainabilityData" class="purpose text-with-br justify-text">{{sustainabilityData.polpusa_verde_long.description}}</p>
 
     <img class="img-fluid phrase" src="/assets/images/sustainability/green/phrase.png" alt="phrase">
   </div>

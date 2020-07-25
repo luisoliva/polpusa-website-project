@@ -19,12 +19,14 @@ export class ParagraphWithBreaksComponent implements OnInit, AfterViewInit {
   @Input() textColor:string = '#888888';
   @Input() marginTop:string = '0px';
   @Input() maxWidth:string = '100%';
+  @Input() fontFamily:string = "Lato-Regular";
   @ViewChild('textArea') textAreaElement:ElementRef;
   height:string;
 
   constructor() { }
 
   ngOnInit(): void {
+    //this.text  = this.text.replace(/(?:\r\n|\r|\n)/g, '<br />');
   }
 
   @HostListener('window:resize', ['$event'])
@@ -32,7 +34,7 @@ export class ParagraphWithBreaksComponent implements OnInit, AfterViewInit {
     this.height = '30px';
     setTimeout(()=>{
       this.height = String(this.textAreaElement.nativeElement.scrollHeight) + 'px';
-    },500)
+    },250)
   }
 
   ngAfterViewInit(): void {

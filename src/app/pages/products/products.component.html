@@ -13,9 +13,9 @@
   <!-- <app-product-filter *ngIf="selectedCategoryItem?.type === eCategory.FILTER"></app-product-filter> -->
 
   <!-- Product Categories -->
-  <app-product-categories (setCategorySelectedItem)="setCategorySelectedItem($event)"></app-product-categories>
+  <app-product-categories (productSelected)="getProductSelected($event)" (setCategorySelectedItem)="setCategorySelectedItem($event)"></app-product-categories>
 
   <!-- Product Items -->
-  <app-product-items [selectedCategoryItem]="selectedCategoryItem"></app-product-items>
+  <app-product-items #productItems [selectedCategoryItem]="selectedCategoryItem"></app-product-items>
   <!-- <router-outlet></router-outlet> -->
 </div>

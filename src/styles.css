@@ -1,6 +1,9 @@
 .c-sky {
   color: #009EE2;
 }
+.text-with-br{
+  white-space: pre-line;
+}
 .justify-text{
   text-align: justify!important;
 }

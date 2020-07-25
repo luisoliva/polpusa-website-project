@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { ProductCategory } from 'src/app/core/interfaces/products';
 import { ECategoryType } from 'src/app/core/enums/ECategoryType';
+import {ProductDetailComponent} from "../../components/products/product-detail/product-detail.component";
+import {ProductItemsComponent} from "../../components/products/product-items/product-items.component";
 
 @Component({
   selector: 'app-products',
@@ -10,6 +12,7 @@ import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 export class ProductsComponent implements OnInit {
   eCategory = ECategoryType;
   selectedCategoryItem: ProductCategory = {} as ProductCategory;
+  @ViewChild('productItems') productItemsComponent:ProductItemsComponent
 
   constructor() { }
 
@@ -20,4 +23,7 @@ export class ProductsComponent implements OnInit {
     this.selectedCategoryItem = category;
   }
 
+  getProductSelected($event: any) {
+    this.productItemsComponent.goToProductDetail($event);
+  }
 }

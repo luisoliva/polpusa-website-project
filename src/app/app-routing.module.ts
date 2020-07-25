@@ -7,8 +7,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { SustainabilityComponent } from './pages/sustainability/sustainability.component';
 import { QuoteComponent } from './pages/quote/quote.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { ProductItemsComponent } from './components/products/product-items/product-items.component';
-import { ProductDetailComponent } from './components/products/product-detail/product-detail.component';
+import {BlogDetailComponent} from "./pages/blog/blog-detail/blog-detail.component";
 
 const routes: Routes = [
   {path: 'inicio', component: HomeComponent},
@@ -20,6 +19,7 @@ const routes: Routes = [
   {path: 'contacto', component: ContactComponent},
   {path: 'sustentabilidad', component: SustainabilityComponent},
   {path: 'blog', component: BlogComponent},
+  {path: 'blog/detail/:id', component:BlogDetailComponent},
   {path: 'cotizar', component: QuoteComponent},
   {path: '', redirectTo:'/inicio', pathMatch: 'full'},
   {path: '**', component: HomeComponent},

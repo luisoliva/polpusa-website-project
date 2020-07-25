@@ -4,9 +4,7 @@
     <div class="spetial-product-left">
       <div>
         <h1 class="spetial-product-left-title">Productos <span class="title-green">Especiales</span></h1>
-        <p class="spetial-product-left-content">
-          <app-paragraph-with-breaks *ngIf="sustainabilityData" [text]="sustainabilityData.special_products.description"></app-paragraph-with-breaks>
-        </p>
+        <p *ngIf="sustainabilityData" class="spetial-product-left-content justify-text text-with-br">{{sustainabilityData.special_products.description}}</p>
         <span class="trust-in-us">¡Confíe en nosotros!</span>
         <!-- Gallery -->
         <div class="gallery">

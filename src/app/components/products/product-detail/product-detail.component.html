@@ -1,7 +1,7 @@
 <section class="product-detail-wrapper mt-5">
   <div class="row product-detail-header">
     <div class="col-md-4">
-      <span class="product-detail-header-content">Bobina Azul</span>
+      <span class="product-detail-header-content">{{product.name}}</span>
     </div>
     <div class="col-md-8">
       <span class="product-detail-header-content">Descripción</span>
@@ -10,44 +10,39 @@
 
   <div class="row">
     <div class="col-md-4 right-line">
-      <img class="img-fluid product-detail-image" src="/assets/images/productos/detail/movie-line.png" alt="movie-line">
-      <span class="product-detail-image-text">Pelicula eslástica baja desidad natural</span>
+      <img class="img-fluid product-detail-image" src="{{product.product_photo}}" alt="product-image">
+      <span class="product-detail-image-text">{{product.footer}}</span>
     </div>
     <div class="col-md-8 justify-text">
-      <h3 class="product-detail-title">Bobina Stetch</h3>
-      <div>
-        <p class="product-detail-description">
-          Una película ipsum dolor sit amet consectetur, adipisicing elit. Officiis voluptatum odio accusantium provident fugiat
-          minima eveniet tempore suscipit repellat rem. Fugit alias repellendus aliquid, iure eum laboriosam aut atque. Fugit.
-        </p>
-        <p class="product-detail-description">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis voluptatum odio accusantium provident fugiat
-          minima eveniet tempore suscipit repellat rem. Fugit alias repellendus aliquid, iure eum laboriosam aut atque. Fugit.
-        </p>
-        <p class="product-detail-description">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis voluptatum odio accusantium provident fugiat
-          minima eveniet tempore suscipit repellat rem. Fugit alias repellendus aliquid, iure eum laboriosam aut atque. Fugit.
-        </p>
-      </div>
+      <h3 class="product-detail-title">{{product.name}}</h3>
+      <!--Tipo-->
+      <h6 *ngIf="product.type_bag!==5">{{getType()}}</h6>
+      <br>
 
+      <!--Description-->
+      <p class="product-detail-description text-with-br">{{product.description}}</p>
+      <!--Specifications matrix-->
+      <img *ngIf="product.photo_specifications!==null" class="specifications-matrix-img" src="{{product.photo_specifications}}" alt="Matriz especificaciones">
       <!-- Specifications Table -->
-      <app-specification-table></app-specification-table>
+      <app-specification-table *ngIf="product.specs_id.length !== 0" [product]="product"></app-specification-table>
 
-      <app-features-table [tableTitle]="'Propiedades físicas'"></app-features-table>
+      <app-features-table [tableTitle]="'Propiedades físicas'" [items]="propertiesEs"></app-features-table>
 
-      <app-features-table [tableTitle]="'Ventajas'"></app-features-table>
+      <app-features-table [tableTitle]="'Ventajas'" [items]="advantagesEs"></app-features-table>
     </div>
   </div>
   <!-- Line Down -->
   <div class="down-line mt-5"></div>
   <!-- Images Carousel -->
-  <app-product-carousel></app-product-carousel>
+  <app-product-carousel title="Usos sugeridos" [album]="product.image_use"></app-product-carousel>
+  <app-product-carousel class="mt-3" *ngIf="product.images_type.length !== 0" title="Tipos de bolsas" [album]="product.images_type"></app-product-carousel>
+
   <!-- Line Down -->
   <div class="down-line mt-5"></div>
   <h3 class="download-title">Descargar</h3>
   <div class="down-wrapper">
-    <a class="btn-download">
-      <img src="/assets/images/icons/download.png" alt="">
+    <a class="btn-download" (click)="openDS(product.data_sheet)">
+      <img src="/assets/images/icons/download.png" alt="Ficha técnica ES">
       <span>Ficha Técnica</span>
     </a>
     <a class="btn-download">
