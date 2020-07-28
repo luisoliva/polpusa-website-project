@@ -1,18 +1,18 @@
 <section class="container-fluid form-contact-wrapper">
-  <h2 class="form-title">Queremos saber más de ti</h2>
+  <h2 class="form-title">{{'CONTACT.FORM.TITLE' | translate}}</h2>
   <!-- Form Options -->
   <div class="row">
     <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
       <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.PROVIDER" [src]="selectedFormOption ===  formOptions.PROVIDER ? '/assets/images/contact/form/provider-active.png' : '/assets/images/contact/form/provider.png'" alt="provider" (click)="chooseFormOption(formOptions.PROVIDER)">
-      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.PROVIDER">Soy Proveedor</span>
+      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.PROVIDER">{{'CONTACT.FORM.OPTIONS.1' | translate}}</span>
     </div>
     <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
       <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.CLIENT" [src]="selectedFormOption ===  formOptions.CLIENT ? '/assets/images/contact/form/client-active.png' : '/assets/images/contact/form/client.png'" alt="client" (click)="chooseFormOption(formOptions.CLIENT)">
-      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption === formOptions.CLIENT">Soy Cliente</span>
+      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption === formOptions.CLIENT">{{'CONTACT.FORM.OPTIONS.2' | translate}}</span>
     </div>
     <div class="col-md-4 d-flex flex-column justify-content-center align-items-center">
       <img class="img-fluid form-option-icon" [class.option-icon-active]="selectedFormOption ===  formOptions.WORK" [src]="selectedFormOption ===  formOptions.WORK ? '/assets/images/contact/form/work-active.png' : '/assets/images/contact/form/work.png'" alt="work" (click)="chooseFormOption(formOptions.WORK)">
-      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.WORK">Busco Trabajo</span>
+      <span class="form-option-title mt-4 mb-4" [class.option-title-active]="selectedFormOption ===  formOptions.WORK">{{'CONTACT.FORM.OPTIONS.3' | translate}}</span>
     </div>
   </div>
 
@@ -23,30 +23,30 @@
       <!-- Contact Name -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_NAME' | translate}}">
       </div>
       <!-- Company Name -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_COMPANY' | translate}}">
       </div>
       <!-- Phone -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PHONE' | translate}}">
       </div>
       <!-- Email -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_EMAIL' | translate}}">
       </div>
       <!-- Product -->
       <div class="form-group">
-        <input type="text" class="form-control custom-form-input" placeholder="Producto de interés">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}">
       </div>
       <!-- Action -->
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn send-form-button">Enviar</button>
+        <button class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
       </div>
     </form>
     <!-- CLIENT FORM -->
@@ -54,30 +54,30 @@
       <!-- Contact Name -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_NAME' | translate}}">
       </div>
       <!-- Company Name -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Nombre de la empresa">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_COMPANY' | translate}}">
       </div>
       <!-- Phone -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PHONE' | translate}}">
       </div>
       <!-- Email -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_EMAIL' | translate}}">
       </div>
       <!-- Product -->
       <div class="form-group">
-        <input type="text" class="form-control custom-form-input" placeholder="Producto de interés">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}">
       </div>
       <!-- Action -->
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn send-form-button">Enviar</button>
+        <button class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
       </div>
     </form>
     <!-- WORK FORM -->
@@ -85,31 +85,31 @@
       <!-- Contact Name -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Nombre del contacto">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_NAME' | translate}}">
       </div>
       <!-- Phone -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Teléfono">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PHONE' | translate}}">
       </div>
       <!-- Email -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="Correo">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_EMAIL' | translate}}">
       </div>
       <!-- Position -->
       <div class="form-group">
-        <input type="text" class="form-control custom-form-input" placeholder="Puesto">
+        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.JOB' | translate}}">
       </div>
       <!-- Upload CV -->
       <div class="form-group">
         <div class="required-dot">*</div>
-        <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i> Adjuntar su CV</button>
+        <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i>{{'GENERIC.CV' | translate}}</button>
         <input #cvFile type="file" class="d-none">
       </div>
       <!-- Action -->
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn send-form-button">Enviar</button>
+        <button class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
       </div>
     </form>
   </div>

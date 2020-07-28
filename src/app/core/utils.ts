@@ -10,4 +10,8 @@ export class Utils {
     public static openUrlInOtherTab(url:string){
         window.open(url, "_blank");
     }
+
+    public static goBack(){
+        window.history.back();
+    }
 }

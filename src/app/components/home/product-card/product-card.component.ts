@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ICardItem } from 'src/app/core/interfaces/card-item';
 import {ProductsService} from "../../../pages/products/services/products.service";
 import {Category} from "../../../core/models/category.model";
+import {TranslateService} from "@ngx-translate/core";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-product-card',
@@ -10,8 +12,12 @@ import {Category} from "../../../core/models/category.model";
 })
 export class ProductCardComponent implements OnInit {
   cards: Category[] = [];
+  language;
 
-  constructor(private productsService:ProductsService) { }
+  constructor(private productsService:ProductsService,
+              private currentLanguageService:CurrentLanguageService) {
+    this.language = this.currentLanguageService.language;
+  }
 
   ngOnInit(): void {
     this.productsService.getCategories().toPromise()

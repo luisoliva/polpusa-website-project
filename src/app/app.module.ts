@@ -10,7 +10,14 @@ import { AboutModule } from './pages/about/about.module';
 import { ContactModule } from './pages/contact/contact.module';
 import { SustainabilityModule } from './pages/sustainability/sustainability.module';
 import { QuoteModule } from './pages/quote/quote.module';
-import { HttpClientModule} from "@angular/common/http";
+import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {TranslateLoader, TranslateModule} from "@ngx-translate/core";
+import {TranslateHttpLoader} from "@ngx-translate/http-loader";
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -28,7 +35,13 @@ import { HttpClientModule} from "@angular/common/http";
     BlogModule,
     QuoteModule,
     HttpClientModule,
-  ],
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })  ],
   providers: [],
   exports: [
   ],

@@ -11,33 +11,33 @@
     <div class="collapse navbar-collapse" id="navbarPolpusa">
       <ul class="navbar-nav ml-auto mr-5">
         <li class="nav-item custom-nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="['/inicio']" routerLinkActive="custom-active">Inicio</a>
+          <a class="nav-link custom-nav-link" [routerLink]="['/inicio']" routerLinkActive="custom-active">{{'LAYOUT.NAVBAR.HOME' | translate}}</a>
         </li>
         <li class="nav-item custom-nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="['/productos']" routerLinkActive="custom-active">Productos</a>
+          <a class="nav-link custom-nav-link" [routerLink]="['/productos']" routerLinkActive="custom-active">{{'LAYOUT.NAVBAR.PRODUCTS' | translate}}</a>
         </li>
         <li class="nav-item custom-nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="['/nosotros']" routerLinkActive="custom-active">Nosotros</a>
+          <a class="nav-link custom-nav-link" [routerLink]="['/nosotros']" routerLinkActive="custom-active">{{'LAYOUT.NAVBAR.US' | translate}}</a>
         </li>
         <li class="nav-item custom-nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="['/contacto']" routerLinkActive="custom-active">Contacto</a>
+          <a class="nav-link custom-nav-link" [routerLink]="['/contacto']" routerLinkActive="custom-active">{{'LAYOUT.NAVBAR.CONTACT' | translate}}</a>
         </li>
         <li class="nav-item custom-nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="['/sustentabilidad']" routerLinkActive="custom-active">Sustentabilidad</a>
+          <a class="nav-link custom-nav-link" [routerLink]="['/sustentabilidad']" routerLinkActive="custom-active">{{'LAYOUT.NAVBAR.SUSTAINABILITY' | translate}}</a>
         </li>
         <li class="nav-item custom-nav-item">
-          <a class="nav-link custom-nav-link" [routerLink]="['/blog']" routerLinkActive="custom-active">Blog</a>
+          <a class="nav-link custom-nav-link" [routerLink]="['/blog']" routerLinkActive="custom-active">{{'LAYOUT.NAVBAR.BLOG' | translate}}</a>
         </li>
         <li class="nav-item custom-nav-item d-flex justify-content-center align-items-center">
-          <a class="nav-link cotizar" [routerLink]="['/cotizar']">Cotizar</a>
+          <a class="nav-link cotizar" [routerLink]="['/cotizar']">{{'LAYOUT.NAVBAR.QUOTE' | translate}}</a>
         </li>
         <li class="nav-item dropdown custom-nav-item d-flex justify-content-center align-items-center">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="/assets/images/menu/globe.svg" alt="globe"> <span class="ml-2 language">ES</span>
+            <img src="/assets/images/menu/globe.svg" alt="globe"> <span class="ml-2 language">{{language | uppercase}}</span>
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item language">ES</a>
-            <a class="dropdown-item language">EN</a>
+            <a (click)="selectLanguage('es')" class="dropdown-item language-item">ES</a>
+            <a (click)="selectLanguage('en')" class="dropdown-item language-item">EN</a>
           </div>
         </li>
       </ul>

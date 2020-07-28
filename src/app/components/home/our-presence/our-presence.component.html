@@ -1,10 +1,10 @@
 <section class="mt-5">
-  <h4 class="c-sky presence-title text-center">Nuestra Presencia</h4>
+  <h4 class="c-sky presence-title text-center">{{'HOMEPAGE.PRESENCE.TITLE' | translate}}</h4>
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
   <div class="container-fluid presence-wrapper mt-5">
     <div class="precense-item" *ngFor="let country of countries">
       <img class="presence-img" [src]="country.file_Upload" [alt]="country.title">
-      <span class="text-center d-block mt-4 precense-item-title">{{country.title}}</span>
+      <span class="text-center d-block mt-4 precense-item-title">{{currentLanguageService.language == 'es' ?  country.title : country.slides[0].title}}</span>
     </div>
   </div>
 </section>

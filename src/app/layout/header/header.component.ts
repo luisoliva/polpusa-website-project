@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { Router, NavigationEnd, NavigationStart } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -8,6 +8,8 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Output() setLanguage = new EventEmitter<string>()
+  @Input() language;
 
   constructor(private router: Router) { }
 
@@ -23,4 +25,8 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  selectLanguage(language: string) {
+    this.language  = language;
+    this.setLanguage.emit(language);
+  }
 }

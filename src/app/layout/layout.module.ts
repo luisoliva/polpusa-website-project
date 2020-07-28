@@ -3,16 +3,18 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from '../app-routing.module';
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent
   ],
-  imports: [
-    CommonModule,
-    AppRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        AppRoutingModule,
+        TranslateModule
+    ],
   exports: [
     HeaderComponent,
     FooterComponent

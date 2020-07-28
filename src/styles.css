@@ -4,6 +4,25 @@
 .text-with-br{
   white-space: pre-line;
 }
+.btn-back {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+  margin-left: 295px;
+  padding-left: 15px;
+  height: 40px;
+  color: #009EE2;
+  font-family: "Lato-Regular";
+  font-size: 16px;
+  line-height: 18.75px;
+}
+.btn-back a {
+  cursor: pointer;
+}
+.btn-back a i {
+  padding-right: 5px;
+}
 .justify-text{
   text-align: justify!important;
 }
@@ -36,5 +55,12 @@
 @media only screen and (max-width: 768px) {
   .main-content {
     padding-top: 103px;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .btn-back {
+    margin-top: 3rem;
+    margin-left: 0;
   }
 }

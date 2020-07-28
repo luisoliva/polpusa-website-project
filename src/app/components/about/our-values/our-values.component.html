@@ -1,22 +1,22 @@
 <section class="our-values-wrapper">
-  <h4 class="our-values-title">Nuestros Valores</h4>
+  <h4 class="our-values-title">{{'US.OUR_VALUES.TITLE' | translate}}</h4>
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
 
   <div class="container our-values-content">
     <div class="row mt-5">
-      <div class="col-md-4" *ngFor="let value of values_row1">
+      <div class="col-md-4" *ngFor="let value of values_row1;let index = index">
         <img class="img-fluid value-image" [src]="value.image" [alt]="value.title">
-        <span class="value-title mt-4">{{value.title}}</span>
-        <span class="value-subtitle">{{value.subtitle}}</span>
-        <p class="value-content">{{value.content}}</p>
+        <span class="value-title mt-4">{{('US.OUR_VALUES.' + (index+1) + '.TITLE') | translate}}</span>
+        <span class="value-subtitle">{{('US.OUR_VALUES.' + (index+1) + '.CONTENT') | translate}}</span>
+        <p class="value-content">{{('US.OUR_VALUES.' + (index+1) + '.FOOTER') | translate}}</p>
       </div>
     </div>
     <div class="row mt-5">
-      <div class="col-md-6" *ngFor="let value of values_row2">
+      <div class="col-md-6" *ngFor="let value of values_row2; let index = index">
         <img class="img-fluid value-image" [src]="value.image" [alt]="value.title">
-        <span class="value-title mt-4">{{value.title}}</span>
-        <span class="value-subtitle">{{value.subtitle}}</span>
-        <p class="value-content value-content-last">{{value.content}}</p>
+        <span class="value-title mt-4">{{('US.OUR_VALUES.' + (index+4) + '.TITLE') | translate}}</span>
+        <span class="value-subtitle">{{('US.OUR_VALUES.' + (index+4) + '.CONTENT') | translate}}</span>
+        <p class="value-content value-content-last">{{('US.OUR_VALUES.' + (index+4) + '.FOOTER') | translate}}</p>
       </div>
     </div>
   </div>

@@ -1,0 +1,187 @@
+{
+  "GENERIC": {
+    "SEEMORE": "Ver más",
+    "FORM_FIELD_NAME": "Nombre del contacto",
+    "FORM_FIELD_COMPANY": "Nombre de la empresa",
+    "FORM_FIELD_PHONE": "Teléfono",
+    "FORM_FIELD_EMAIL": "Correo",
+    "FORM_FIELD_PRODUCT": "Producto de interés",
+    "SEND": "Enviar",
+    "JOB": "Puesto",
+    "CV": "Adjuntar su CV"
+  },
+  "LAYOUT": {
+    "NAVBAR": {
+      "HOME" : "Inicio",
+      "PRODUCTS" : "Productos",
+      "US" : "Nosotros",
+      "CONTACT" : "Contacto",
+      "SUSTAINABILITY" : "Sustentabilidad",
+      "BLOG" : "Blog",
+      "QUOTE" : "Cotizar"
+    },
+    "FOOTER" : {
+      "SITE_TREE":{
+        "TITLE": "Árbol del sitio"
+      },
+      "CONTACT": {
+        "TITLE": "Datos de contacto"
+      },
+      "FOLLOW_US": {
+        "TITLE": "Síguenos"
+      }
+    }
+  },
+  "HOMEPAGE" : {
+    "VIDEO" : {
+      "TITLE" : "Los Especialistas en empaques flexibles de alta calidad",
+      "BUTTON" : "Cotiza nuestros productos"
+    },
+    "PRODUCTS" : {
+      "TITLE" : "Nuestros Productos"
+    },
+    "CLIENTS" : {
+      "TITLE" : "En Polpusa estamos orgullosos de trabajar con marcas prestigiosas como:"
+    },
+    "PRESENCE": {
+      "TITLE": "Nuestra Presencia"
+    },
+    "CONTACT" : {
+      "QUESTION" : "¿Tienes alguna duda?"
+    },
+    "SOCIALRESPON": {
+      "TITLE" : "Responsabilidad Social"
+    },
+    "STRATEGIES" : {
+      "TITLE": "Estrategias",
+      "COMUNITY" : {
+        "TITLE" : "Comunidad",
+        "1" : "Compromiso con la comunidad local",
+        "2" : "Desarrollo de comunidad colaborativa",
+        "3" : "Igualdad de oportunidades",
+        "4" : "Calidad de vida familiar",
+        "5" : "Brindar herramientas que faciliten el desarrollo académico y profesional",
+        "6" : "Reconocimiento a la cultura maya",
+        "7" : "Apoyo a grupos vulnerables",
+        "8" : "Fomentar la educación en principios éticos y morales"
+      },
+      "WELLNESS" : {
+        "TITLE" : "Bienestar interno",
+        "1" : "Integración de comunidad colaborativa",
+        "2" : "Desarrollo de comunidad colaborativa",
+        "3" : "Estilo de vida saludable",
+        "4" : "Fomento del deporte",
+        "5" : "Calidad de vida familiar",
+        "6" : "Fomentar la educación en principios éticos y morales",
+        "7" : "Capacitación y desarrollo de los colaboradores",
+        "8" : "Bienestar de los colaboradores",
+        "9" : "Salud y seguridad en el trabajo"
+      },
+      "ECOLOGY" : {
+        "TITLE" : "Medio ambiente",
+        "1" : "Reducción de emiciones CO2",
+        "2" : "Ofrecer productos que cumplan los principios de economía circular",
+        "3" : "Actividades de concientización ambiental"
+      },
+      "ECONOMY": {
+        "TITLE" : "Economía",
+        "1" : "Incrementar ventas a traves de alianzas estratégicas",
+        "2" : "Ofrecer porductos que cumplan los principios de economía circular"
+      },
+      "GOVERNANCE": {
+        "TITLE" : "Gobernanza",
+        "1" : "Cumplimiento legal",
+        "2" : "Institucionalización de la compañia",
+        "3": "Desarrollo de habilidades de liderazgo en equipo directo"
+      }
+    },
+    "BRANDS": {
+      "TITLE": "Nuestras Marcas"
+    },
+    "EXPERIENCE_BANNER": {
+      "TITLE": "Más de 30 años de experiencia ofreciendo soluciones en empaques flexibles"
+    },
+    "CERTIFICATIONS": {
+      "TITLE" : "Certificaciones"
+    }
+  },
+  "US": {
+    "BANNER": {
+      "TITLE": "Somos una Familia"
+    },
+    "US": {
+      "TITLE": "Nosotros",
+      "DES1": "Polietileno publicitario S.A nació en 1986 de la necesidad de crear una nueva empresa que pudiera satisfacer de manera integral la demanda de bolsas y películas de polietileno para el mercado del sureste mexicano.",
+      "DES2": "Su fundador, Don Joaquín López Peniche, que desde años antes ya fabricaba bolsas en una empresa familiar, “Peniche propaganda”, decidió iniciar esta nueva empresa para especializarse en la fabricación de empaques flexibles de alta calidad.",
+      "DES3": "Hoy en día fabricamos bolsas con sello pouch, películas monocapa y coextruídas de polietileno en alta y baja densidad y polipropileno. Igualmente hacemos laminaciones para aplicaciones de empaques que requieren barrera al medio ambiente y, además, contamos con la más alta tecnología en impresión flexográfica, lo que nos permite imprimir trabajos en alta definición hasta 8 tintas.",
+      "DES4": "A lo largo de estos 30 años hemos crecido hasta convertirnos en la fábrica de polietileno más moderna e importante de la región."
+    },
+    "OUR_VALUES": {
+      "TITLE": "Nuestros valores",
+      "1": {
+        "TITLE": "Excelencia",
+        "CONTENT": "Buscamos la perfección en nuestro ser y nuestro actuar.",
+        "FOOTER": "-Calidad, innovación perseverancia."
+      },
+      "2": {
+        "TITLE": "Lealtad",
+        "CONTENT": "Orgullosos de pertenecer a la familia Polpusa.",
+        "FOOTER": "-Confianza, compromiso, fidelidad, gratitud, reciprocidad."
+      },
+      "3": {
+        "TITLE": "Servicio",
+        "CONTENT": "Es nuestra vocación.",
+        "FOOTER": "-Diligente, empatía, proactiva, accesible, colaboración."
+      },
+      "4": {
+        "TITLE": "Pasión",
+        "CONTENT": "Amamos lo que hacemos.",
+        "FOOTER": "-Compromiso, perseverancia, entusiasmo, dusciplina, entrega."
+      },
+      "5": {
+        "TITLE": "Integridad",
+        "CONTENT": "Somos fieles a nuestros principios y valores:",
+        "FOOTER": "-Honestidad, respeto, congruencia, responsabilidad, compromiso."
+      }
+    },
+    "MISSION": {
+      "TITLE": "Misión"
+    },
+    "VISION": {
+      "TITLE": "Visión",
+      "1": {
+        "TITLE": "Clientes",
+        "DES": "Consolidar nuestro liderazgo a nivel nacional en la fabricación e innovación de empaques flexibles, incorporando tecnología de punta, entregando de manera oportuna la más alta calidad en materiales, imágenes y acabados, y con el más competente capital humano de nuestra industria."
+      },
+      "2": {
+        "TITLE": "Proveedores",
+        "DES": "Desarrollar relaciones duraderas y estratégicas basadas en el beneficio mutuo."
+      },
+      "3": {
+        "TITLE": "Colaboradores",
+        "DES": "Atraer el mejor talento promoviendo el crecimiento integral de nuestros trabajadores, ofreciendo oportunidades y un ambiente digno de trabajo."
+      },
+      "4": {
+        "TITLE": "Comunidad",
+        "DES": "Participar activamente en el desarrollo de nuestra comunidad, especialmente con los grupos más vulnerables."
+      },
+      "5": {
+        "TITLE": "Medio ambiente",
+        "DES": "Desarrollar productos y operaciones sustentables y promover el cuidado de nuestro entorno."
+      }
+    }
+  },
+  "CONTACT": {
+    "BANNER": {
+      "TITLE": "¡Hagamos negocios!"
+    },
+    "FORM": {
+      "TITLE": "Queremos saber más de ti",
+      "OPTIONS": {
+        "1": "Soy proveedor",
+        "2": "Soy cliente",
+        "3": "Busco trabajo"
+      }
+    }
+  }
+}

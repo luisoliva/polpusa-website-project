@@ -9,12 +9,14 @@
 
 <!-- Our Purpose -->
 <section class="our-porpuse-wrapper">
-  <h4 class="our-porpuse-title"><span class="c-sky">Nuestro</span> Propósito</h4>
+  <h4 *ngIf="currentLanguageService.language == 'es'" class="our-porpuse-title"><span class="c-sky">Nuestro</span> Propósito</h4>
+  <h4 *ngIf="currentLanguageService.language == 'en'" class="our-porpuse-title"><span class="c-sky">Our</span> Purpose</h4>
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
   <div class="mt-5">
     <img class="img-fluid d-block m-auto" style="height: 115px;" src="/assets/images/about/HWAW-logo.png" alt="HWAW-logo">
     <p class="our-porpuse-content">
-      <q class="quotes">Trascender en la vida al <span class="our-porpuse-content-bold">trabajar</span> con <span class="our-porpuse-content-bold">pasión</span> para lograr el <span class="our-porpuse-content-bold">bienestar</span> de la familia <span class="our-porpuse-content-bold">Polpusa</span> y su <span class="our-porpuse-content-bold">comunidad</span></q>
+      <q *ngIf="currentLanguageService.language == 'es'" class="quotes">Trascender en la vida al <span class="our-porpuse-content-bold">trabajar</span> con <span class="our-porpuse-content-bold">pasión</span> para lograr el <span class="our-porpuse-content-bold">bienestar</span> de la familia <span class="our-porpuse-content-bold">Polpusa</span> y su <span class="our-porpuse-content-bold">comunidad</span></q>
+      <q *ngIf="currentLanguageService.language == 'en'" class="quotes">Transcend life by <span class="our-porpuse-content-bold">working</span> with <span class="our-porpuse-content-bold">passion</span> to achieve <span class="our-porpuse-content-bold">the wellness</span> of <span class="our-porpuse-content-bold">Polpusa</span> family and their <span class="our-porpuse-content-bold">community</span></q>
     </p>
   </div>
 </section>
@@ -26,9 +28,10 @@
 <section class="mission-wrapper mb-5">
   <img class="img-fluid arrows" src="/assets/images/about/mision/left-arrow.png" alt="left-arrow">
   <div class="mission">
-    <h4 class="mission-title">Misión</h4>
+    <h4 class="mission-title">{{'US.MISSION.TITLE' | translate}}</h4>
     <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'" [float]="'right'"></app-title-bar>
-    <p class="mission-content mt-5 mb-5">Generar <span class="mission-content-bold">bienestar a nuestra comunidad</span>, brindando <span class="mission-content-bold">soluciones sustentables</span> de empaque flexible.</p>
+    <p *ngIf="currentLanguageService.language == 'es'" class="mission-content mt-5 mb-5">Generar <span class="mission-content-bold">bienestar a nuestra comunidad</span>, brindando <span class="mission-content-bold">soluciones sustentables</span> de empaque flexible.</p>
+    <p *ngIf="currentLanguageService.language == 'en'" class="mission-content mt-5 mb-5">Generate <span class="mission-content-bold">well-being for our community</span>, providing <span class="mission-content-bold">sustainable solutions</span> for flexible packaging.</p>
   </div>
   <img class="img-fluid arrows ml-auto" src="/assets/images/about/mision/right-arrow.png" alt="right-arrow">
 </section>
@@ -46,7 +49,7 @@
       </div>
     </div>
   </div>
-  <div class="row mt-5" *ngFor="let vision of visions">
+  <div class="row mt-5" *ngFor="let vision of visions; let index = index">
     <div class="col-xl-4 col-lg-7 vision-wrapper">
       <div class="vision-overlay"></div>
       <div class="container vision-item">
@@ -55,13 +58,13 @@
             <img class="img-fluid" [src]="vision.image" [alt]="vision.name">
           </div>
           <div class="col-lg-5 col-md-12">
-            <span class="vision-item-title">{{vision.name}}</span>
+            <span class="vision-item-title">{{'US.VISION.' + (index+1) + '.TITLE' | translate}}</span>
           </div>
         </div>
       </div>
     </div>
     <div class="col-xl-7 col-lg-5 d-flex align-items-center">
-      <p class="vision-item-content justify-text">{{vision.content}}</p>
+      <p class="vision-item-content justify-text">{{'US.VISION.' + (index+1) + '.DES' | translate}}</p>
     </div>
   </div>
 </section>

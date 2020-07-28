@@ -51,6 +51,10 @@ header {
   font-weight: 400;
   line-height: 19px;
 }
+.language-item:hover{
+  cursor: pointer;
+  background-color: #eaeaea;
+}
 .logotype {
   position: relative;
   left: -60px;

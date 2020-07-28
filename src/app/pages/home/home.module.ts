@@ -10,6 +10,7 @@ import { HomeContactModule } from 'src/app/components/home/home-contact/home-con
 import { CertificationsModule } from 'src/app/components/home/certifications/certifications.module';
 import { StrategyModule } from 'src/app/components/home/strategy/strategy.module';
 import {Ng2CarouselamosModule} from "ng2-carouselamos";
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [HomeComponent],
@@ -24,6 +25,7 @@ import {Ng2CarouselamosModule} from "ng2-carouselamos";
         CertificationsModule,
         TitleBarModule,
         Ng2CarouselamosModule,
+        TranslateModule,
     ]
 })
 export class HomeModule { }

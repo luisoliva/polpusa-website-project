@@ -1,6 +1,7 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 import {HomepageApiService} from "./services/homepage-api.service";
 import {Slide} from "../../core/models/slide.model";
+import {CurrentLanguageService} from "../../core/current-language.service";
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,9 @@ export class HomeComponent implements OnInit {
   width:number;
   itemCarouselWidth: string;
 
-  constructor(private homepageApiService:HomepageApiService) { }
+  constructor(private homepageApiService:HomepageApiService,
+              public currentLanguageService:CurrentLanguageService) {
+  }
 
   ngOnInit(): void {
     this.width = window.innerWidth - (window.innerWidth/12) - 20;

@@ -1,0 +1,129 @@
+.blog-wrapper {
+    height: 240px;
+    margin-top: -5px;
+}
+.blog-banner {
+    width: 100%;
+    height: 100%;
+}
+.blog-divider{
+    width: 100%;
+    height: 1px;
+    background-color: #82CFF4;
+}
+.blog-wallpaper{
+    width: 97%;
+    /*height: 450px;*/
+    /*object-fit: cover;*/
+}
+.blog-body-text{
+    font-size: 17px;
+    color: #888888;
+    line-height: 35px;
+}
+.title {
+    color: #009EE2;
+    font-family: 'Montserrat-Bold';
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 50px;
+    text-align: center;
+}
+.post-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.post-title {
+    color: #0A1450;
+    font-family: 'Montserrat-Bold';
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+}
+.post-date {
+    color: #888888;
+    font-family: 'Lato-Light';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+.post-content {
+    color: #888888;
+    font-family: 'Lato-Regular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+}
+.btn-read-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002D73;
+    border-radius: 21.5px;
+    width: 136px;
+    height: 43px;
+    color: #FFFFFF;
+    font-family: 'Lato-Bold';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: left;
+    transition: transform .2s;
+}
+.btn-read-more:hover{
+    cursor: pointer;
+    color: white!important;
+    transform: scale(1.1);
+}
+.btn-load-more {
+    background-color: #FFFFFF;
+    border-radius: 23px;
+    box-shadow: 0px 5px 10px 2px #eee;
+    width: 180px;
+    height: 46px;
+    color: #009EE2;
+    font-family: 'Lato-Regular';
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+}
+.date-subtitle{
+    text-align: center;
+    color: #696868;
+    margin-top: 15px;
+    font-size: 17px;
+}
+.share-icon {
+    color: #82CFF4;
+    margin-right: 10px;
+}
+.text-icon{
+    color: #82CFF4;
+    margin-right: 30px;
+}
+.text-icon:hover{
+    color: #82CFF4;
+}
+.social-networks-icon{
+    color:#009EE2;
+    margin-right: 27px;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.social-networks-icon:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+}
+@media only screen and (max-width:768px) {
+    .blog-wrapper {
+        height: 103px;
+    }
+    .blog-banner {
+        height: 103px;
+    }
+}

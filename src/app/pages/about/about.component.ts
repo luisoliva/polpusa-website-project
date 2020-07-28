@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IVision } from 'src/app/core/interfaces/vision';
+import {CurrentLanguageService} from "../../core/current-language.service";
 
 @Component({
   selector: 'app-about',
@@ -40,7 +41,7 @@ export class AboutComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(public currentLanguageService:CurrentLanguageService) { }
 
   ngOnInit(): void {
   }
