@@ -2,6 +2,7 @@ import {Component, OnInit, HostListener, Input} from '@angular/core';
 import {Sustainability} from "../../../core/models/sustainability.model";
 import {Slide} from "../../../core/models/slide.model";
 import {SustainabilityService} from "../../../pages/sustainability/services/sustainability.service";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-green-sustainability',
@@ -14,7 +15,8 @@ export class GreenSustainabilityComponent implements OnInit {
   imageA:Slide;
   imageB:Slide;
 
-  constructor(private sustainabilityService:SustainabilityService) { }
+  constructor(private sustainabilityService:SustainabilityService,
+              public currentLanguage:CurrentLanguageService) { }
 
   ngOnInit(): void {
     this.sustainabilityService.getPolpusaVerdeImages('A').toPromise()
@@ -42,7 +44,10 @@ export class GreenSustainabilityComponent implements OnInit {
   }
 
   getOptions():Array<string>{
-    return this.sustainabilityData.polpusa_verde_opc.description.split('{#}')
+    if (this.currentLanguage.language == 'es'){
+      return this.sustainabilityData.polpusa_verde_opc.description.split('{#}')
+    }else if (this.currentLanguage.language == 'en'){
+      return this.sustainabilityData.polpusa_verde_opc.translation[0].description.split('{#}')
+    }
   }
-
 }

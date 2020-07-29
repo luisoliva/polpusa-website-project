@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ProductItem } from 'src/app/core/interfaces/products';
 import {Product} from "../../../core/models/product.model";
 import {Utils} from "../../../core/utils";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-product-detail',
@@ -15,7 +16,7 @@ export class ProductDetailComponent implements OnInit {
   advantagesEs:string[] = [];
   advantagesEn:string[] = [];
 
-  constructor() { }
+  constructor(public currentLanguage:CurrentLanguageService) { }
 
   ngOnInit(): void {
     this.product.properties_id.forEach((element)=>{
@@ -38,13 +39,13 @@ export class ProductDetailComponent implements OnInit {
 
   getType(){
     if (this.product.type_bag == 1){
-      return 'Biodegradable'
+      return this.currentLanguage.language == 'es' ? 'Biodegradable' : 'Biodegradable';
     }else if(this.product.type_bag == 2){
-      return 'Reciclado'
+      return this.currentLanguage.language == 'es' ? 'Reciclado' : 'Recyclied';
     }else if(this.product.type_bag == 3){
-      return 'Reciclable'
+      return this.currentLanguage.language == 'es' ? 'Reciclable' : 'recyclable';
     }else if (this.product.type_bag == 4){
-      return 'Reutilizable'
+      return this.currentLanguage.language == 'es' ? 'Reutilizable' : 'Reusable';
     }else{
       return 'N/A'
     }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { EQuoteForm } from 'src/app/core/enums/EForm';
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-quote-form',
@@ -16,7 +17,8 @@ export class QuoteFormComponent implements OnInit {
   formOptions = EQuoteForm;
 
   constructor(
-    private formbuilder: FormBuilder
+    private formbuilder: FormBuilder,
+    public currentLanguageService:CurrentLanguageService
   ) { }
 
   ngOnInit(): void {

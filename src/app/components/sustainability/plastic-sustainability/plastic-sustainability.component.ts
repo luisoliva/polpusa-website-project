@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Sustainability} from "../../../core/models/sustainability.model";
 import {Slide} from "../../../core/models/slide.model";
 import {SustainabilityService} from "../../../pages/sustainability/services/sustainability.service";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-plastic-sustainability',
@@ -12,7 +13,8 @@ export class PlasticSustainabilityComponent implements OnInit {
   @Input() sustainabilityData:Sustainability;
   image:Slide;
 
-  constructor(private sustainabilityService:SustainabilityService) { }
+  constructor(private sustainabilityService:SustainabilityService,
+              public currentLanguage:CurrentLanguageService) { }
 
   ngOnInit(): void {
     this.sustainabilityService.getPlasticImage().toPromise()

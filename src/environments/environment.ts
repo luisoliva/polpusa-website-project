@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  url: 'http://dev.polpusa.com:8000/'
+  url: 'https://polpusahrk.herokuapp.com/'
+  // url: 'http://dev.polpusa.com:8000/'
 };
 
 /*

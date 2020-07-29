@@ -2,6 +2,7 @@ import {Component, OnInit, HostListener, Input} from '@angular/core';
 import {Sustainability} from "../../../core/models/sustainability.model";
 import {SustainabilityService} from "../../../pages/sustainability/services/sustainability.service";
 import {Slide} from "../../../core/models/slide.model";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-sustainability-products',
@@ -14,7 +15,8 @@ export class SustainabilityProductsComponent implements OnInit {
   trustInUsImage:Slide;
   lineProductsImage:Slide;
 
-  constructor(private sustainabilityService:SustainabilityService) { }
+  constructor(private sustainabilityService:SustainabilityService,
+              public currentLanguange:CurrentLanguageService) { }
 
   ngOnInit(): void {
     this.sustainabilityService.getTrustInUsImage().toPromise()

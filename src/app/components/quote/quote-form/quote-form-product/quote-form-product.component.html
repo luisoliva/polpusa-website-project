@@ -1,15 +1,15 @@
 <section class="container quote-form-product-wrapper">
-  <h1 class="quote-form-product-title">Selecciona los productos de tu interés</h1>
+  <h1 class="quote-form-product-title">{{'QUOTE.AVAILABLE_PRODUCTS.TITLE' | translate}}</h1>
   <div class="select-all-button-container">
-    <button (click)="selectAllProducts()" class="btn select-all-button">Seleccionar todos</button>
+    <button (click)="selectAllProducts()" class="btn select-all-button">{{'QUOTE.AVAILABLE_PRODUCTS.BUTTON' | translate}}</button>
   </div>
 
   <div class="row d-flex justify-content-center">
-    <div class="col-xl-3 col-lg-4 col-md-6 d-flex flex-column justify-content-center align-items-center main-container-product" style="cursor: pointer;" *ngFor="let product of quoteProducts" (click)="selectProduct(product)">
+    <div class="col-xl-3 col-lg-4 col-md-6 d-flex flex-column justify-content-center align-items-center main-container-product" style="cursor: pointer;" *ngFor="let product of quoteProducts;let index = index" (click)="selectProduct(product)">
       <div class="quote-form-product-figure" [class.quote-form-product-figure-active]="isProductSelected(product)">
         <img class="img-fluid" [src]="product.image" [alt]="product.name">
       </div>
-      <span class="quote-form-prodcut-item" [class.quote-form-prodcut-item-active]="isProductSelected(product)">{{product.name}}</span>
+      <span class="quote-form-prodcut-item" [class.quote-form-prodcut-item-active]="isProductSelected(product)">{{'QUOTE.AVAILABLE_PRODUCTS.'+(index+1) | translate}}</span>
     </div>
   </div>
 </section>

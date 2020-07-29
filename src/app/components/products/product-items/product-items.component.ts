@@ -3,6 +3,8 @@ import { ProductItem, ProductCategory } from 'src/app/core/interfaces/products';
 import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 import {Product} from "../../../core/models/product.model";
 import {ProductDetailComponent} from "../product-detail/product-detail.component";
+import {CurrentLanguageService} from "../../../core/current-language.service";
+import {Pagination} from "../../../core/models/pagination.model";
 
 @Component({
   selector: 'app-product-items',
@@ -14,8 +16,10 @@ export class ProductItemsComponent implements OnInit {
   eCategory = ECategoryType;
   showProductDetail: boolean = false;
   productSelected:Product;
+  isLoading = false;
+  pagination: Pagination;
 
-  constructor() { }
+  constructor(public currentLanguage:CurrentLanguageService) { }
 
   ngOnInit(): void {
   }
@@ -38,5 +42,9 @@ export class ProductItemsComponent implements OnInit {
 
   hideProductDetail() {
     this.showProductDetail = false;
+  }
+
+  loadMoreProducts() {
+
   }
 }

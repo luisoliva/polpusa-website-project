@@ -2,6 +2,7 @@ import {Component, OnInit, HostListener, Input} from '@angular/core';
 import {Sustainability} from "../../../core/models/sustainability.model";
 import {Slide} from "../../../core/models/slide.model";
 import {SustainabilityService} from "../../../pages/sustainability/services/sustainability.service";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-our-actions',
@@ -14,7 +15,8 @@ export class OurActionsComponent implements OnInit {
   imageA:Slide;
   imageB:Slide;
 
-  constructor(private sustainabilityService:SustainabilityService) { }
+  constructor(private sustainabilityService:SustainabilityService,
+              public currentLanguage:CurrentLanguageService) { }
 
   ngOnInit(): void {
     this.sustainabilityService.getOurActionsImage('A').toPromise()

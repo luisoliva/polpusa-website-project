@@ -5,17 +5,17 @@
 
 <!-- Posts -->
 <section class="mt-5">
-  <h2 class="title">Últimas Publicaciones</h2>
+  <h2 class="title">{{'BLOG.TITLE' | translate}}</h2>
   <div class="container">
     <div class="row mt-5 mb-5" *ngFor="let post of posts">
       <div class="col-md-6">
         <img class="img-fluid" [src]="post.image" [alt]="post.title">
       </div>
       <div class="col-md-6 post-item ">
-        <h3 class="post-title">{{post.title}}</h3>
+        <h3 class="post-title">{{currentLanguage.language == 'es' ? post.title : post.blog[0].title}}</h3>
         <span class="post-date">{{post.date | date:'shortDate'}}</span>
-        <p class="post-content justify-text">{{post.body | truncateText: 325}}</p>
-        <a [routerLink]="['detail/',post.id]" class="btn-read-more">Leer más</a>
+        <p class="post-content justify-text">{{currentLanguage.language == 'es' ? post.body : post.blog[0].body | truncateText: 325}}</p>
+        <a [routerLink]="['detail/',post.id]" class="btn-read-more">{{'GENERIC.READMORE' | translate}}</a>
       </div>
     </div>
   </div>
@@ -23,5 +23,5 @@
 
 <!-- Load More -->
 <section class="container text-center">
-  <button *ngIf="!isLoading && pagination ? pagination.links.next : false" class="btn btn-load-more" (click)="loadMoreBlogs()">Cargar más</button>
+  <button *ngIf="!isLoading && pagination ? pagination.links.next : false" class="btn btn-load-more" (click)="loadMoreBlogs()">{{'GENERIC.LOADMORE' | translate}}</button>
 </section>

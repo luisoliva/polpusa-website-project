@@ -5,6 +5,7 @@ import {Blog} from "../../../core/models/blog.model";
 import {Utils} from "../../../core/utils";
 import {Pagination} from "../../../core/models/pagination.model";
 import {HttpClient} from "@angular/common/http";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-blog-detail',
@@ -20,7 +21,8 @@ export class BlogDetailComponent implements OnInit {
 
   constructor(private blogService:BlogService,
               private route: ActivatedRoute,
-              private httpClient:HttpClient) {
+              private httpClient:HttpClient,
+              public currentLanguage:CurrentLanguageService) {
     this.route.paramMap.subscribe(params => {
       this.ngOnInit();
     });

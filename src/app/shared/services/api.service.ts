@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpResponse } from '@angular/common/http'
-import {map} from 'rxjs/operators';
+import { HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
-import {environment} from "../../../environments/environment.prod";
+import {environment} from "../../../environments/environment";
 import {Category} from "../../core/models/category.model";
 import {Upload} from "../../core/models/upload.model";
 import {Product} from "../../core/models/product.model";

@@ -3,6 +3,7 @@ import {BlogService} from "./services/blog.service";
 import {Blog} from "../../core/models/blog.model";
 import {Pagination} from "../../core/models/pagination.model";
 import {HttpClient} from "@angular/common/http";
+import {CurrentLanguageService} from "../../core/current-language.service";
 
 @Component({
   selector: 'app-blog',
@@ -15,7 +16,8 @@ export class BlogComponent implements OnInit {
   isLoading = false;
 
   constructor(private blogService:BlogService,
-              private httpClient:HttpClient) { }
+              private httpClient:HttpClient,
+              public currentLanguage:CurrentLanguageService) { }
 
   ngOnInit(): void {
     this.blogService.getBlogs().toPromise()

@@ -8,7 +8,7 @@
                   [attr.data-target]="'#collapse-'+category.id"
                   aria-expanded="true"
                   [attr.aria-controls]="'collapse-'+category.id"
-                  [innerHTML]="category.name"
+                  [innerHTML]="currentLanguage.language == 'es' ? category.name : category.category[0].title"
                   (click)="selectedCategory(category)">
             <!-- {{category.name}} -->
           </button>
@@ -20,7 +20,7 @@
       <div [id]="'collapse-'+category.id" class="collapse" [class.show]="i === 0" [attr.aria-labelledby]="'cat-'+category.id" data-parent="#accordion">
         <ul class="category-menu">
           <li *ngFor="let subCategory of category.subcategory; let j = index">
-            <a (click)="productSelected.emit(subCategory)" class="subcategory-link" [class.subcategory-link-active]="j === 4">{{subCategory.name}}</a>
+            <a (click)="productSelected.emit(subCategory)" class="subcategory-link" [class.subcategory-link-active]="j === 4">{{currentLanguage.language == 'es' ? subCategory.name : subCategory.product_EN[0].name}}</a>
           </li>
         </ul>
       </div>

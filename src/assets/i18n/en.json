@@ -1,9 +1,277 @@
 {
-  "GENERIC": {},
+  "GENERIC": {
+    "SEEMORE": "See more",
+    "READMORE": "Read more",
+    "LOADMORE": "Load more",
+    "SHARE": "Share",
+    "FORM_FIELD_NAME": "Contact name",
+    "FORM_FIELD_COMPANY": "Company",
+    "FORM_FIELD_PHONE": "Phone",
+    "FORM_FIELD_EMAIL": "Email",
+    "FORM_FIELD_PRODUCT": "product of interest",
+    "FORM_FIELD_INTEREST_APP" : "Application of interest",
+    "FORM_FIELD_QUANTITY" : "Quantity",
+    "FORM_FIELD_WIDTH" : "Width",
+    "FORM_FIELD_CALIBER" : "Gauge",
+    "FORM_FIELD_ECO_FRIENDLY" :{
+      "TITLE": "Are you interested in making your product more friendly to the environment?"
+    },
+    "YES": "Yes",
+    "NO" : "No",
+    "SEND": "Send",
+    "JOB": "Area of interest",
+    "CV": "Attach your CV",
+    "SEARCH": "Search",
+    "BACK": "Back",
+    "DES" : "Description",
+    "DOWNLOAD": "Download",
+    "DATASHEET": "Datasheet",
+    "CONSULT": "Consult"
+  },
+  "LAYOUT": {
+    "NAVBAR": {
+      "HOME" : "Home",
+      "PRODUCTS" : "Products",
+      "US" : "About us",
+      "CONTACT" : "Contact",
+      "SUSTAINABILITY" : "Sustainability",
+      "BLOG" : "Blog",
+      "QUOTE" : "Price Quote"
+    },
+    "FOOTER" : {
+      "SITE_TREE":{
+        "TITLE": "Site tree"
+      },
+      "CONTACT": {
+        "TITLE": "Contact information"
+      },
+      "FOLLOW_US": {
+        "TITLE": "Follow us"
+      }
+    }
+  },
   "HOMEPAGE" : {
     "VIDEO" : {
-      "TITLE" : "Los Especialistas en empaques flexibles de alta calidad en ingles",
-      "BUTTON" : "Cotiza nuestros productos en ingles"
+      "TITLE" : "The flexible packaging specialists",
+      "BUTTON" : "Quote our products"
+    },
+    "PRODUCTS" : {
+      "TITLE" : "Our products"
+    },
+    "CLIENTS" : {
+      "TITLE" : "We are proud to work with prestigious brands such as:"
+    },
+    "PRESENCE": {
+      "TITLE": "International Market presence"
+    },
+    "CONTACT" : {
+      "QUESTION" : "Contact us"
+    },
+    "SOCIALRESPON": {
+      "TITLE" : "Corporate Social Responsibility"
+    },
+    "STRATEGIES" : {
+      "TITLE": "Strategies",
+      "COMUNITY" : {
+        "TITLE" : "Community",
+        "1" : "Compromiso con la comunidad local",
+        "2" : "Desarrollo de comunidad colaborativa",
+        "3" : "Igualdad de oportunidades",
+        "4" : "Calidad de vida familiar",
+        "5" : "Brindar herramientas que faciliten el desarrollo académico y profesional",
+        "6" : "Reconocimiento a la cultura maya",
+        "7" : "Apoyo a grupos vulnerables",
+        "8" : "Fomentar la educación en principios éticos y morales"
+      },
+      "WELLNESS" : {
+        "TITLE" : "Well-Being",
+        "1" : "Integración de comunidad colaborativa",
+        "2" : "Desarrollo de comunidad colaborativa",
+        "3" : "Estilo de vida saludable",
+        "4" : "Fomento del deporte",
+        "5" : "Calidad de vida familiar",
+        "6" : "Fomentar la educación en principios éticos y morales",
+        "7" : "Capacitación y desarrollo de los colaboradores",
+        "8" : "Bienestar de los colaboradores",
+        "9" : "Salud y seguridad en el trabajo"
+      },
+      "ECOLOGY" : {
+        "TITLE" : "Environment",
+        "1" : "Reducción de emiciones CO2",
+        "2" : "Ofrecer productos que cumplan los principios de economía circular",
+        "3" : "Actividades de concientización ambiental"
+      },
+      "ECONOMY": {
+        "TITLE" : "Economy",
+        "1" : "Incrementar ventas a traves de alianzas estratégicas",
+        "2" : "Ofrecer porductos que cumplan los principios de economía circular"
+      },
+      "GOVERNANCE": {
+        "TITLE" : "Governance",
+        "1" : "Cumplimiento legal",
+        "2" : "Institucionalización de la compañia",
+        "3": "Desarrollo de habilidades de liderazgo en equipo directo"
+      }
+    },
+    "BRANDS": {
+      "TITLE": "Our brands"
+    },
+    "EXPERIENCE_BANNER": {
+      "TITLE": "More than 30 years of experience offering flexible packaging solutions"
+    },
+    "CERTIFICATIONS": {
+      "TITLE" : "Certifications"
+    }
+  },
+  "PRODUCTS": {
+    "PHYSICAL_PROP": {
+      "TITLE" : "Features"
+    },
+    "ADVANTAGES": {
+      "TITLE": "Advantages"
+    },
+    "SPECS_TABLE": {
+      "TITLE" : "Specs",
+      "WIDTH": "Width",
+      "HEIGHT" : "Length",
+      "CALIBER": "Gauge"
+    },
+    "SUGGESTED_USES": {
+      "TITLE": "Suggested uses"
+    },
+    "BAGS_TYPES": {
+      "TITLE": "Types of bags"
+    },
+    "ACTIONS": {
+      "PRODUCTS_CATALOG": "Products catalog",
+      "QUOTE" : "Quote product"
+    },
+    "FORM": {
+      "TITLE": "Are you interested in this product?",
+      "SUBTITLE" : "We will contact you soon"
+    }
+  },
+  "US": {
+    "BANNER": {
+      "TITLE": "We are family"
+    },
+    "US": {
+      "TITLE": "About us",
+      "DES1": "Polietileno Publicitario S.A. was born in 1986 out of the need to create a new company that could fully satisfy the demand for polyethylene bags and films for the Southeast Mexican market.",
+      "DES2": "Its founder, Don Joaquín López Peniche, who for years had already manufactured bags in a family business, \"Peniche Propaganda\", decided to start this new company to specialize in the manufacture of high quality flexible packaging.",
+      "DES3": "Today we manufacture pouch-sealed bags, monolayer and coextruded films of polyethylene in high and low density and polypropylene. We also make laminations for packaging applications that require an environmental barrier and, in addition, we have the highest technology in flexographic printing, which allows us to print in high definition up to 8 inks.",
+      "DES4": "Throughout these 30 years we have grown to become the most modern and important polyethylene factory in the region."
+    },
+    "OUR_VALUES": {
+      "TITLE": "Our values",
+      "1": {
+        "TITLE": "Excellence",
+        "CONTENT": "We seek perfection in our being and acting.",
+        "FOOTER": "-Quality, innovation, perseverance"
+      },
+      "2": {
+        "TITLE": "Loyalty",
+        "CONTENT": "Proud to belong to the Polpusa family",
+        "FOOTER": "-Trust, commitment, fidelity, gratitude, reciprocity."
+      },
+      "3": {
+        "TITLE": "Service",
+        "CONTENT": "It is our vocation",
+        "FOOTER": "-Diligent, empathic, proactive, approachable, collaborative"
+      },
+      "4": {
+        "TITLE": "Passion",
+        "CONTENT": "We love what we do",
+        "FOOTER": "-Commitments, perseverance, enthusiasm, discipline, dedication."
+      },
+      "5": {
+        "TITLE": "Integrity",
+        "CONTENT": "We are faithful to our principles and values:",
+        "FOOTER": "-Honesty, respect, consistency, responsibility, commitment."
+      }
+    },
+    "MISSION": {
+      "TITLE": "Mission"
+    },
+    "VISION": {
+      "TITLE": "Vision",
+      "1": {
+        "TITLE": "Customers",
+        "DES": "Consolidate our leadership at the national level in the manufacturing and innovation of flexible packaging, incorporating cutting-edge technology, delivering the highest quality materials, images and finishes on time, and with the most competent human capital in our industry."
+      },
+      "2": {
+        "TITLE": "Suppliers",
+        "DES": " Develop lasting and strategic relationships based on mutual benefit"
+      },
+      "3": {
+        "TITLE": "Collaborators",
+        "DES": "Attract the best talent promoting the integral growth of our collaborators, offering opportunities and a worthy work environment."
+      },
+      "4": {
+        "TITLE": "Community",
+        "DES": "Actively participate in the development of our community, especially with the most vulnerable groups."
+      },
+      "5": {
+        "TITLE": "Environment",
+        "DES": "Develop sustainable products and operations and promote the care of our environment."
+      }
+    }
+  },
+  "CONTACT": {
+    "BANNER": {
+      "TITLE": "Let’s make a deal!"
+    },
+    "FORM": {
+      "TITLE": "Tell us about you",
+      "OPTIONS": {
+        "1": "Supplier",
+        "2": "Client",
+        "3": "I am looking for a job"
+      }
+    }
+  },
+  "SUSTAINABILITY": {
+    "BANNER": {
+      "BUTTON": "Quote our products"
+    },
+    "SPECIAL_PRODUCTS": {
+      "SUBTITLE": "Trust us!",
+      "GREEN_SECTION": {
+        "TITLE": "We invite you to discover our entire range of products"
+      }
+    },
+    "PLASTIC": {
+      "TITLE": "Plastic sustainability"
+    },
+    "OUR_ACTIONS": {
+      "TITLE": "Our actions",
+      "QUESTION": "Did you know...",
+      "QUE_TEXT" : "More than 90% of what is thrown away at home and companies can be recycled",
+      "CIRCULAR_ECONOMY": {
+        "TITLE": "Circular economy",
+        "DES": "It is a responsible alternative in which the environmental impact is evaluated, it is based on reducing, reusing and recycling"
+      }
+    }
+  },
+  "BLOG": {
+    "TITLE": "Latest posts",
+    "RECOMMENDED_POSTS" : "Recommended post"
+  },
+  "QUOTE" : {
+    "TITLE" : "What do you want to quote?",
+    "AVAILABLE_PRODUCTS" : {
+      "TITLE": "Select the products that you are interested in",
+      "BUTTON": "Select all",
+      "1": "Bolsas Naturales",
+      "2": "Rollo Punteado",
+      "3": "Hojas de Polipapel",
+      "4": "Marca Camisetitas",
+      "5": "Ecotubitos",
+      "6": "Zipper Flex",
+      "7": "Frigobol",
+      "8": "Bolsas para basura",
+      "9": "Stretch",
+      "10": "Injerto"
     }
   }
 }

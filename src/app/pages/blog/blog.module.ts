@@ -4,12 +4,14 @@ import { BlogComponent } from './blog.component';
 import {TruncateTextPipe} from "../../core/truncate-text.pipe";
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import {RouterModule} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
     declarations: [BlogComponent, TruncateTextPipe, BlogDetailComponent],
     imports: [
         CommonModule,
         RouterModule,
+        TranslateModule,
     ],
     providers:[DatePipe]
 })

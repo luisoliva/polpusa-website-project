@@ -6,7 +6,7 @@
 
 <!-- Come Back -->
 <div class="btn-back" *ngIf="showProductDetail">
-  <a (click)="hideProductDetail()"><i class="fas fa-chevron-left"></i> Volver</a>
+  <a (click)="hideProductDetail()"><i class="fas fa-chevron-left"></i> {{'GENERIC.BACK' | translate}}</a>
 </div>
 
 <section class="row product-items-wrapper mt-5" *ngIf="!showProductDetail">
@@ -19,7 +19,7 @@
       </div>
       <!-- Footer -->
       <div class="product-item-footer" [class.product-item-footer-active]="i === null">
-        <span class="product-item-title">{{product.name}}</span>
+        <span class="product-item-title">{{currentLanguage.language == 'es' ? product.name : product.product_EN[0].name}}</span>
         <!-- <a class="product-item-action" [routerLink]="['/productos/detalle', product.id]">
           Ver Más
           <span class="product-item-action-icon" [class.product-item-action-icon-active]="i === 0">
@@ -27,7 +27,7 @@
           </span>
         </a> -->
         <a class="product-item-action" (click)="goToProductDetail(product)">
-          Ver Más
+          {{'GENERIC.SEEMORE' | translate}}
           <span class="product-item-action-icon" [class.product-item-action-icon-active]="i === null">
             <i class="fas fa-chevron-right"></i>
           </span>
@@ -37,5 +37,10 @@
   </div>
 </section>
 
+<div *ngIf="selectedCategoryItem && !showProductDetail" class="row justify-content-center">
+  <div style="text-align: center" class="col-xl-4 col-lg-6 col-md-6 d-flex justify-content-end">
+    <button *ngIf="!isLoading && pagination ? pagination.links.next : false" class="btn btn-load-more" (click)="loadMoreProducts()">{{'GENERIC.LOADMORE' | translate}}</button>
+  </div>
+</div>
 <!-- Product Detail -->
 <app-product-detail *ngIf="showProductDetail && productSelected" [product]="productSelected"></app-product-detail>

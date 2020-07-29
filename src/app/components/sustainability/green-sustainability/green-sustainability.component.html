@@ -1,17 +1,18 @@
 <section class="ps-r green-sustainability-wrapper">
   <img class="img-fluid green-banner" src="/assets/images/sustainability/green/banner.png" alt="banner">
+  <img class="img-fluid green-banner" src="/assets/images/sustainability/green/banner_en.png" alt="banner">
 
   <div class="green-box-wrapper">
     <img class="img-fluid green-box-title" src="/assets/images/sustainability/green/title.png" alt="title">
     <app-title-bar [background]="'#ffffff'" [height]="'6px'" [width]="titleResize" [float]="'left'"></app-title-bar>
     <br>
-    <p *ngIf="sustainabilityData" class="polpusa_in justify-text text-with-br">{{sustainabilityData.polpusa_verde_brief.description}}</p>
+    <p *ngIf="sustainabilityData" class="polpusa_in justify-text text-with-br">{{currentLanguage.language == 'es' ? sustainabilityData.polpusa_verde_brief.description : sustainabilityData.polpusa_verde_brief.translation[0].description}}</p>
 
     <ul *ngIf="sustainabilityData" class="green-box-menu">
       <li *ngFor="let item of getOptions()" class="green-box-menu-item">{{item}}</li>
     </ul>
 
-    <p *ngIf="sustainabilityData" class="purpose text-with-br justify-text">{{sustainabilityData.polpusa_verde_long.description}}</p>
+    <p *ngIf="sustainabilityData" class="purpose text-with-br justify-text">{{currentLanguage.language == 'es' ? sustainabilityData.polpusa_verde_long.description : sustainabilityData.polpusa_verde_long.translation[0].description}}</p>
 
     <img class="img-fluid phrase" src="/assets/images/sustainability/green/phrase.png" alt="phrase">
   </div>

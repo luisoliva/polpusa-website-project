@@ -7,6 +7,7 @@ import { ProductCarouselComponent } from './product-carousel/product-carousel.co
 
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import {FormsModule} from "@angular/forms";
+import {TranslateModule} from "@ngx-translate/core";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {FormsModule} from "@angular/forms";
         CommonModule,
         Ng2CarouselamosModule,
         FormsModule,
+        TranslateModule,
     ],
   exports: [
     ProductDetailComponent,

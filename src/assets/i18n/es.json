@@ -1,14 +1,32 @@
 {
   "GENERIC": {
     "SEEMORE": "Ver más",
+    "READMORE": "Leer más",
+    "LOADMORE": "Cargas más",
+    "SHARE": "Compartir",
     "FORM_FIELD_NAME": "Nombre del contacto",
     "FORM_FIELD_COMPANY": "Nombre de la empresa",
     "FORM_FIELD_PHONE": "Teléfono",
     "FORM_FIELD_EMAIL": "Correo",
     "FORM_FIELD_PRODUCT": "Producto de interés",
+    "FORM_FIELD_INTEREST_APP" : "Aplicación de interés",
+    "FORM_FIELD_QUANTITY" : "Cantidad",
+    "FORM_FIELD_WIDTH" : "Ancho",
+    "FORM_FIELD_CALIBER" : "Calibre",
+    "FORM_FIELD_ECO_FRIENDLY" :{
+      "TITLE": "¿Te interesa que tu producto sea más amigable con el medio ambiente?"
+    },
+    "YES": "Sí",
+    "NO" : "No",
     "SEND": "Enviar",
     "JOB": "Puesto",
-    "CV": "Adjuntar su CV"
+    "CV": "Adjuntar su CV",
+    "SEARCH": "Buscar",
+    "BACK": "Volver",
+    "DES" : "Descripción",
+    "DOWNLOAD": "Descargar",
+    "DATASHEET": "Ficha técnica",
+    "CONSULT": "Consultar"
   },
   "LAYOUT": {
     "NAVBAR": {
@@ -105,6 +123,34 @@
       "TITLE" : "Certificaciones"
     }
   },
+  "PRODUCTS": {
+    "PHYSICAL_PROP": {
+      "TITLE" : "Propiedades físicas"
+    },
+    "ADVANTAGES": {
+      "TITLE": "Ventajas"
+    },
+    "SPECS_TABLE": {
+      "TITLE" : "Especificaciones",
+      "WIDTH": "Ancho",
+      "HEIGHT" : "Largo",
+      "CALIBER": "Calibre"
+    },
+    "SUGGESTED_USES": {
+      "TITLE": "Usos sugeridos"
+    },
+    "BAGS_TYPES": {
+      "TITLE": "Tipos de bolsas"
+    },
+    "ACTIONS": {
+      "PRODUCTS_CATALOG": "Catálogo de productos",
+      "QUOTE" : "Cotizar producto"
+    },
+    "FORM": {
+      "TITLE": "¿Te interesa este producto?",
+      "SUBTITLE" : "Te contactamos en breve"
+    }
+  },
   "US": {
     "BANNER": {
       "TITLE": "Somos una Familia"
@@ -182,6 +228,50 @@
         "2": "Soy cliente",
         "3": "Busco trabajo"
       }
+    }
+  },
+  "SUSTAINABILITY": {
+    "BANNER": {
+      "BUTTON": "Cotiza nuestros productos"
+    },
+    "SPECIAL_PRODUCTS": {
+      "SUBTITLE": "¡Confíe en nosotros!",
+      "GREEN_SECTION": {
+        "TITLE": "Te invitamos a conocer toda nuestra gama de productos"
+      }
+    },
+    "PLASTIC": {
+      "TITLE": "Sustentabilidad en plástico"
+    },
+    "OUR_ACTIONS": {
+      "TITLE": "Nuestras acciones",
+      "QUESTION": "¿Sabías  que... ",
+      "QUE_TEXT" : "Más del 90% de lo que se desecha a domicilio y empresas se puede reciclar",
+      "CIRCULAR_ECONOMY": {
+        "TITLE": "Economía circular",
+        "DES": "Es una alternativa responsable en la que se evalúa el impacto ambiental, se basa en reducir, reusar y reciclar"
+      }
+    }
+  },
+  "BLOG": {
+    "TITLE": "Últimas Publicaciones",
+    "RECOMMENDED_POSTS" : "Publicaciones recomendadas"
+  },
+  "QUOTE" : {
+    "TITLE" : "¿Qué deseas cotizar?",
+    "AVAILABLE_PRODUCTS" : {
+      "TITLE": "Selecciona los productos de tu interés",
+      "BUTTON": "Seleccionar todos",
+      "1": "Bolsas Naturales",
+      "2": "Rollo Punteado",
+      "3": "Hojas de Polipapel",
+      "4": "Marca Camisetitas",
+      "5": "Ecotubitos",
+      "6": "Zipper Flex",
+      "7": "Frigobol",
+      "8": "Bolsas para basura",
+      "9": "Stretch",
+      "10": "Injerto"
     }
   }
 }

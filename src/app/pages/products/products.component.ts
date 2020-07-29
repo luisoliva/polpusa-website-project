@@ -1,7 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import { ProductCategory } from 'src/app/core/interfaces/products';
 import { ECategoryType } from 'src/app/core/enums/ECategoryType';
-import {ProductDetailComponent} from "../../components/products/product-detail/product-detail.component";
 import {ProductItemsComponent} from "../../components/products/product-items/product-items.component";
 
 @Component({

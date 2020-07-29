@@ -3,6 +3,7 @@ import { ProductCategory } from 'src/app/core/interfaces/products';
 import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 import {ProductsService} from "../../../pages/products/services/products.service";
 import {Category} from "../../../core/models/category.model";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Component({
   selector: 'app-product-categories',
@@ -17,7 +18,8 @@ export class ProductCategoriesComponent implements OnInit {
   productCategories:ProductCategory[]=[]
   @Output() productSelected = new EventEmitter<any>()
 
-  constructor(private productsService:ProductsService) { }
+  constructor(private productsService:ProductsService,
+              public currentLanguage:CurrentLanguageService) { }
 
   ngOnInit(): void {
     this.productsService.getCategories().toPromise()
@@ -34,15 +36,16 @@ export class ProductCategoriesComponent implements OnInit {
           this.productsService.getAllProducts(this.productCategories).toPromise()
               .then(values=>{
                   this.productCategories.forEach((x)=>{
-                      values.forEach((item)=>{
-                        if (item.data.lenght!==0){
-                            if (x.id == item.data[0].category_id){
-                                x.subcategory = item.data;
+                      for (let i=0;i<values.length;i++){
+                        if (values[i].data.length !== 0){
+                            if (x.id == values[i].data[0].category_id){
+                                x.subcategory = values[i].data;
+                                break
                             }
                         }else{
                             x.subcategory = []
                         }
-                      })
+                      }
                   })
                   this.categorySelectedItem = this.productCategories[0]; // Set default element
                   this.setCategorySelectedItem.emit(this.productCategories[0]); // Set default element filter o search component

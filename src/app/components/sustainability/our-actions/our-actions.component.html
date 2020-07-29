@@ -2,30 +2,31 @@
   <div class="our-actions-wrapper">
     <div class="our-actions-left">
       <div>
-        <h2 class="our-actions-left-title">Nuestras acciones</h2>
+        <h2 class="our-actions-left-title">{{'SUSTAINABILITY.OUR_ACTIONS.TITLE' | translate}}</h2>
         <app-title-bar [background]="'#00AAFB'" [height]="'8px'" [width]="titleResize" [float]="'left'"></app-title-bar>
 
         <div class="gallery">
           <img *ngIf="imageA" class="img-fluid gallery-image" src="{{imageA.file_Upload}}" alt="{{imageA.title}}">
           <img *ngIf="imageB" class="img-fluid gallery-image" src="{{imageB.file_Upload}}" alt="{{imageB.title}}">
         </div>
-        <p *ngIf="sustainabilityData" class="our-actions-left-content text-with-br justify-text">{{sustainabilityData.our_actions.description}}</p>
+        <p *ngIf="sustainabilityData" class="our-actions-left-content text-with-br justify-text">{{currentLanguage.language == 'es' ? sustainabilityData.our_actions.description : sustainabilityData.our_actions.translation[0].description}}</p>
       </div>
     </div>
     <div class="our-actions-right">
       <div class="green-box">
         <div class="green-box-item">
-          <h3 class="know-that">¿Sabías  que... </h3>
-          <p class="know-that-response">Más del 90% de lo que se desecha a
-            domicilio y empresas se puede reciclar</p>
+          <h3 class="know-that">{{'SUSTAINABILITY.OUR_ACTIONS.QUESTION' | translate}}</h3>
+          <p class="know-that-response">{{'SUSTAINABILITY.OUR_ACTIONS.QUE_TEXT' | translate}}</p>
         </div>
       </div>
 
-      <h2 class="circular-economy">Economía circular</h2>
-      <p class="is_alternative justify-text">Es una alternativa responsable en la que se evalúa el impacto ambiental, se basa en reducir, reusar y reciclar</p>
+      <h2 class="circular-economy">{{'SUSTAINABILITY.OUR_ACTIONS.CIRCULAR_ECONOMY.TITLE' | translate}}</h2>
+      <p class="is_alternative justify-text">{{'SUSTAINABILITY.OUR_ACTIONS.CIRCULAR_ECONOMY.DES' | translate}}</p>
 
-      <img class="img-fluid resource-image" src="/assets/images/sustainability/our-actions/recursos.png" alt="recursos">
-      <img class="img-fluid resource-title" src="/assets/images/sustainability/our-actions/title.png" alt="title">
+      <img *ngIf="currentLanguage.language == 'es'" class="img-fluid resource-image" src="/assets/images/sustainability/our-actions/recursos.png" alt="recursos">
+      <img *ngIf="currentLanguage.language == 'en'" class="img-fluid resource-image" src="/assets/images/sustainability/our-actions/resources_en.png" alt="recursos">
+      <img *ngIf="currentLanguage.language == 'es'"  class="img-fluid resource-title" src="/assets/images/sustainability/our-actions/title.png" alt="title">
+      <img *ngIf="currentLanguage.language == 'en'" class="img-fluid resource-title" src="/assets/images/sustainability/our-actions/title.png" alt="title">
     </div>
   </div>
 </section>

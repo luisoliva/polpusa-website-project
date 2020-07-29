@@ -3,9 +3,10 @@
     <!-- Left -->
     <div class="spetial-product-left">
       <div>
-        <h1 class="spetial-product-left-title">Productos <span class="title-green">Especiales</span></h1>
+        <h1 *ngIf="currentLanguange.language == 'es'" class="spetial-product-left-title">Productos <span class="title-green">Especiales</span></h1>
+        <h1 *ngIf="currentLanguange.language == 'en'" class="spetial-product-left-title">Special <span class="title-green">Products</span></h1>
         <p *ngIf="sustainabilityData" class="spetial-product-left-content justify-text text-with-br">{{sustainabilityData.special_products.description}}</p>
-        <span class="trust-in-us">¡Confíe en nosotros!</span>
+        <span class="trust-in-us">{{'SUSTAINABILITY.SPECIAL_PRODUCTS.SUBTITLE' | translate}}</span>
         <!-- Gallery -->
         <div class="gallery">
           <div class="row">
@@ -24,20 +25,22 @@
     </div>
     <!-- Right -->
     <div class="spetial-product-right">
-      <p class="spetial-product-right-title">Te invitamos a conocer toda nuestra gama de productos</p>
+      <p class="spetial-product-right-title">{{'SUSTAINABILITY.SPECIAL_PRODUCTS.GREEN_SECTION.TITLE' | translate}}</p>
       <app-title-bar [background]="'#ffffff'" [width]="titleResize" [height]="'8px'"></app-title-bar>
 
-      <h2 class="products">Productos</h2>
-      <span class="products-line">de línea</span>
-
+      <h2 *ngIf="currentLanguange.language == 'es'" class="products">Productos</h2>
+      <span *ngIf="currentLanguange.language == 'es'" class="products-line">de línea</span>
+      <h2 *ngIf="currentLanguange.language == 'en'" class="products">Line </h2>
+      <span *ngIf="currentLanguange.language == 'en'" class="products-line"> products</span>
 <!--      <img class="img-fluid img-camiseta" src="/assets/images/sustainability/products/camiseta.png" alt="camisetas">-->
       <img *ngIf="lineProductsImage" class="img-fluid img-camiseta" src="{{lineProductsImage.file_Upload}}" alt="{{lineProductsImage.title}}">
 
       <div class="d-flex justify-content-center">
         <!-- <button class="btn btn-consult">consulta</button> -->
-        <a class="btn btn-consult" [routerLink]="['/contacto']" [fragment]="'client'">consulta</a>
+        <a class="btn btn-consult" [routerLink]="['/contacto']" [fragment]="'client'">{{'GENERIC.CONSULT' | translate}}</a>
       </div>
-      <p class="sells">con tu asesor de ventas la <span class="sells-bold">alternativa sustentable</span> más adecuada para tu producto</p>
+      <p *ngIf="currentLanguange.language == 'es'" class="sells">con tu asesor de ventas la <span class="sells-bold">alternativa sustentable</span> más adecuada para tu producto</p>
+      <p *ngIf="currentLanguange.language == 'en'" class="sells">with your sales advisor the most suitable <span class="sells-bold">SUSTAINABLE ALTERNATIVE </span> for your product</p>
     </div>
   </div>
 </section>

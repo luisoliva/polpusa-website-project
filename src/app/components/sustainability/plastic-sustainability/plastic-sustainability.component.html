@@ -4,11 +4,11 @@
 <section class="plastic-wrapper">
   <div class="row pb-5">
     <div class="col-lg-7 col-md-12 d-flex flex-column justify-content-center align-items-center">
-      <h2 class="plastic-title">Sustentabilidad en plástico</h2>
+      <h2 class="plastic-title">{{'SUSTAINABILITY.PLASTIC.TITLE' | translate}}</h2>
     </div>
     <div class="col-lg-7 d-flex flex-column justify-content-center align-items-center">
       <br><br>
-      <p *ngIf="sustainabilityData" class="plastic-content justify-text text-with-br">{{sustainabilityData.plastic_sustainability.description}}</p>
+      <p *ngIf="sustainabilityData" class="plastic-content justify-text text-with-br">{{currentLanguage.language == 'es' ? sustainabilityData.plastic_sustainability.description : sustainabilityData.plastic_sustainability.translation[0].description}}</p>
     </div>
     <div class="col-lg-5 d-flex justify-content-start align-items-center mt-5 mb-5">
       <img *ngIf="image" class="img-fluid hand-image" src="{{image.file_Upload}}" alt="{{image.title}}">

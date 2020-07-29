@@ -19,7 +19,7 @@ export class BannerComponent implements OnInit {
           this.videoUrl = res.data[0].file_Upload
         }
       })
-      .catch(()=>this.videoUrl = '/assets/video/home/home.mp4')
+      // .catch(()=>this.videoUrl = '/assets/video/home/home.mp4')
   }
 
 }
