@@ -8,6 +8,7 @@ import { ProductCarouselComponent } from './product-carousel/product-carousel.co
 import { Ng2CarouselamosModule } from 'ng2-carouselamos';
 import {FormsModule} from "@angular/forms";
 import {TranslateModule} from "@ngx-translate/core";
+import {PolpusaFormModule} from "../../../shared/components/polpusa-form/polpusa-form.module";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {TranslateModule} from "@ngx-translate/core";
         Ng2CarouselamosModule,
         FormsModule,
         TranslateModule,
+        PolpusaFormModule,
     ],
   exports: [
     ProductDetailComponent,

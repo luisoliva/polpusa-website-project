@@ -1,0 +1,90 @@
+<form *ngIf="!submitedForm">
+    <!-- Product -->
+    <div *ngIf="request.product !== undefined" class="form-group">
+        <select name="product" class="form-control custom-form-select" (change)="request.product">
+            <option disabled selected value="null">{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}</option>
+            <option *ngFor="let product of products" value="{{product.name ? product.name : product.title}}">{{product.name ? product.name : product.title}}</option>
+            <option value="Otro">{{'GENERIC.OTHER' | translate}}</option>
+        </select>
+    </div>
+    <!-- Product of interest -->
+    <div *ngIf="request.product_interest !== undefined" class="form-group">
+        <select name="product_interest" (change)="request.product_interest" class="form-control custom-form-select">
+            <option disabled selected value="null">{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}</option>
+            <option *ngFor="let product of products" value="{{product.name ? product.name : product.title}}">{{product.name ? product.name : product.title}}</option>
+            <option value="Otro">{{'GENERIC.OTHER' | translate}}</option>
+        </select>
+    </div>
+    <!-- Application -->
+    <div *ngIf="request.application_interest !== undefined" class="form-group">
+        <select name="application" (change)="request.application_interest" class="form-control custom-form-select">
+            <option disabled selected value="null">{{'GENERIC.FORM_FIELD_INTEREST_APP' | translate}}</option>
+        </select>
+    </div>
+    <!-- Quantity (kg) -->
+    <div *ngIf="request.quantity !== undefined" class="form-group">
+        <input type="text" name="quantity" [(ngModel)]="request.quantity" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_QUANTITY' | translate}}">
+    </div>
+    <!-- Width -->
+    <div *ngIf="request.wide !== undefined" class="form-group">
+        <input name="wide" [(ngModel)]="request.wide" type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_WIDTH' | translate}}">
+    </div>
+    <!-- Size -->
+    <div *ngIf="request.caliber !== undefined" class="form-group">
+        <input name="caliber" [(ngModel)]="request.caliber" type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_CALIBER' | translate}}">
+    </div>
+    <!-- Company Name -->
+    <div *ngIf="request.company_name !== undefined" class="form-group">
+        <div class="required-dot">*</div>
+        <input name="company" [(ngModel)]="request.company_name" type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_COMPANY' | translate}}">
+    </div>
+    <!-- Contact Name -->
+    <div *ngIf="request.contact_name !== undefined" class="form-group">
+        <div class="required-dot">*</div>
+        <input name="contact" [(ngModel)]="request.contact_name" type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_NAME' | translate}}">
+    </div>
+    <!-- Phone -->
+    <div *ngIf="request.phone_number !== undefined" class="form-group">
+        <div class="required-dot">*</div>
+        <input name="phone" [(ngModel)]="request.phone_number" type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PHONE' | translate}}">
+    </div>
+    <!-- Email -->
+    <div *ngIf="request.mail !== undefined" class="form-group">
+        <div class="required-dot">*</div>
+        <input name="email" [(ngModel)]="request.mail" type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_EMAIL' | translate}}">
+    </div>
+    <!-- Job area -->
+    <div *ngIf="request.stall !== undefined" class="form-group">
+        <div class="required-dot">*</div>
+        <input name="stall" [(ngModel)]="request.stall" type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.JOB' | translate}}">
+    </div>
+    <!-- Upload CV -->
+    <div *ngIf="request.curruculum !== undefined" class="form-group">
+        <div class="required-dot">*</div>
+        <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i>{{'GENERIC.CV' | translate}}</button>
+        <input name="cv" [(ngModel)]="request.curruculum" #cvFile type="file" class="d-none">
+    </div>
+    <!-- Friendly Enviroment -->
+    <div *ngIf="request.organic_product !== undefined" class="form-group">
+        <label class="custom-label">{{'GENERIC.FORM_FIELD_ECO_FRIENDLY.TITLE' | translate}}</label>
+        <!-- Yes -->
+        <div>
+            <input [(ngModel)]="request.organic_product" class="btn-enviroment" id="yes" type="radio" value="Sí" name="yes">
+            <label for="yes">{{'GENERIC.YES' | translate}}</label>
+        </div>
+        <!-- No -->
+        <div class="mt-3">
+            <input [(ngModel)]="request.organic_product" class="btn-enviroment" id="no" type="radio" value="No" name="no">
+            <label for="no">{{'GENERIC.NO' | translate}}</label>
+        </div>
+    </div>
+    <h6 *ngIf="error" class="error-field">{{'GENERIC.REQUIRED' | translate}}</h6>
+    <!-- Action -->
+    <div class="d-flex justify-content-end mt-4">
+        <button (click)="submitForm()" class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
+    </div>
+</form>
+<div *ngIf="submitedForm">
+    <h5 style="color: #888888">{{'GENERIC.THANKS' | translate}}</h5>
+    <button (click)="sendOtherForm()" type="button" class="btn btn-outline-dark mt-3">{{'GENERIC.OTHER_FORM' | translate}}</button>
+</div>

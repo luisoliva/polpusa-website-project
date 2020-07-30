@@ -35,6 +35,12 @@ form {
   color:#09A2E4;
   font-size: 15px;
 }
+.cancel-search{
+  color: #888888;
+}
+.cancel-search:hover{
+  cursor: pointer;
+}
 @media only screen and (max-width: 990px) {
   form {
     justify-content: center;

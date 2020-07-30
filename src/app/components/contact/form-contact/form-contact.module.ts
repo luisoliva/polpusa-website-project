@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormContactComponent } from './form-contact.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {TranslateModule} from "@ngx-translate/core";
+import {PolpusaFormModule} from "../../../shared/components/polpusa-form/polpusa-form.module";
 
 @NgModule({
   declarations: [FormContactComponent],
@@ -10,7 +11,8 @@ import {TranslateModule} from "@ngx-translate/core";
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        TranslateModule
+        TranslateModule,
+        PolpusaFormModule
     ],
   exports: [FormContactComponent]
 })

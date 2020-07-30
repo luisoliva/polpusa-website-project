@@ -4,6 +4,7 @@ import { QuoteFormComponent } from './quote-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { QuoteFormProductComponent } from './quote-form-product/quote-form-product.component';
 import {TranslateModule} from "@ngx-translate/core";
+import {PolpusaFormModule} from "../../../shared/components/polpusa-form/polpusa-form.module";
 
 @NgModule({
   declarations: [QuoteFormComponent, QuoteFormProductComponent],
@@ -11,7 +12,8 @@ import {TranslateModule} from "@ngx-translate/core";
         CommonModule,
         FormsModule,
         ReactiveFormsModule,
-        TranslateModule
+        TranslateModule,
+        PolpusaFormModule
     ],
   exports: [QuoteFormComponent]
 })

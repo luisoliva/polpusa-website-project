@@ -2,7 +2,7 @@
     <div class="row row-wrapper" style="margin: 0;">
       <!-- Section 1 -->
       <div class="col-md-3 footer-item">
-        <h5 class="footer-item-title">{{'LAYOUT.FOOTER.SITE_TREE.TITLE' | translate}}</h5>
+        <h5 [style]="{marginLeft: language.language == 'es' ? '-10px':'-37px'}" class="footer-item-title">{{'LAYOUT.FOOTER.SITE_TREE.TITLE' | translate}}</h5>
         <ul class="nav flex-column mt-3">
           <li class="nav-item"><a class="nav-link custom-link" [routerLink]="['/inicio']">{{'LAYOUT.NAVBAR.HOME' | translate}}</a></li>
           <li class="nav-item"><a class="nav-link custom-link" [routerLink]="['/productos']">{{'LAYOUT.NAVBAR.PRODUCTS' | translate}}</a></li>

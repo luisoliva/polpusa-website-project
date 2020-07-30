@@ -2,7 +2,8 @@
   <form>
     <div class="search-input">
       <span class="search-icon"><i class="fas fa-search"></i></span>
-      <input class="form-control" type="text" placeholder="{{'GENERIC.SEARCH' | translate}}">
+      <input #input class="form-control" type="text" placeholder="{{'GENERIC.SEARCH' | translate}}">
+      <i (click)="clearSearch()" *ngIf="searchPerformed" class="fas fa-times-circle cancel-search"></i>
     </div>
   </form>
 </section>

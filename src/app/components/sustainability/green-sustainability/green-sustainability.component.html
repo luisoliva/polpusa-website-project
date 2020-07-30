@@ -3,7 +3,8 @@
   <img class="img-fluid green-banner" src="/assets/images/sustainability/green/banner_en.png" alt="banner">
 
   <div class="green-box-wrapper">
-    <img class="img-fluid green-box-title" src="/assets/images/sustainability/green/title.png" alt="title">
+    <img *ngIf="currentLanguage.language == 'es'" class="img-fluid green-box-title" src="/assets/images/sustainability/green/title.png" alt="title">
+    <img *ngIf="currentLanguage.language == 'en'" class="img-fluid green-box-title" src="/assets/images/sustainability/green/greenpolpusa.png" alt="title">
     <app-title-bar [background]="'#ffffff'" [height]="'6px'" [width]="titleResize" [float]="'left'"></app-title-bar>
     <br>
     <p *ngIf="sustainabilityData" class="polpusa_in justify-text text-with-br">{{currentLanguage.language == 'es' ? sustainabilityData.polpusa_verde_brief.description : sustainabilityData.polpusa_verde_brief.translation[0].description}}</p>
@@ -14,7 +15,7 @@
 
     <p *ngIf="sustainabilityData" class="purpose text-with-br justify-text">{{currentLanguage.language == 'es' ? sustainabilityData.polpusa_verde_long.description : sustainabilityData.polpusa_verde_long.translation[0].description}}</p>
 
-    <img class="img-fluid phrase" src="/assets/images/sustainability/green/phrase.png" alt="phrase">
+    <img class="img-fluid phrase" src="{{currentLanguage.language == 'es' ? '/assets/images/sustainability/green/phrase.png' : '/assets/images/sustainability/green/reduce_reuse_recycle.png'}}" alt="phrase">
   </div>
 
   <div class="green-div"></div>

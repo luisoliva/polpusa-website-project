@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ProductItem } from 'src/app/core/interfaces/products';
+import {Component, OnInit, Input, ViewChild} from '@angular/core';
 import {Product} from "../../../core/models/product.model";
 import {Utils} from "../../../core/utils";
 import {CurrentLanguageService} from "../../../core/current-language.service";
+import {PolpusaFormComponent} from "../../../shared/components/polpusa-form/polpusa-form.component";
 
 @Component({
   selector: 'app-product-detail',
@@ -15,6 +15,8 @@ export class ProductDetailComponent implements OnInit {
   propertiesEn:string[] = [];
   advantagesEs:string[] = [];
   advantagesEn:string[] = [];
+  formType: number;
+  @ViewChild('form') formComponent:PolpusaFormComponent;
 
   constructor(public currentLanguage:CurrentLanguageService) { }
 
@@ -31,6 +33,7 @@ export class ProductDetailComponent implements OnInit {
     this.product.advantage_EN.forEach((element)=>{
       this.advantagesEn.push(element.advantage_product)
     })
+    this.formType = this.product.category_id;
   }
 
   openDS(data_sheet: any) {

@@ -16,8 +16,20 @@ export class ProductsService {
 
   constructor(private api:ApiService) { }
 
+  getSpecialtyProductsSearch(searchValue:string):Observable<any>{
+    return this.api.get('v1/api/product-all/?category_id=1&name='+ searchValue);
+  }
+
+  getFilterStockProducts(bag_type:number):Observable<any>{
+    return this.api.get('v1/api/product-all/?category_id=2&type_bag='+String(bag_type));
+  }
+
+  getFilmsSearch(searchValue:string):Observable<any>{
+    return this.api.get('v1/api/product-all/?category_id=3&name='+searchValue);
+  }
+
   getCategories():Observable<any>{
-    return this.api.get('v1/api/categories-traslations/');
+    return this.api.get('v1/api/categories-traslations/?perpage=2000');
   }
 
   updateCategory(id:number, category:Category):Observable<any>{
@@ -28,8 +40,8 @@ export class ProductsService {
     return this.api.put('v1/api/traslation-categories/'+id+'/', translationData);
   }
 
-  getProductsByCategory(categoryId:number):Observable<any>{
-    return this.api.get('v1/api/product-all/?category_id='+categoryId);
+  getProductsByCategory(categoryId:number, perpage?:number):Observable<any>{
+    return this.api.get('v1/api/product-all/?category_id='+categoryId + (perpage ? '&perpage=' + String(perpage) : ''));
   }
 
   deleteProduct(id:number):Observable<any>{

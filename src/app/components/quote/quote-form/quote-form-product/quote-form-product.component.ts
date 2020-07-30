@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {element} from "protractor";
 
 @Component({
   selector: 'app-quote-form-product',
@@ -18,6 +19,7 @@ export class QuoteFormProductComponent implements OnInit {
     {id: 9, name: 'Stretch', image: '/assets/images/quote/products/poli-bag.png'},
     {id: 10, name: 'Injerto', image: '/assets/images/quote/products/bag.png'}
   ];
+  @Output() productsSelected = new EventEmitter<string>();
 
   selectedProducts:Array<any> = new Array<any>();
 
@@ -33,6 +35,15 @@ export class QuoteFormProductComponent implements OnInit {
     }else{
       this.selectedProducts.push(product);
     }
+    this.productsSelected.emit(this.getStringOfProducts());
+  }
+
+  getStringOfProducts():string{
+    let arr = [];
+    this.selectedProducts.forEach((element)=>{
+      arr.push(element.name)
+    })
+    return arr.join(', ')
   }
 
   isProductSelected(product: any) {
@@ -42,5 +53,6 @@ export class QuoteFormProductComponent implements OnInit {
   selectAllProducts() {
     this.selectedProducts = [];
     this.selectedProducts = this.selectedProducts.concat(this.quoteProducts)
+    this.productsSelected.emit(this.getStringOfProducts());
   }
 }

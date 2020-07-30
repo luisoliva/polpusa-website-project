@@ -4,6 +4,8 @@ import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 import {ProductsService} from "../../../pages/products/services/products.service";
 import {Category} from "../../../core/models/category.model";
 import {CurrentLanguageService} from "../../../core/current-language.service";
+import {Product} from "../../../core/models/product.model";
+import {Pagination} from "../../../core/models/pagination.model";
 
 @Component({
   selector: 'app-product-categories',
@@ -17,6 +19,9 @@ export class ProductCategoriesComponent implements OnInit {
   categorySelectedItem: ProductCategory;
   productCategories:ProductCategory[]=[]
   @Output() productSelected = new EventEmitter<any>()
+  productSelectedVal;
+  originalProducts:Product[];
+  originalPagination:Pagination;
 
   constructor(private productsService:ProductsService,
               public currentLanguage:CurrentLanguageService) { }
@@ -40,6 +45,7 @@ export class ProductCategoriesComponent implements OnInit {
                         if (values[i].data.length !== 0){
                             if (x.id == values[i].data[0].category_id){
                                 x.subcategory = values[i].data;
+                                x.pagination = values[i].pagination;
                                 break
                             }
                         }else{
@@ -67,6 +73,17 @@ export class ProductCategoriesComponent implements OnInit {
       this.categorySelectedItem;
       // this.setCategorySelectedItem.emit(null);
     }
+  }
+
+  selectedProduct(subcategory){
+    this.productSelected.emit(subcategory)
+    this.productSelectedVal = subcategory;
+  }
+
+  setItemsFound(products:{data:Product[],pagination:Pagination}){
+      //recibo el objeto
+      debugger
+      console.log(products);
   }
 
 }

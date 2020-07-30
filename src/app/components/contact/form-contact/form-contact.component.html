@@ -19,98 +19,10 @@
   <!-- Form Options Content -->
   <div class="form-options-content">
     <!-- PROVIDER FORM -->
-    <form *ngIf="selectedFormOption ===  formOptions.PROVIDER">
-      <!-- Contact Name -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_NAME' | translate}}">
-      </div>
-      <!-- Company Name -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_COMPANY' | translate}}">
-      </div>
-      <!-- Phone -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PHONE' | translate}}">
-      </div>
-      <!-- Email -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_EMAIL' | translate}}">
-      </div>
-      <!-- Product -->
-      <div class="form-group">
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}">
-      </div>
-      <!-- Action -->
-      <div class="d-flex justify-content-end mt-4">
-        <button class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
-      </div>
-    </form>
+    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.PROVIDER" [formType]="4"></app-polpusa-form>
     <!-- CLIENT FORM -->
-    <form *ngIf="selectedFormOption ===  formOptions.CLIENT">
-      <!-- Contact Name -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_NAME' | translate}}">
-      </div>
-      <!-- Company Name -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_COMPANY' | translate}}">
-      </div>
-      <!-- Phone -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PHONE' | translate}}">
-      </div>
-      <!-- Email -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_EMAIL' | translate}}">
-      </div>
-      <!-- Product -->
-      <div class="form-group">
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}">
-      </div>
-      <!-- Action -->
-      <div class="d-flex justify-content-end mt-4">
-        <button class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
-      </div>
-    </form>
+    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.CLIENT" [formType]="5"></app-polpusa-form>
     <!-- WORK FORM -->
-    <form *ngIf="selectedFormOption ===  formOptions.WORK">
-      <!-- Contact Name -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_NAME' | translate}}">
-      </div>
-      <!-- Phone -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_PHONE' | translate}}">
-      </div>
-      <!-- Email -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.FORM_FIELD_EMAIL' | translate}}">
-      </div>
-      <!-- Position -->
-      <div class="form-group">
-        <input type="text" class="form-control custom-form-input" placeholder="{{'GENERIC.JOB' | translate}}">
-      </div>
-      <!-- Upload CV -->
-      <div class="form-group">
-        <div class="required-dot">*</div>
-        <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i>{{'GENERIC.CV' | translate}}</button>
-        <input #cvFile type="file" class="d-none">
-      </div>
-      <!-- Action -->
-      <div class="d-flex justify-content-end mt-4">
-        <button class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
-      </div>
-    </form>
+    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.WORK" [formType]="6"></app-polpusa-form>
   </div>
 </section>

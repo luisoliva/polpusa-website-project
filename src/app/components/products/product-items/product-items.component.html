@@ -1,5 +1,5 @@
 <!-- Search Bar -->
-<app-product-search-bar *ngIf="selectedCategoryItem?.type === eCategory.SEARCH && !showProductDetail"></app-product-search-bar>
+<app-product-search-bar *ngIf="selectedCategoryItem?.type === eCategory.SEARCH && !showProductDetail" [films]="selectedCategoryItem.id == 3" (itemsFound)="itemsFoundEmitter.emit($event)"></app-product-search-bar>
 
 <!-- Filter Bar -->
 <app-product-filter *ngIf="selectedCategoryItem?.type === eCategory.FILTER && !showProductDetail"></app-product-filter>
@@ -39,8 +39,8 @@
 
 <div *ngIf="selectedCategoryItem && !showProductDetail" class="row justify-content-center">
   <div style="text-align: center" class="col-xl-4 col-lg-6 col-md-6 d-flex justify-content-end">
-    <button *ngIf="!isLoading && pagination ? pagination.links.next : false" class="btn btn-load-more" (click)="loadMoreProducts()">{{'GENERIC.LOADMORE' | translate}}</button>
+    <button *ngIf="!isLoading && selectedCategoryItem.pagination ? selectedCategoryItem.pagination.links.next !== '' : false" class="btn btn-load-more" (click)="loadMoreProducts()">{{'GENERIC.LOADMORE' | translate}}</button>
   </div>
 </div>
 <!-- Product Detail -->
-<app-product-detail *ngIf="showProductDetail && productSelected" [product]="productSelected"></app-product-detail>
+<app-product-detail #detail *ngIf="showProductDetail && productSelected" [product]="productSelected"></app-product-detail>

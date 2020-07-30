@@ -41,9 +41,11 @@
 <section class="social-responsability-wrapper">
   <h4 class="social-responsability-title">{{'HOMEPAGE.SOCIALRESPON.TITLE' | translate}}</h4>
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
-  <div class="row justify-content-center">
-    <div class="col-md-6">
-      <img class="img-fluid d-block ml-auto mr-auto" style="width: 95%; margin-top: 5rem;" src="/assets/images/home/responsabilidad.png" alt="social-responsability">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7">
+        <img class="img-fluid d-block ml-auto mr-auto" style="width: 100%; margin-top: 5rem;" src="{{currentLanguageService.language == 'es' ? '/assets/images/home/responsabilidad.png' : '/assets/images/home/responsabilidad_en.png'}}" alt="social-responsability">
+      </div>
     </div>
   </div>
 </section>

@@ -1,0 +1,56 @@
+/*
+  Hide radio button (the round disc)
+  we will use just the label to create pushbutton effect
+*/
+input.btn-enviroment[type=radio] {
+    display:none;
+    margin:10px;
+}
+
+/*
+Change the look'n'feel of labels (which are adjacent to radiobuttons).
+Add some margin, padding to label
+*/
+input.btn-enviroment[type=radio] + label {
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    background-color: none;
+    border: 1px solid rgba(32, 119, 189, 0.4137834821428572) !important;
+    font-family: 'Lato-Bold' !important;
+    text-align: left !important;
+    width: 100%;
+}
+/*
+* Change background color for label next to checked radio button
+* to make it look like highlighted button
+*/
+input.btn-enviroment[type=radio]:checked + label {
+    border: none !important;
+    border-radius: 0;
+    background-color: rgba(0, 158, 226, 0.2);
+}
+.send-form-button {
+    background-color: #002d73;
+    border-radius: 21.5px;
+    width: 136px;
+    height: 43px;
+    color: #ffffff;
+    font-family: "Lato-Bold";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+.form-cv-text {
+    display: block;
+    color: #536890 !important;
+    font-family: "Lato-Bold" !important;
+    background: none;
+    border: 1px solid rgba(32, 119, 189, 0.4137834821428572);
+    width: 100%;
+    text-align: left;
+}
+.error-field{
+    color: red;
+    font-size: 14px;
+}
