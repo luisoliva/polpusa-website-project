@@ -1,5 +1,5 @@
 export interface PolpusaForm {
-    type:number;
+    type_contact:number;
     application_interest?:string;
     product?:string;
     quantity?:string;

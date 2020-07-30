@@ -1,7 +1,7 @@
 .search-wrapper {
   margin-top: 4rem;
 }
-form {
+.search-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;

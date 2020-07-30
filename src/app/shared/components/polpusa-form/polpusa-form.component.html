@@ -1,24 +1,51 @@
-<form *ngIf="!submitedForm">
+<div *ngIf="!submitedForm && !isLoading && !submitError">
     <!-- Product -->
     <div *ngIf="request.product !== undefined" class="form-group">
-        <select name="product" class="form-control custom-form-select" (change)="request.product">
+        <select name="product" class="form-control custom-form-select" [ngModel]="request.product !== '' ? request.product : null" (ngModelChange)="request.product = $event">
             <option disabled selected value="null">{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}</option>
-            <option *ngFor="let product of products" value="{{product.name ? product.name : product.title}}">{{product.name ? product.name : product.title}}</option>
-            <option value="Otro">{{'GENERIC.OTHER' | translate}}</option>
+            <option *ngFor="let product of products" value="{{language.language == 'es' ? (product.name ? product.name : product.title) : (product.product_EN !== undefined ? product.product_EN[0].name : product.category[0].title)}}">
+                {{language.language == 'es' ? (product.name ? product.name : product.title) : (product.product_EN !== undefined ? product.product_EN[0].name : product.category[0].title)}}            </option>
+            <option value="{{'GENERIC.OTHER' | translate}}">{{'GENERIC.OTHER' | translate}}</option>
         </select>
     </div>
     <!-- Product of interest -->
     <div *ngIf="request.product_interest !== undefined" class="form-group">
-        <select name="product_interest" (change)="request.product_interest" class="form-control custom-form-select">
+        <select name="product_interest" [ngModel]="request.product_interest !== '' ? request.product_interest : null" (ngModelChange)="request.product_interest = $event" class="form-control custom-form-select">
             <option disabled selected value="null">{{'GENERIC.FORM_FIELD_PRODUCT' | translate}}</option>
-            <option *ngFor="let product of products" value="{{product.name ? product.name : product.title}}">{{product.name ? product.name : product.title}}</option>
-            <option value="Otro">{{'GENERIC.OTHER' | translate}}</option>
+            <option *ngFor="let product of products" value="{{language.language == 'es' ? (product.name ? product.name : product.title) : (product.product_EN !== undefined ? product.product_EN[0].name : product.category[0].title)}}">
+                {{language.language == 'es' ? (product.name ? product.name : product.title) : (product.product_EN !== undefined ? product.product_EN[0].name : product.category[0].title)}}            </option>
+            <option value="{{'GENERIC.OTHER' | translate}}">{{'GENERIC.OTHER' | translate}}</option>
         </select>
     </div>
     <!-- Application -->
     <div *ngIf="request.application_interest !== undefined" class="form-group">
-        <select name="application" (change)="request.application_interest" class="form-control custom-form-select">
-            <option disabled selected value="null">{{'GENERIC.FORM_FIELD_INTEREST_APP' | translate}}</option>
+        <select name="application" [ngModel]="request.application_interest !== '' ? request.application_interest : null" (ngModelChange)="request.application_interest = $event" class="form-control custom-form-select">
+            <option disabled selected value="null">{{'GENERIC.FORM_FIELD_INTEREST_APP.TITLE' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.1' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.1' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.2' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.2' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.3' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.3' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.4' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.4' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.5' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.5' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.6' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.6' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.7' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.7' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.8' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.8' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.9' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.9' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.10' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.10' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.11' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.11' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.12' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.12' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.13' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.13' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.14' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.14' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.15' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.15' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.16' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.16' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.17' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.17' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.18' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.18' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.19' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.19' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.20' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.20' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.21' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.21' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.22' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.22' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.23' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.23' | translate}}</option>
+            <option value="{{'GENERIC.FORM_FIELD_INTEREST_APP.24' | translate}}">{{'GENERIC.FORM_FIELD_INTEREST_APP.24' | translate}}</option>
+            <option value="{{'GENERIC.OTHER' | translate}}">{{'GENERIC.OTHER' | translate}}</option>
         </select>
     </div>
     <!-- Quantity (kg) -->
@@ -61,8 +88,8 @@
     <!-- Upload CV -->
     <div *ngIf="request.curruculum !== undefined" class="form-group">
         <div class="required-dot">*</div>
-        <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i>{{'GENERIC.CV' | translate}}</button>
-        <input name="cv" [(ngModel)]="request.curruculum" #cvFile type="file" class="d-none">
+        <button class="btn form-cv-text" (click)="cvFile.click()"><i class="fas fa-cloud-upload-alt"></i>{{request.curruculum == null ? ('GENERIC.CV' | translate) : (request.curruculum.name | truncateText:60)}}</button>
+        <input accept="application/msword, application/pdf" name="cv" (change)="handleFile($event)" #cvFile type="file" class="d-none">
     </div>
     <!-- Friendly Enviroment -->
     <div *ngIf="request.organic_product !== undefined" class="form-group">
@@ -78,13 +105,20 @@
             <label for="no">{{'GENERIC.NO' | translate}}</label>
         </div>
     </div>
-    <h6 *ngIf="error" class="error-field">{{'GENERIC.REQUIRED' | translate}}</h6>
+    <h6 *ngIf="errorRequiredFields" class="error-field">{{'GENERIC.REQUIRED' | translate}}</h6>
     <!-- Action -->
     <div class="d-flex justify-content-end mt-4">
         <button (click)="submitForm()" class="btn send-form-button">{{'GENERIC.SEND' | translate}}</button>
     </div>
-</form>
-<div *ngIf="submitedForm">
-    <h5 style="color: #888888">{{'GENERIC.THANKS' | translate}}</h5>
+</div>
+<div *ngIf="submitedForm && !isLoading && !submitError" [style]="{textAlign:centeredButton ? 'center' : 'left'}">
+    <h5 style="color: #888888;">{{'GENERIC.THANKS' | translate}}</h5>
     <button (click)="sendOtherForm()" type="button" class="btn btn-outline-dark mt-3">{{'GENERIC.OTHER_FORM' | translate}}</button>
+</div>
+<div *ngIf="isLoading" [style]="{textAlign:centeredButton ? 'center' : 'left'}">
+    <h5 style="color: #888888;">{{'GENERIC.LOADING_FORM' | translate}}</h5>
+</div>
+<div *ngIf="submitError" [style]="{textAlign:centeredButton ? 'center' : 'left'}">
+    <h5 style="color: #c20808;">{{'GENERIC.RETRY_TEXT' | translate}}</h5>
+    <button (click)="submitError = false" type="button" class="btn btn-outline-dark mt-3">{{'GENERIC.RETRY_BUTTON' | translate}}</button>
 </div>

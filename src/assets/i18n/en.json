@@ -4,7 +4,12 @@
     "READMORE": "Read more",
     "LOADMORE": "Load more",
     "SHARE": "Share",
+    "LOADING_PRODUCTS": "Loading products...",
+    "LOADING_FORM": "Sending information...",
+    "NO_RESULTS_PRODUCTS": "No products found in this category",
     "REQUIRED": "Please fill in all the required fields marked with *",
+    "RETRY_TEXT": "An error while submiting the form ocurred. Please try again",
+    "RETRY_BUTTON": "Try again",
     "THANKS" : "Your request has been submitted. Thanks for contacting us",
     "OTHER_FORM": "Send another request",
     "FORM_FIELD_NAME": "Contact name",
@@ -12,7 +17,33 @@
     "FORM_FIELD_PHONE": "Phone",
     "FORM_FIELD_EMAIL": "Email",
     "FORM_FIELD_PRODUCT": "Select a product",
-    "FORM_FIELD_INTEREST_APP" : "Application of interest",
+    "FORM_FIELD_INTEREST_APP" : {
+      "TITLE": "Interest application",
+      "1": "Bolsas para hielo",
+      "2": "Empaque para galletas y botanas",
+      "3": "Película para envasado automático",
+      "4": "Película para toallitas húmedas ",
+      "5": "Bolsas para pan",
+      "6": "Bolsas para café",
+      "7": "Bolsas boutique",
+      "8": "Bolsas de camiseta personalizadas",
+      "9": "Bolsas para alto vacío",
+      "10": "Bolsas para productos congelados",
+      "11": "Bolsas para tierra o injerto",
+      "12": "Empaque para cárnicos - PASTOR",
+      "13": "Bolsas para materiales de construcción - GOFRADO",
+      "14": "Empaque para productos higiénicos o de limpieza",
+      "15": "Bolsas con wicket para industria textil",
+      "16": "Bolsas para hotelería",
+      "17": "Bolsas con zipper",
+      "18": "Envasado automático ",
+      "19": "Bolsas de celofán",
+      "20": "Bolsas stand up pouch",
+      "21": "Cubretraje (bolsas para lavandería)",
+      "22": "Bolsas con medidas especiales",
+      "23": "Tubulares con medidas especiales ",
+      "24": "Películas con medidas especiales"
+    },
     "FORM_FIELD_QUANTITY" : "Quantity (kg)",
     "FORM_FIELD_WIDTH" : "Width (cm)",
     "FORM_FIELD_CALIBER" : "Gauge (mm)",
@@ -24,7 +55,7 @@
     "NO" : "No",
     "SEND": "Submit",
     "JOB": "Area of interest",
-    "CV": "Attach your CV",
+    "CV": "Attach your resume or CV",
     "SEARCH": "Search",
     "BACK": "Back",
     "DES" : "Description",
@@ -153,6 +184,14 @@
     "FORM": {
       "TITLE": "Are you interested in this product?",
       "SUBTITLE" : "We will contact you soon"
+    },
+    "FILTERS": {
+      "TITLE": "Filters",
+      "0": "Show all",
+      "1": "biodegradable",
+      "2": "Recycled",
+      "3": "Recyclable",
+      "4": "Reusable"
     }
   },
   "US": {
@@ -259,7 +298,7 @@
   },
   "BLOG": {
     "TITLE": "Latest posts",
-    "RECOMMENDED_POSTS" : "Recommended post"
+    "RECOMMENDED_POSTS" : "Recommended posts"
   },
   "QUOTE" : {
     "TITLE" : "What do you want to quote?",

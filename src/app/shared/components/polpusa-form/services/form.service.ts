@@ -11,6 +11,6 @@ export class FormService {
   constructor(private api:ApiService) { }
 
   submitForm(data:PolpusaForm):Observable<any>{
-    return this.api.post('', this.api.getFormData(data));
+    return this.api.post('v1/api/contact/', this.api.getFormData(data));
   }
 }

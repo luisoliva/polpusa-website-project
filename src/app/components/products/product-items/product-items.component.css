@@ -1,5 +1,6 @@
 .product-items-wrapper {
   margin-left: 295px;
+  min-height: 350px;
 }
 .btn-load-more {
   background-color: #FFFFFF;
@@ -78,6 +79,12 @@
 .product-item:hover .product-item-action-icon,
 .product-item-action-icon-active {
   color: #ffffff;
+}
+.no-results-text{
+  text-align: center;
+  color: #717171;
+  width: 100%;
+  margin-top: 50px;
 }
 @media only screen and (max-width: 990px) {
   .product-items-wrapper {

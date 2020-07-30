@@ -1,7 +1,7 @@
 .filter-wrapper {
   margin-top: 4rem;
 }
-form {
+.filter-field-container {
   display: flex;
   align-items: center;
   justify-content: flex-end;

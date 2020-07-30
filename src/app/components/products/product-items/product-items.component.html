@@ -1,8 +1,8 @@
 <!-- Search Bar -->
-<app-product-search-bar *ngIf="selectedCategoryItem?.type === eCategory.SEARCH && !showProductDetail" [films]="selectedCategoryItem.id == 3" (itemsFound)="itemsFoundEmitter.emit($event)"></app-product-search-bar>
+<app-product-search-bar #search *ngIf="selectedCategoryItem?.type === eCategory.SEARCH && !showProductDetail" [films]="selectedCategoryItem.id == 3" (itemsFound)="itemsFoundEmitter.emit($event)"></app-product-search-bar>
 
 <!-- Filter Bar -->
-<app-product-filter *ngIf="selectedCategoryItem?.type === eCategory.FILTER && !showProductDetail"></app-product-filter>
+<app-product-filter #filter *ngIf="selectedCategoryItem?.type === eCategory.FILTER && !showProductDetail" (itemsFound)="itemsFoundEmitter.emit($event)"></app-product-filter>
 
 <!-- Come Back -->
 <div class="btn-back" *ngIf="showProductDetail">
@@ -35,6 +35,7 @@
       </div>
     </div>
   </div>
+  <h6 class="no-results-text" *ngIf="selectedCategoryItem.subcategory ? selectedCategoryItem.subcategory.length == 0 : true">{{selectedCategoryItem.subcategory !== undefined ? ('GENERIC.NO_RESULTS_PRODUCTS' | translate):('GENERIC.LOADING_PRODUCTS' | translate)}}</h6>
 </section>
 
 <div *ngIf="selectedCategoryItem && !showProductDetail" class="row justify-content-center">

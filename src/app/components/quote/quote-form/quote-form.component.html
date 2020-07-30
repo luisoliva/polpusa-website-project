@@ -33,10 +33,10 @@
   <!-- Form Options Content -->
   <div class="form-options-content">
     <!-- MOVIE FORM -->
-    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.MOVIE" [formType]="7"></app-polpusa-form>
+    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.MOVIE" [formType]="7" [centeredButton]="true"></app-polpusa-form>
     <!-- SPETIAL FORM -->
-    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.SPETIAL" [formType]="8"></app-polpusa-form>
+    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.SPETIAL" [formType]="8" [centeredButton]="true"></app-polpusa-form>
     <!-- LINE FORM -->
-    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.LINE" [formType]="9" [lineProductsSelected]="productsSelected"></app-polpusa-form>
+    <app-polpusa-form *ngIf="selectedFormOption ===  formOptions.LINE" [formType]="9" [lineProductsSelected]="productsSelected" [centeredButton]="true"></app-polpusa-form>
   </div>
 </section>

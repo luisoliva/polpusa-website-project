@@ -8,16 +8,18 @@ import {ProductEn} from "../../../core/models/product-en.model";
 import {Utils} from "../../../core/utils";
 import {Spec} from "../../../core/models/spec.model";
 import {ProductCategory} from "../../../core/interfaces/products";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
 
-  constructor(private api:ApiService) { }
+  constructor(private api:ApiService,
+              private languageService:CurrentLanguageService) { }
 
   getSpecialtyProductsSearch(searchValue:string):Observable<any>{
-    return this.api.get('v1/api/product-all/?category_id=1&name='+ searchValue);
+    return this.api.get('v1/api/product-all/?category_id=1&' + (this.languageService.language == 'es' ? 'name=' : 'nameIn=') +searchValue);
   }
 
   getFilterStockProducts(bag_type:number):Observable<any>{
@@ -25,7 +27,7 @@ export class ProductsService {
   }
 
   getFilmsSearch(searchValue:string):Observable<any>{
-    return this.api.get('v1/api/product-all/?category_id=3&name='+searchValue);
+    return this.api.get('v1/api/product-all/?category_id=3&' + (this.languageService.language == 'es' ? 'name=' : 'nameIn=') +searchValue);
   }
 
   getCategories():Observable<any>{

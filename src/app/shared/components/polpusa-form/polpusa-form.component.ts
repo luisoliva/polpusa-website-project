@@ -3,8 +3,8 @@ import {PolpusaForm} from "../../../core/models/polpusa-form.model";
 import {ProductsService} from "../../../pages/products/services/products.service";
 import {Product} from "../../../core/models/product.model";
 import {Category} from "../../../core/models/category.model";
+import {CurrentLanguageService} from "../../../core/current-language.service";
 import {FormService} from "./services/form.service";
-import {NavigationStart, Router} from "@angular/router";
 
 @Component({
   selector: 'app-polpusa-form',
@@ -14,12 +14,17 @@ import {NavigationStart, Router} from "@angular/router";
 export class PolpusaFormComponent implements OnInit {
   @Input() formType: number;
   @Input() lineProductsSelected:string;
+  @Input() centeredButton = false;
   request: PolpusaForm;
   products: Array<Product | Category> = []
   submitedForm = false;
-  error = false
+  errorRequiredFields = false
+  submitError = false;
+  isLoading = false;
+
 
   constructor(private productsService: ProductsService,
+              public language:CurrentLanguageService,
               private formService:FormService) {
   }
 
@@ -40,7 +45,7 @@ export class PolpusaFormComponent implements OnInit {
     switch (this.formType) {
       case 1: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -55,7 +60,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 2: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -70,7 +75,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 3: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -82,7 +87,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 4: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -95,7 +100,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 5: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -108,7 +113,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 6: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           contact_name: "",
           mail: "",
           phone_number: "",
@@ -119,7 +124,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 7: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -134,7 +139,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 8: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -146,7 +151,7 @@ export class PolpusaFormComponent implements OnInit {
       }
       case 9: {
         this.request = {
-          type: this.formType,
+          type_contact: this.formType,
           company_name: "",
           contact_name: "",
           mail: "",
@@ -161,19 +166,31 @@ export class PolpusaFormComponent implements OnInit {
 
   submitForm() {
     if (this.canSubmitForm()){
-      this.submitedForm = true;
+      this.isLoading = true;
+      this.errorRequiredFields = false;
       if (this.lineProductsSelected){
         this.request.line_products = this.lineProductsSelected;
       }
       console.log(this.request);
+      this.formService.submitForm(this.request).toPromise()
+          .then(res=>{
+            debugger
+            console.log(res)
+            this.submitedForm = true;
+          })
+          .catch(err=>{
+            debugger
+            this.submitError = true;
+          })
+          .finally(()=>this.isLoading = false)
     }else{
-      this.error = true;
+      this.errorRequiredFields = true;
     }
   }
 
   sendOtherForm() {
     this.submitedForm = false;
-    this.error = false;
+    this.errorRequiredFields = false;
     this.setRequest();
   }
 
@@ -198,6 +215,10 @@ export class PolpusaFormComponent implements OnInit {
       a = a && this.request.curruculum !== null;
     }
     return a;
+  }
+
+  handleFile($event: any) {
+    this.request.curruculum = $event.target.files[0]
   }
 }
 

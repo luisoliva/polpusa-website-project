@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import { ProductCategory } from 'src/app/core/interfaces/products';
-import { ECategoryType } from 'src/app/core/enums/ECategoryType';
+import {ProductCategory} from 'src/app/core/interfaces/products';
+import {ECategoryType} from 'src/app/core/enums/ECategoryType';
 import {ProductItemsComponent} from "../../components/products/product-items/product-items.component";
 import {Product} from "../../core/models/product.model";
 import {ProductCategoriesComponent} from "../../components/products/product-categories/product-categories.component";
@@ -23,6 +23,18 @@ export class ProductsComponent implements OnInit {
   }
 
   setCategorySelectedItem(category: ProductCategory) {
+    if (this.productItemsComponent.searchComponent !== undefined){
+      if (this.selectedCategoryItem.type == ECategoryType.SEARCH && this.productItemsComponent.searchComponent.searchPerformed){
+        this.productItemsComponent.searchComponent.clearSearch();
+      }
+    }
+
+    if (this.productItemsComponent.filterComponent !== undefined){
+      if (this.selectedCategoryItem.type == ECategoryType.FILTER && this.productItemsComponent.filterComponent.searchPerformed){
+        this.productItemsComponent.filterComponent.filterByType(0);
+      }
+    }
+
     this.selectedCategoryItem = category;
   }
 
@@ -30,7 +42,7 @@ export class ProductsComponent implements OnInit {
     this.productItemsComponent.goToProductDetail($event);
   }
 
-  getItemsFound($event: {data:Product[],pagination:Pagination}) {
+  getItemsFound($event: {data:Product[],pagination:Pagination, category_id:number}) {
     this.categoriesComponent.setItemsFound($event);
   }
 }

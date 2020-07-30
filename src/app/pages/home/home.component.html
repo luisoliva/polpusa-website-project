@@ -15,7 +15,7 @@
       <div class="col-11">
         <div ng2-carouselamos [items]="alliances" [$item]="itemTemplate" [$next]="next" [$prev]="prev" [width]="width"></div>
         <ng-template #itemTemplate let-item let-i="index">
-          <div style="display: flex">
+          <div style="display: flex;max-height: 190px">
             <img class="carousel-item-polpusa" [ngStyle]="{width:itemCarouselWidth}" [src]="item.file_Upload" [alt]="item.title">
           </div>
         </ng-template>
@@ -54,7 +54,7 @@
 <app-strategy></app-strategy>
 
 <!--Our brands-->
-<section class="mt-5">
+<section style="margin-bottom: 75px" class="mt-5">
   <h4 class="c-sky brand-title text-center">{{'HOMEPAGE.BRANDS.TITLE' | translate}}</h4>
   <app-title-bar [background]="'#BCE3F9'" [width]="'115px'" [height]="'7px'"></app-title-bar>
   <div class="container-fluid">
@@ -62,7 +62,7 @@
       <div class="col-11">
         <div ng2-carouselamos [items]="polpusaBrands" [$item]="itemTemplate2" [$next]="next" [$prev]="prev" [width]="width"></div>
         <ng-template #itemTemplate2 let-item2 let-i="index">
-          <div style="display: flex">
+          <div style="display: flex;max-height: 190px">
             <img class="carousel-item-polpusa" [ngStyle]="{width:itemCarouselWidth}" [src]="item2.url" [alt]="item2.name">
           </div>
         </ng-template>

@@ -6,6 +6,8 @@ import {ProductDetailComponent} from "../product-detail/product-detail.component
 import {CurrentLanguageService} from "../../../core/current-language.service";
 import {HttpClient} from "@angular/common/http";
 import {Pagination} from "../../../core/models/pagination.model";
+import {ProductSearchBarComponent} from "../product-search-bar/product-search-bar.component";
+import {ProductFilterComponent} from "../product-filter/product-filter.component";
 
 @Component({
   selector: 'app-product-items',
@@ -18,8 +20,10 @@ export class ProductItemsComponent implements OnInit {
   showProductDetail: boolean = false;
   productSelected:Product;
   isLoading = false;
-  @Output() itemsFoundEmitter = new EventEmitter<{data:Product[],pagination:Pagination}>()
+  @Output() itemsFoundEmitter = new EventEmitter<{data:Product[],pagination:Pagination, category_id:number}>()
   @ViewChild('detail') detailComponent:ProductDetailComponent
+  @ViewChild('search') searchComponent:ProductSearchBarComponent;
+  @ViewChild('filter') filterComponent:ProductFilterComponent;
 
   constructor(public currentLanguage:CurrentLanguageService,
               private httpClient:HttpClient) { }
@@ -33,17 +37,6 @@ export class ProductItemsComponent implements OnInit {
     setTimeout(()=>{
       this.detailComponent.formComponent.setRequest(this.productSelected.category_id);
     })
-    // if(this.productSelected){
-    //   let des = product.description;
-    //   this.productSelected = product;
-    //   this.productSelected.description = null;
-    //   setTimeout(()=>{
-    //     this.productSelected.description = des;
-    //     console.log('detail: ', product);
-    //   })
-    // }else{
-    //   this.productSelected = product;
-    // }
   }
 
   hideProductDetail() {

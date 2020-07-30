@@ -11,7 +11,7 @@ export class FormContactComponent implements OnInit {
   providerForm: FormGroup;
   clientForm: FormGroup;
   workForm: FormGroup;
-  selectedFormOption = EForm.CLIENT;
+  selectedFormOption = null;
   formOptions = EForm;
 
   constructor(

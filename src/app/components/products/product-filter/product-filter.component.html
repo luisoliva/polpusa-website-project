@@ -1,13 +1,14 @@
 <section class="filter-wrapper">
-  <form class="form-inline">
+  <div class="form-inline filter-field-container">
     <div class="search-input">
-      <span class="filter-albel">Filtro</span>
-      <select class="form-control filter-input">
-        <option value="">Biodegradable</option>
-        <option value="">Reciclado</option>
-        <option value="">Reciclable</option>
-        <option value="">Reutilizable</option>
+      <span class="filter-albel">{{'PRODUCTS.FILTERS.TITLE' | translate}}</span>
+      <select class="form-control filter-input" [ngModel]="typeBag" (ngModelChange)="filterByType($event)">
+        <option label="{{'PRODUCTS.FILTERS.0' | translate}}" value="0">{{'PRODUCTS.FILTERS.0' | translate}}</option>
+        <option label="{{'PRODUCTS.FILTERS.1' | translate}}" value="1">{{'PRODUCTS.FILTERS.1' | translate}}</option>
+        <option label="{{'PRODUCTS.FILTERS.2' | translate}}" value="2">{{'PRODUCTS.FILTERS.2' | translate}}</option>
+        <option label="{{'PRODUCTS.FILTERS.3' | translate}}" value="3">{{'PRODUCTS.FILTERS.3' | translate}}</option>
+        <option label="{{'PRODUCTS.FILTERS.4' | translate}}" value="4">{{'PRODUCTS.FILTERS.4' | translate}}</option>
       </select>
     </div>
-  </form>
+  </div>
 </section>

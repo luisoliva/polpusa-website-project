@@ -13,6 +13,9 @@ import {TranslateModule} from "@ngx-translate/core";
         RouterModule,
         TranslateModule,
     ],
-    providers:[DatePipe]
+    exports: [
+        TruncateTextPipe
+    ],
+    providers: [DatePipe]
 })
 export class BlogModule { }

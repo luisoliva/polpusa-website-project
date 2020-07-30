@@ -20,8 +20,8 @@ export class ProductCategoriesComponent implements OnInit {
   productCategories:ProductCategory[]=[]
   @Output() productSelected = new EventEmitter<any>()
   productSelectedVal;
-  originalProducts:Product[];
-  originalPagination:Pagination;
+  originalProducts:Product[] = null;
+  originalPagination:Pagination = null;
 
   constructor(private productsService:ProductsService,
               public currentLanguage:CurrentLanguageService) { }
@@ -80,10 +80,30 @@ export class ProductCategoriesComponent implements OnInit {
     this.productSelectedVal = subcategory;
   }
 
-  setItemsFound(products:{data:Product[],pagination:Pagination}){
-      //recibo el objeto
-      debugger
-      console.log(products);
+  setItemsFound(products:{data:Product[],pagination:Pagination, category_id:number}){
+      if (products.data !== null){
+          for (let i = 0;i<this.productCategories.length;i++){
+              if (this.productCategories[i].id == products.category_id){
+                  if(this.originalProducts == null){
+                      this.originalProducts = this.productCategories[i].subcategory;
+                      this.originalPagination = this.productCategories[i].pagination;
+                  }
+                  this.productCategories[i].subcategory = products.data
+                  this.productCategories[i].pagination = products.pagination;
+                  break
+              }
+          }
+      }else {
+          for (let i = 0; i < this.productCategories.length; i++) {
+              if (this.productCategories[i].id == products.category_id){
+                  this.productCategories[i].subcategory = this.originalProducts;
+                  this.productCategories[i].pagination = this.originalPagination;
+                  this.originalProducts = null;
+                  this.originalPagination = null;
+                  break
+              }
+          }
+      }
   }
 
 }
