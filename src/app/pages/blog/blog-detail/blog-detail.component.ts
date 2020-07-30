@@ -16,7 +16,6 @@ export class BlogDetailComponent implements OnInit {
   blog:Blog;
   posts:Array<Blog> = new Array<Blog>();
   isLoading = false;
-  pagination:Pagination;
   location = ''
 
   constructor(private blogService:BlogService,
@@ -35,36 +34,11 @@ export class BlogDetailComponent implements OnInit {
     this.blogService.getRecommendedBlogs().toPromise()
         .then(res=>{
           this.posts = res.data;
-          this.pagination = res.pagination;
         })
   }
 
   back(){
     Utils.goBack();
-  }
-
-  loadMoreBlogs() {
-    this.isLoading = true;
-    this.httpClient.get(this.pagination.links.next).toPromise()
-        .then((res:any)=>{
-          this.posts = this.posts.concat(res.data);
-          this.pagination = res.pagination;
-        })
-        .finally(()=> {
-          setTimeout(()=>{
-            this.isLoading = false
-          },500)
-        })
-
-  }
-
-  loadFacebookSdk(){
-    const script = window.document.createElement('script')
-    script.async = true;
-    script.defer = true;
-    script.crossOrigin = 'anonymous';
-    script.src = 'https://connect.facebook.net/en_US/sdk.js'
-    window.document.body.appendChild(script);
   }
 
   facebookShare(){

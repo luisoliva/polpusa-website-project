@@ -27,7 +27,7 @@ export class BlogService {
   }
 
   getRecommendedBlogs():Observable<any>{
-    return this.api.get('v1/api/blog-translation/?perpage=2&random=true')
+    return this.api.get('v1/api/blog-translation/?perpage=3&random=true')
   }
 
   deleteBlogById(id):Observable<any>{
