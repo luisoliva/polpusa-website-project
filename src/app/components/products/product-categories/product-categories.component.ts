@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import { ProductCategory } from 'src/app/core/interfaces/products';
 import { ECategoryType } from 'src/app/core/enums/ECategoryType';
 import {ProductsService} from "../../../pages/products/services/products.service";
@@ -19,7 +19,7 @@ export class ProductCategoriesComponent implements OnInit {
   categorySelectedItem: ProductCategory;
   productCategories:ProductCategory[]=[]
   @Output() productSelected = new EventEmitter<any>()
-  productSelectedVal;
+  @Input() productSelectedVal;
   originalProducts:Product[] = null;
   originalPagination:Pagination = null;
 

@@ -4,7 +4,7 @@ export interface PolpusaForm {
     product?:string;
     quantity?:string;
     wide?:string;
-    caliber?:string;
+    calibre?:string;
     company_name?:string;
     contact_name:string;
     product_interest?:string;

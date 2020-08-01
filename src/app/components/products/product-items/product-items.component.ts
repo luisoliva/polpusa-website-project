@@ -20,6 +20,7 @@ export class ProductItemsComponent implements OnInit {
   showProductDetail: boolean = false;
   productSelected:Product;
   isLoading = false;
+  @Output() productSelectedEmitter = new EventEmitter<Product>()
   @Output() itemsFoundEmitter = new EventEmitter<{data:Product[],pagination:Pagination, category_id:number}>()
   @ViewChild('detail') detailComponent:ProductDetailComponent
   @ViewChild('search') searchComponent:ProductSearchBarComponent;
@@ -36,11 +37,21 @@ export class ProductItemsComponent implements OnInit {
     this.productSelected  = product;
     setTimeout(()=>{
       this.detailComponent.formComponent.setRequest(this.productSelected.category_id);
+      this.resetProductForm()
     })
+    this.productSelectedEmitter.emit(product);
   }
 
   hideProductDetail() {
     this.showProductDetail = false;
+    this.resetProductForm()
+  }
+
+  resetProductForm(){
+    this.detailComponent.formComponent.isLoading = false;
+    this.detailComponent.formComponent.submitError = false;
+    this.detailComponent.formComponent.submitedForm = false;
+    this.detailComponent.formComponent.errorRequiredFields = false;
   }
 
   loadMoreProducts() {

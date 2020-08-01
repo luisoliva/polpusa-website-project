@@ -53,7 +53,7 @@ export class PolpusaFormComponent implements OnInit {
           application_interest: "",
           quantity: "",
           wide: "",
-          caliber: "",
+          calibre: "",
           organic_product: ""
         }
         break
@@ -132,7 +132,7 @@ export class PolpusaFormComponent implements OnInit {
           application_interest: "",
           quantity: "",
           wide: "",
-          caliber: "",
+          calibre: "",
           organic_product: ""
         }
         break

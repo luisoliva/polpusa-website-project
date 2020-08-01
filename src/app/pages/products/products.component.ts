@@ -14,6 +14,7 @@ import {Pagination} from "../../core/models/pagination.model";
 export class ProductsComponent implements OnInit {
   eCategory = ECategoryType;
   selectedCategoryItem: ProductCategory = {} as ProductCategory;
+  selectedProduct:Product;
   @ViewChild('productItems') productItemsComponent:ProductItemsComponent
   @ViewChild('categories') categoriesComponent:ProductCategoriesComponent;
 

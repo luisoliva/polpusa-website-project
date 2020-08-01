@@ -8,7 +8,7 @@
     "LOADING_FORM": "Sending information...",
     "NO_RESULTS_PRODUCTS": "No products found in this category",
     "REQUIRED": "Please fill in all the required fields marked with *",
-    "RETRY_TEXT": "An error while submiting the form ocurred. Please try again",
+    "RETRY_TEXT": "An error ocurred while submiting the form. Please try again",
     "RETRY_BUTTON": "Try again",
     "THANKS" : "Your request has been submitted. Thanks for contacting us",
     "OTHER_FORM": "Send another request",
@@ -109,43 +109,43 @@
       "TITLE": "Strategies",
       "COMUNITY" : {
         "TITLE" : "Community",
-        "1" : "Compromiso con la comunidad local",
-        "2" : "Desarrollo de comunidad colaborativa",
-        "3" : "Igualdad de oportunidades",
-        "4" : "Calidad de vida familiar",
-        "5" : "Brindar herramientas que faciliten el desarrollo académico y profesional",
-        "6" : "Reconocimiento a la cultura maya",
-        "7" : "Apoyo a grupos vulnerables",
-        "8" : "Fomentar la educación en principios éticos y morales"
+        "1" : "Commitment to the local community",
+        "2" : "Collaborative community development",
+        "3" : "Equal opportunities",
+        "4" : "Family quality of life",
+        "5" : "Provide tools that facilitate academic and professional development",
+        "6" : "Recognition of the Mayan culture",
+        "7" : "Support for vulnerable groups",
+        "8" : "Promote education in ethical and moral principles"
       },
       "WELLNESS" : {
         "TITLE" : "Well-Being",
-        "1" : "Integración de comunidad colaborativa",
-        "2" : "Desarrollo de comunidad colaborativa",
-        "3" : "Estilo de vida saludable",
-        "4" : "Fomento del deporte",
-        "5" : "Calidad de vida familiar",
-        "6" : "Fomentar la educación en principios éticos y morales",
-        "7" : "Capacitación y desarrollo de los colaboradores",
-        "8" : "Bienestar de los colaboradores",
-        "9" : "Salud y seguridad en el trabajo"
+        "1" : "Collaborative community integration",
+        "2" : "Collaborative community development",
+        "3" : "Healthy life style",
+        "4" : "Sport promotion",
+        "5" : "Family quality of life",
+        "6" : "Promote education in ethical and moral principles",
+        "7" : "Employee training and development",
+        "8" : "Employee well-being",
+        "9" : "Ensure employee Health and Safety at Work"
       },
       "ECOLOGY" : {
         "TITLE" : "Environment",
-        "1" : "Reducción de emiciones CO2",
-        "2" : "Ofrecer productos que cumplan los principios de economía circular",
-        "3" : "Actividades de concientización ambiental"
+        "1" : "Reduce CO2 emissions",
+        "2" : "Offer products that conttribute with the principles of circular economy",
+        "3" : "Environmental awareness activities"
       },
       "ECONOMY": {
         "TITLE" : "Economy",
-        "1" : "Incrementar ventas a traves de alianzas estratégicas",
-        "2" : "Ofrecer porductos que cumplan los principios de economía circular"
+        "1" : "Increase sales through strategic alliances",
+        "2" : "Offer products that comply with the principles of circular economy"
       },
       "GOVERNANCE": {
         "TITLE" : "Governance",
-        "1" : "Cumplimiento legal",
-        "2" : "Institucionalización de la compañia",
-        "3": "Desarrollo de habilidades de liderazgo en equipo directo"
+        "1" : "Legal compliance",
+        "2" : "Institutionalization of the company",
+        "3": "Direct team leadership skills development"
       }
     },
     "BRANDS": {
@@ -303,18 +303,18 @@
   "QUOTE" : {
     "TITLE" : "What do you want to quote?",
     "AVAILABLE_PRODUCTS" : {
-      "TITLE": "Select the products that you are interested in",
+      "TITLE": "Choose products of interest",
       "BUTTON": "Select all",
-      "1": "Bolsas Naturales",
-      "2": "Rollo Punteado",
-      "3": "Hojas de Polipapel",
-      "4": "Marca Camisetitas",
-      "5": "Ecotubitos",
-      "6": "Zipper Flex",
-      "7": "Frigobol",
-      "8": "Bolsas para basura",
-      "9": "Stretch",
-      "10": "Injerto"
+      "1": "Clear LDPE Bags",
+      "2": "Bags in a roll (with core)",
+      "3": "HDPE sheets in a roll (with core)",
+      "4": "HDPE T-Shirt Bags",
+      "5": "Straws",
+      "6": "Zipper Bags",
+      "7": "Plastic Ice Bags",
+      "8": "Garbage Bags",
+      "9": "Stretch Film",
+      "10": "Garden Bags"
     }
   }
 }
