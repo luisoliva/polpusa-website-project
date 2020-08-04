@@ -15,7 +15,7 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
     this.homepage.getMainVideo().toPromise()
       .then(res=>{
-        if (res.data.lenght !== 0 ) {
+        if (res.data.length !== 0 ) {
           this.videoUrl = res.data[0].file_Upload
         }
       })

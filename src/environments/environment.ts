@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'https://1774d97ac56a.ngrok.io/'
+  url: 'https://ea0d0aa8add2.ngrok.io/'
   // url: 'http://dev.polpusa.com:8000/'
 };
 

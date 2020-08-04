@@ -11,14 +11,14 @@ import {CurrentLanguageService} from "../../core/current-language.service";
 export class HomeComponent implements OnInit {
   alliances: Slide[] = [];
   polpusaBrands: any[] = [
-    { name:'Camisetitas', url:'assets/images/icons/logo_camisetitas.png'},
-    { name:'Frigobol', url:'assets/images/icons/frigobol.png'},
-    { name:'Logar', url:'assets/images/icons/logar.png'},
-    { name:'Megabolsa', url:'assets/images/icons/megabolsa.png'},
-    { name:'Practibio', url:'assets/images/icons/practibio.png'},
-    { name:'Rollitos', url:'assets/images/icons/rollitos.png'},
-    { name:'Volsak', url:'assets/images/icons/volsak.png'},
-    { name:'Zipperflex', url:'assets/images/icons/zipperflex.png'},
+    { name:'Camisetitas', url:'assets/images/home/polpusa-brands/logo_camisetitas.png'},
+    { name:'Frigobol', url:'assets/images/home/polpusa-brands/frigobol.png'},
+    { name:'Logar', url:'assets/images/home/polpusa-brands/logar.png'},
+    { name:'Megabolsa', url:'assets/images/home/polpusa-brands/megabolsa.png'},
+    { name:'Practibio', url:'assets/images/home/polpusa-brands/practibio.png'},
+    { name:'Rollitos', url:'assets/images/home/polpusa-brands/rollitos.png'},
+    { name:'Volsak', url:'assets/images/home/polpusa-brands/volsak.png'},
+    { name:'Zipperflex', url:'assets/images/home/polpusa-brands/zipperflex.png'},
   ];
   width:number;
   itemCarouselWidth: string;
