@@ -3,6 +3,8 @@ import {Product} from "../../../core/models/product.model";
 import {Utils} from "../../../core/utils";
 import {CurrentLanguageService} from "../../../core/current-language.service";
 import {PolpusaFormComponent} from "../../../shared/components/polpusa-form/polpusa-form.component";
+import {ProductsService} from "../../../pages/products/services/products.service";
+import {Upload} from "../../../core/models/upload.model";
 
 @Component({
   selector: 'app-product-detail',
@@ -16,9 +18,11 @@ export class ProductDetailComponent implements OnInit {
   advantagesEs:string[] = [];
   advantagesEn:string[] = [];
   formType: number;
+  catalog:Upload;
   @ViewChild('form') formComponent:PolpusaFormComponent;
 
-  constructor(public currentLanguage:CurrentLanguageService) { }
+  constructor(public currentLanguage:CurrentLanguageService,
+              private products:ProductsService) { }
 
   ngOnInit(): void {
     this.product.properties_id.forEach((element)=>{
@@ -34,10 +38,12 @@ export class ProductDetailComponent implements OnInit {
       this.advantagesEn.push(element.advantage_product)
     })
     this.formType = this.product.category_id;
-  }
-
-  openDS(data_sheet: any) {
-    Utils.openUrlInOtherTab(data_sheet);
+    this.products.getProductsCatalogs().toPromise()
+        .then(res=>{
+          if (res.data.length !== 0){
+            this.catalog = res.data[0]
+          }
+        })
   }
 
   getType(){

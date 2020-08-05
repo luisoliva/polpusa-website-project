@@ -18,6 +18,10 @@ export class ProductsService {
   constructor(private api:ApiService,
               private languageService:CurrentLanguageService) { }
 
+  getProductsCatalogs():Observable<any>{
+    return this.api.get('v1/api/upload-all/?type=2')
+  }
+
   getSpecialtyProductsSearch(searchValue:string):Observable<any>{
     return this.api.get('v1/api/product-all/?category_id=1&' + (this.languageService.language == 'es' ? 'name=' : 'nameIn=') +searchValue);
   }

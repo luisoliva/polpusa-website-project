@@ -41,11 +41,11 @@
   <div class="down-line mt-5"></div>
   <h3 class="download-title">{{'GENERIC.DOWNLOAD' | translate}}</h3>
   <div class="down-wrapper">
-    <a class="btn-download" (click)="openDS(product.data_sheet)">
+    <a class="btn-download" [href]="currentLanguage.language == 'es' ? product.data_sheet : product.product_EN[0].data_sheet" target="_blank">
       <img src="/assets/images/icons/download.png" alt="Ficha técnica ES">
       <span>{{'GENERIC.DATASHEET' | translate}}</span>
     </a>
-    <a class="btn-download">
+    <a *ngIf="catalog" class="btn-download" [href]="currentLanguage.language == 'es' ? catalog.u_file : catalog.uploadID[0].u_file" target="_blank">
       <img src="/assets/images/icons/download.png" alt="">
       <span>{{'PRODUCTS.ACTIONS.PRODUCTS_CATALOG' | translate}}</span>
     </a>
